@@ -1,0 +1,18 @@
+#pragma once
+
+#include "driver/gpio.h"
+#include "driver/uart.h"
+
+#define LOCKER_GM65_UART_NUM UART_NUM_2
+#define LOCKER_GM65_RX_GPIO GPIO_NUM_16
+#define LOCKER_GM65_BAUD_RATE 9600
+
+#define LOCKER_HX711_DOUT_GPIO GPIO_NUM_4
+#define LOCKER_HX711_SCK_GPIO GPIO_NUM_5
+#define LOCKER_HX711_READY_TIMEOUT_US 1000000
+#define LOCKER_WEIGHT_TARE_SAMPLES 10
+#define LOCKER_WEIGHT_ZERO_THRESHOLD_G 5.0f
+// Starting value only; calibrate with a known weight for accurate grams.
+#define LOCKER_WEIGHT_CALIBRATION_FACTOR 2280.0f
+#define LOCKER_WEIGHT_STARTUP_DELAY_MS 500
+#define LOCKER_WEIGHT_READ_INTERVAL_MS 500
