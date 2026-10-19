@@ -1,0 +1,1894 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\TFT\build\TFT.elf D:\ESP_IDF\Code\TFT\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM3'
+et.Rչ� ��016 0Ғ2:57C�Hrst'�� (POU��9}ISET),���0x1&B�A%}AST_F�P*�%==Q)
+co˥�ͥ�� 0, SPI���5
+clk_dr����0,\E���0�0,d_dr��x00,�.�����0x00,hd_���0x0bwp_d���0C�둕�DIO, clk��di�'��loa����ff���bb�n:628j
+load'��007�00,leK�5864C!녑�0x400804�,len:���j
+e���0x�80644C�I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (27) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=26eb8h (159416) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00036ee0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003b708 vaddr=40080000 size=04910h ( 18704) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ecf0ch (970508) map[0m
+[0;32mI (487) esp_image: segment 4: paddr=0012cf34 vaddr=40084910 size=16d00h ( 93440) load[0m
+[0;32mI (524) esp_image: segment 5: paddr=00143c3c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (537) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (537) boot: Disabling RNG early entropy source...[0m
+[0;32mI (548) cpu_start: Multicore app[0m
+[0;32mI (556) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (557) cpu_start: Pro cpu start user code[0m
+[0;32mI (557) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (558) app_init: Application information:[0m
+[0;32mI (562) app_init: Project name:     TFT[0m
+[0;32mI (566) app_init: App version:      7e929b8[0m
+[0;32mI (570) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (575) app_init: ELF file SHA256:  a4c9bae27...[0m
+[0;32mI (579) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (584) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (588) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (592) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (596) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (602) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (607) heap_init: At 3FFC93C0 len 00016C40 (91 KiB): DRAM[0m
+[0;32mI (612) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (618) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (623) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (632) spi_flash: flash io: dio[0m
+[0;33mW (635) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (658) main_task: Calling app_main()[0m
+[0;32mI (688) wifi:wifi driver task: 3ffd13c4, prio:23, stack:6656, core=0[0m
+[0;32mI (698) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (698) wifi:wifi certification version: v7.0[0m
+[0;32mI (698) wifi:config NVS flash: enabled[0m
+[0;32mI (698) wifi:config nano formatting: disabled[0m
+[0;32mI (698) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (708) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (708) wifi:Init management short buffer num: 32[0m
+[0;32mI (718) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (718) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (728) wifi:Init static rx buffer num: 10[0m
+[0;32mI (728) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (728) wifi_init: rx ba win: 6[0m
+[0;32mI (738) wifi_init: accept mbox: 6[0m
+[0;32mI (738) wifi_init: tcpip mbox: 32[0m
+[0;32mI (738) wifi_init: udp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp tx win: 5760[0m
+[0;32mI (748) wifi_init: tcp rx win: 5760[0m
+[0;32mI (748) wifi_init: tcp mss: 1440[0m
+[0;32mI (758) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (758) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (768) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (848) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (848) wifi:enable tsf[0m
+[0;32mI (848) SERVER: wifi_init_sta finished.[0m
+[0;32mI (848) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (868) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (868) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (908) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (918) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1258) wifi:connected with iPhone, aid = 1, channel 6, BW20, bssid = b2:92:8d:de:65:a2[0m
+[0;32mI (1258) wifi:security: WPA2-PSK, phy: bgn, rssi: -45[0m
+[0;32mI (1268) wifi:pm start, type: 1[0m
+
+[0;32mI (1268) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1328) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2458) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2458) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (5868) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (5878) wifi:<ba-add>idx:0 (ifx:0, b2:92:8d:de:65:a2), tid:0, ssn:2, winSize:64[0m
+[0;32mI (6008) display_touch: Starting LVGL task[0m
+[0;32mI (6138) main_task: Returned from app_main()[0m
+[0;32mI (6758) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7078) SENSOR: Tare complete for [0]. Offset=478711[0m
+[0;32mI (7898) SENSOR: Tare complete for [1]. Offset=-248841[0m
+
+***ERROR*** A stack overflow in task sensor_task has been detected.
+
+
+Backtrace: 0x4008b391:0x3ffe7190 0x4008b359:0x3ffe71b0 0x4008c432:0x3ffe71d0 0x4008d777:0x3ffe7250 0x4008c53c:0x3ffe7270 0x4008c4ee:0xd9a78b5d |<-CORRUPTED
+
+
+
+
+ELF file SHA256: a4c9bae27
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=26eb8h (159416) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00036ee0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=0003b708 vaddr=40080000 size=04910h ( 18704) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ecf0ch (970508) map[0m
+[0;32mI (488) esp_image: segment 4: paddr=0012cf34 vaddr=40084910 size=16d00h ( 93440) load[0m
+[0;32mI (524) esp_image: segment 5: paddr=00143c3c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (538) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (538) boot: Disabling RNG early entropy source...[0m
+[0;32mI (549) cpu_start: Multicore app[0m
+[0;32mI (557) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (557) cpu_start: Pro cpu start user code[0m
+[0;32mI (557) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (559) app_init: Application information:[0m
+[0;32mI (563) app_init: Project name:     TFT[0m
+[0;32mI (567) app_init: App version:      7e929b8[0m
+[0;32mI (571) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (576) app_init: ELF file SHA256:  a4c9bae27...[0m
+[0;32mI (580) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (585) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (589) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (593) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (597) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (603) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (608) heap_init: At 3FFC93C0 len 00016C40 (91 KiB): DRAM[0m
+[0;32mI (613) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (618) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (631) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;33mW (636) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (649) main_task: Started on CPU0[0m
+[0;32mI (659) main_task: Calling app_main()[0m
+[0;32mI (689) wifi:wifi driver task: 3ffd13c4, prio:23, stack:6656, core=0[0m
+[0;32mI (699) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (699) wifi:wifi certification version: v7.0[0m
+[0;32mI (699) wifi:config NVS flash: enabled[0m
+[0;32mI (699) wifi:config nano formatting: disabled[0m
+[0;32mI (699) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (709) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (709) wifi:Init management short buffer num: 32[0m
+[0;32mI (719) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (719) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (729) wifi:Init static rx buffer num: 10[0m
+[0;32mI (729) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (729) wifi_init: rx ba win: 6[0m
+[0;32mI (739) wifi_init: accept mbox: 6[0m
+[0;32mI (739) wifi_init: tcpip mbox: 32[0m
+[0;32mI (739) wifi_init: udp mbox: 6[0m
+[0;32mI (749) wifi_init: tcp mbox: 6[0m
+[0;32mI (749) wifi_init: tcp tx win: 5760[0m
+[0;32mI (749) wifi_init: tcp rx win: 5760[0m
+[0;32mI (749) wifi_init: tcp mss: 1440[0m
+[0;32mI (759) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (759) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (769) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (849) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (849) wifi:enable tsf[0m
+[0;32mI (859) SERVER: wifi_init_sta finished.[0m
+[0;32mI (859) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (869) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (869) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (879) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (909) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1319) wifi:connected with iPhone, aid = 1, channel 6, BW20, bssid = b2:92:8d:de:65:a2[0m
+[0;32mI (1319) wifi:security: WPA2-PSK, phy: bgn, rssi: -48[0m
+[0;32mI (1329) wifi:pm start, type: 1[0m
+
+[0;32mI (1329) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1379) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2509) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2509) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (5869) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (5869) wifi:<ba-add>idx:0 (ifx:0, b2:92:8d:de:65:a2), tid:0, ssn:2, winSize:64[0m
+[0;32mI (6009) display_touch: Starting LVGL task[0m
+[0;32mI (6199) main_task: Returned from app_main()[0m
+[0;32mI (6709) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6869) SENSOR: Tare complete for [0]. Offset=478708[0m
+[0;32mI (7659) SENSOR: Tare complete for [1]. Offset=-248845[0m
+[0;32mI (7659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (7749) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (7749) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (8259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (8259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (8759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (8759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (9259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (9259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (9759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (9759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (10259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (10259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (10759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (10759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (11259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (11259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (11759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (11759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (12259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (12259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (12759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (12759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (13259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (13259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (13759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (13759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (14259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (14259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (14759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (14759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (15259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (15259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (15759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (15759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (16259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (16259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (16759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (16759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (17259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (17259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (17759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (17759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (18259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (18259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (18759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (18759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (19259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (19259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (19759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (19759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (20259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (20259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (20759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (20759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (21259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (21259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (21759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (21759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (22259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (22259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (22759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (22759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (23259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (23259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (23759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (23759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (24259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (24259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (24759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (24759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (25259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (25259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (25759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (25759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (26259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (26259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (26759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (26759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (27259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (27259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (27759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (27759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (28259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (28259) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (28759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (28759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (29579) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (29579) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (30089) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (30089) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (30589) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (30589) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (31089) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (31089) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (31089) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (31719) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (31719) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (32219) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (32219) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (32219) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (32959) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (32969) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (32969) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (33479) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (33479) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (33979) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (33979) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (34479) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (34479) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (34979) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (34979) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (35479) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (35479) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (35979) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (35979) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (36479) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (36479) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (36979) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (36979) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (37479) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (37479) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (37979) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (37979) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (38479) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (38479) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (38979) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (38979) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (39479) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (39479) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (39979) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (39979) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (40479) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (40479) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (40979) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (40979) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (40979) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (41489) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (41489) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (41989) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (41989) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (41999) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (42499) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (42499) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (42499) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (43019) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (43019) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (43019) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (43029) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (43539) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (43539) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (44039) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (44039) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (44539) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (44539) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (45039) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (45039) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (45539) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (45539) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (46039) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (46039) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (46539) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (46539) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (47039) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (47039) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (47539) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (47539) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (48039) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (48039) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (48039) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (48549) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (48549) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (49049) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (49049) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (49049) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (49559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (49559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (50059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (50059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (50559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (50559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (51059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (51059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (51559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (51559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (52059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (52059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (52559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (52559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (53059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (53059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (53559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (53559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (54059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (54059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (54559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (54559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (55059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (55059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (55559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (55559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (56059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (56059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (56559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (56559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (57059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (57059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (57559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (57559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (58059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (58059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (58559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (58559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (59059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (59059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (59559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (59559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (60059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (60059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (60559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (60559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (61059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (61059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (61559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (61559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (62059) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (62059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (62559) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Open[0m
+[0;32mI (62559) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":249.9}[0m
+[0;32mI (62559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (63069) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Open[0m
+[0;32mI (63069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (63569) SENSOR: Compartment [0] -> Weight: 709.84 g | HasItem: 1 | Door: Open[0m
+[0;32mI (63569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (64069) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Open[0m
+[0;32mI (64069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (64569) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Open[0m
+[0;32mI (64569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (65069) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Open[0m
+[0;32mI (65069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (65569) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Open[0m
+[0;32mI (65569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (66069) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (66069) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (66069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (66579) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (66579) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (67079) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (67079) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (67579) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (67579) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (68079) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Open[0m
+[0;32mI (68079) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":249.9}[0m
+[0;32mI (68079) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (68589) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Open[0m
+[0;32mI (68589) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (69089) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Open[0m
+[0;32mI (69089) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (69589) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (69589) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (69589) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (70099) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (70099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (70599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (70599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (71099) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (71099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (71599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (71599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (72099) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (72099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (72599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (72599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (73099) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (73099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (73599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (73599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (74099) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (74099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (74599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (74599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (75099) SENSOR: Compartment [0] -> Weight: 709.84 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (75099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (75599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (75599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (76099) SENSOR: Compartment [0] -> Weight: 709.84 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (76099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (76599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (76599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (77099) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (77099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (77599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (77599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (78099) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (78099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (78599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (78599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (79099) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (79099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (79599) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (79599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (80099) SENSOR: Compartment [0] -> Weight: 709.84 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (80099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (80599) SENSOR: Compartment [0] -> Weight: 709.84 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (80599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (81099) SENSOR: Compartment [0] -> Weight: 3469.25 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (81099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (81599) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (81599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (82099) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (82099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (82599) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (82599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (83099) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (83099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (83599) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (83599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (84099) SENSOR: Compartment [0] -> Weight: 3469.25 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (84099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (84599) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (84599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (85369) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (85379) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (85379) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (85889) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (85889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (86389) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (86389) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (86889) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (86889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (87389) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (87389) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (87889) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (87889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (88389) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (88389) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (88889) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (88889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (89389) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (89389) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (89889) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (89889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (90389) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (90389) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (90889) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (90889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (91389) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (91389) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (91889) SENSOR: Compartment [0] -> Weight: 13.69 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (91889) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":13.7}[0m
+[0;32mI (91889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (92399) SENSOR: Compartment [0] -> Weight: 19.36 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (92399) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (92899) SENSOR: Compartment [0] -> Weight: 12.50 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (92899) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (93399) SENSOR: Compartment [0] -> Weight: 7.49 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (93399) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (93899) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (93899) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (93899) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (94409) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (94409) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (94909) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (94909) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (95409) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (95409) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (95909) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (95909) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (96409) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (96409) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (96909) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (96909) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (97409) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (97409) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (97909) SENSOR: Compartment [0] -> Weight: 18.63 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (97909) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":18.6}[0m
+[0;32mI (97909) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (98419) SENSOR: Compartment [0] -> Weight: 15.98 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (98419) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (98919) SENSOR: Compartment [0] -> Weight: 8.61 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (98919) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (99429) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (99429) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (99929) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (99929) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (99929) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (100439) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (100439) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (100939) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (100939) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (101439) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (101439) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (101939) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (101939) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (102439) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (102439) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (102939) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (102939) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (103689) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (103689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (104189) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (104189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (104689) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (104689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (105189) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (105189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (105689) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (105689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (106189) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (106189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (106689) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (106689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (107189) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (107189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (107689) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (107689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (108189) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (108189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (108689) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (108689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (109189) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (109189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (109719) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (109729) SENSOR: Compartment [1] -> Weight: 25.98 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (109729) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":26.0}[0m
+[0;32mI (110239) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (110239) SENSOR: Compartment [1] -> Weight: 28.85 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (110739) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (110739) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (110739) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (111249) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (111249) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (111749) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (111749) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (112249) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (112249) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (112749) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (112749) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (113249) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (113249) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (113749) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (113749) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (114249) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (114249) SENSOR: Compartment [1] -> Weight: 16.09 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (114249) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":16.1}[0m
+[0;32mI (114759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (114759) SENSOR: Compartment [1] -> Weight: 17.29 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (115259) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (115259) SENSOR: Compartment [1] -> Weight: 16.07 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (115759) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (115759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (115759) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (116269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (116269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (116769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (116769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (117269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (117269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (117769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (117769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (118269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (118269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (118769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (118769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (119269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (119269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (119769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (119769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (120659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (120659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (121159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (121159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (121659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (121659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (122159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (122159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (122659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (122659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (123159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (123159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (123659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (123659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (124159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (124159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (124659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (124659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (125159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (125159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (125659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (125659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (126159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (126159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (126659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (126659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (127159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (127159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (127659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (127659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (128159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (128159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (128659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (128659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (129159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (129159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (129659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (129659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (130159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (130159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (130659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (130659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (131159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (131159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (131659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (131659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (132159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (132159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (132659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (132659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (133159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (133159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (133659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (133659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (134159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (134159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (134659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (134659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (135159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (135159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (135659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (135659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (136159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (136159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (136659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (136659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (137159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (137159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (137659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (137659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (138159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (138159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (138659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (138659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (139159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (139159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (139659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (139659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (140159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (140159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (140659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (140659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (141159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (141159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (141659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (141659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (142159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (142159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (142659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (142659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (143159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (143159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (143659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (143659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (144159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (144159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (144659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (144659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (145159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (145159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (145659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (145659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (146159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (146159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (146659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (146659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (147159) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (147159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (147659) SENSOR: Compartment [0] -> Weight: 709.84 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (147659) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":709.8}[0m
+[0;32mI (147659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (148189) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (148189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (148689) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (148689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (149189) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (149189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (149689) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (149689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (150189) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (150189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (150689) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (150689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (151189) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (151189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (151689) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (151689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (152189) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (152189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (152689) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (152689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (153189) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (153189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (153689) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (153689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (154189) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (154189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (154299) main: Recv str: SPXVN06730363856A[0m
+[0;32mI (154299) main: Xử lý mã QR hợp lệ: SPXVN06730363856A[0m
+[0;32mI (154689) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (154689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (155189) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (155189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (155689) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (155689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (156189) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (156189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (156689) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (156689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (157189) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (157189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (157689) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (157689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (158639) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (158639) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (158649) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (159149) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (159149) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (159649) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (159649) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (160149) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (160149) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (160649) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (160649) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (160649) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (161159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (161159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (161659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (161659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (162159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (162159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (162659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (162659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (163159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (163159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (163659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (163659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (164159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (164159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (164659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (164659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (165159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (165159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (165659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (165659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (166159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (166159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (166659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (166659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (167159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (167159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (167659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (167659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (168159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (168159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (168659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (168659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (169159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (169159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (169659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (169659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (169839) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (169839) main: MQTT Received [ptit/verified/shiper]: 1[0m
+[0;32mI (169839) main: Xác minh thành công (1) -> Vào giao diện nhập SĐT[0m
+[0;32mI (170159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (170159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (170659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (170659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (171159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (171159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (171659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (171659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (172159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (172159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (172369) gui: Bat dau quet ma QR don hang[0m
+[0;32mI (172659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (172659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (173159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (173159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (173659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (173659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (174159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (174159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (174659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (174659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (175159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (175159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (175659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (175659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (176159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (176159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (176659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (176659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (177159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (177159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (177659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (177659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (178159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (178159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (178659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (178659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (179159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (179159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (179659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (179659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (180159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (180159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (180659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (180659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (181159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (181159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (181659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (181659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (182159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (182159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (182659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (182659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (183159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (183159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (183659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (183659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (184159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (184159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (184659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (184659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (185159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (185159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (185659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (185659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (186159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (186159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (186659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (186659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (187159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (187159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (187659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (187659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (188159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (188159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (188659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (188659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (189159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (189159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (189249) main: Recv str: VN2686823255027[0m
+[0;32mI (189249) main: Xử lý mã QR hợp lệ: VN2686823255027[0m
+[0;32mI (189659) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (189659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (190159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (190159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (190659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (190659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (191159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (191159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (191659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (191659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (192159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (192159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (192659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (192659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (193159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (193159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (193659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (193659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (194159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (194159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (194659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (194659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (195159) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (195159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (195659) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (195659) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (196159) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (196159) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (196699) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (196699) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (196699) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (197209) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (197209) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (197709) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (197709) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (198209) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (198209) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (198709) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (198709) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (199209) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (199209) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (199209) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (199719) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (199719) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (199719) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (200229) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (200229) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (200859) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (200869) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":210.0}[0m
+[0;32mI (200869) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (201569) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (201569) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (201579) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (202099) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (202099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (202599) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (202599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (203099) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (203099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (203599) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (203599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (204099) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (204099) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (204599) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (204599) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (205149) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (205149) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (205649) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (205649) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (206149) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (206149) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (206739) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (206739) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (207239) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (207239) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (207739) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (207739) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (208239) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (208239) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (208739) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (208739) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (209279) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (209279) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":210.0}[0m
+[0;32mI (209289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (209789) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (209789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (210289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (210289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (210789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (210789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (211289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (211289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (211789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (211789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (212289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (212289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (212789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (212789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (213289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (213289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (213789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (213789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (214289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (214289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (214789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (214789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (215289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (215289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (215789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (215789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (216289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (216289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (216789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (216789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (217289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (217289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (217789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (217789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (218289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (218289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (218789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (218789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (219289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (219289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (219789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (219789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (220289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (220289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (220789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (220789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (221289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (221289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (221789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (221789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (222289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (222289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (222789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (222789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (223289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (223289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (223789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (223789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (224289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (224289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (224789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (224789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (225289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (225289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (225789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (225789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (226289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (226289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (226789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (226789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (227289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (227289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (227789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (227789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (228289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (228289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (228789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (228789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (229289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (229289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (229789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (229789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (230289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (230289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (230789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (230789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (231289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (231289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (231789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (231789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (232289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (232289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (232789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (232789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (233289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (233289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (233539) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (233539) main: MQTT Received [ptit/verified/customer]: 1[0m
+[0;32mI (233789) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (233789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (234289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (234289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (234789) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (234789) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (235289) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (235289) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (235839) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (235839) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (235839) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (236349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (236349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (236849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (236849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (237349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (237349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (237949) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (237949) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (238459) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (238459) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (238959) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (238959) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (239749) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (239759) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":210.0}[0m
+[0;32mI (239759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (240469) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (240479) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (240479) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (241209) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (241209) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":210.0}[0m
+[0;32mI (241209) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (242039) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (242039) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (242039) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (242549) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (242549) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (242549) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (243059) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (243059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (243559) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (243559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (244059) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (244059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (244559) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (244559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (245059) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (245059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (245559) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (245559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (246059) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (246059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (246559) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (246559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (247059) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (247059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (247559) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (247559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (248059) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (248059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (248559) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (248559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (249059) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (249059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (249559) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (249559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (250059) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (250059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (250559) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (250559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (251059) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (251059) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (251559) main: Recv str: VN2686823255027[0m
+[0;33mW (251559) main: Bỏ qua mã quét do chưa bấm nút quét![0m
+[0;32mI (251559) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (251559) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (252069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (252069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (252569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (252569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (253069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (253069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (253569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (253569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (254069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (254069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (254569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (254569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (255069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (255069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (255569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (255569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (256069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (256069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (256569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (256569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (256719) main: Recv str: VN2686823255027[0m
+[0;33mW (256719) main: Bỏ qua mã quét do chưa bấm nút quét![0m
+[0;32mI (257069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (257069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (257569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (257569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (258069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (258069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (258569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (258569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (259069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (259069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (259569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (259569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (260069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (260069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (260569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (260569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (261069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (261069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (261569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (261569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (262069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (262069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (262569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (262569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (263069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (263069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (263569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (263569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (264069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (264069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (264569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (264569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (265069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (265069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (265569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (265569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (266069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (266069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (266569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (266569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (267069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (267069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (267569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (267569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (268069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (268069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (268569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (268569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (269069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (269069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (269569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (269569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (270069) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (270069) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (270569) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (270569) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (271089) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (271089) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (271589) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (271589) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (272299) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (272309) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (272309) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (272819) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (272819) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (273129) gui: Bat dau quet ma QR nhan hang[0m
+[0;32mI (273319) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (273319) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (274139) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (274139) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (274639) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (274639) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (275139) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (275139) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (275759) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (275759) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":210.0}[0m
+[0;32mI (275759) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (276659) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (276669) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (276669) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (277009) main: Recv str: VN2686823255027[0m
+[0;32mI (277009) main: Xử lý mã QR hợp lệ: VN2686823255027[0m
+[0;32mI (277179) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (277179) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (277679) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (277679) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":249.9}[0m
+[0;32mI (277679) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (278189) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (278189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (278689) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (278689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (279189) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (279189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (279689) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (279689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (280189) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (280189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (280689) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (280689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (281189) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (281189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (281689) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (281689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (282189) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (282189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (282689) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (282689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (283189) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (283189) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (283689) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (283689) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (284189) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (284189) SENSOR: Compartment [1] -> Weight: 107.82 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (284189) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":107.8}[0m
+[0;32mI (284699) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (284699) SENSOR: Compartment [1] -> Weight: 104.31 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (285199) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (285199) SENSOR: Compartment [1] -> Weight: 105.61 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (285699) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (285699) SENSOR: Compartment [1] -> Weight: 106.46 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (286199) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (286199) SENSOR: Compartment [1] -> Weight: 108.15 g | HasItem: 1 | Door: Open[0m
+[0;32mI (286199) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":108.2}[0m
+[0;32mI (286709) SENSOR: Compartment [0] -> Weight: 1629.65 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (286709) SENSOR: Compartment [1] -> Weight: 106.45 g | HasItem: 1 | Door: Open[0m
+[0;32mI (287209) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (287209) SENSOR: Compartment [1] -> Weight: 122.76 g | HasItem: 1 | Door: Open[0m
+[0;32mI (287709) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (287709) SENSOR: Compartment [1] -> Weight: 107.27 g | HasItem: 1 | Door: Open[0m
+[0;32mI (288209) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (288209) SENSOR: Compartment [1] -> Weight: 106.66 g | HasItem: 1 | Door: Open[0m
+[0;32mI (288709) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (288709) SENSOR: Compartment [1] -> Weight: 104.82 g | HasItem: 1 | Door: Open[0m
+[0;32mI (289209) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (289209) SENSOR: Compartment [1] -> Weight: 91.20 g | HasItem: 1 | Door: Open[0m
+[0;32mI (289709) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (289709) SENSOR: Compartment [1] -> Weight: 124.77 g | HasItem: 1 | Door: Open[0m
+[0;32mI (290209) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (290209) SENSOR: Compartment [1] -> Weight: 105.14 g | HasItem: 1 | Door: Open[0m
+[0;32mI (290709) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (290709) SENSOR: Compartment [1] -> Weight: 106.42 g | HasItem: 1 | Door: Open[0m
+[0;32mI (291329) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (291329) SENSOR: Compartment [1] -> Weight: 91.33 g | HasItem: 1 | Door: Open[0m
+[0;32mI (291839) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (291839) SENSOR: Compartment [1] -> Weight: 142.98 g | HasItem: 1 | Door: Open[0m
+[0;32mI (292339) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (292339) SENSOR: Compartment [1] -> Weight: 78.40 g | HasItem: 1 | Door: Open[0m
+[0;32mI (292839) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (292839) SENSOR: Compartment [1] -> Weight: 89.87 g | HasItem: 1 | Door: Open[0m
+[0;32mI (293339) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (293339) SENSOR: Compartment [1] -> Weight: 104.87 g | HasItem: 1 | Door: Open[0m
+[0;32mI (293839) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (293839) SENSOR: Compartment [1] -> Weight: 79.71 g | HasItem: 1 | Door: Open[0m
+[0;32mI (294339) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (294339) SENSOR: Compartment [1] -> Weight: 103.39 g | HasItem: 1 | Door: Open[0m
+[0;32mI (294839) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (294839) SENSOR: Compartment [1] -> Weight: 105.58 g | HasItem: 1 | Door: Open[0m
+[0;32mI (295339) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (295339) SENSOR: Compartment [1] -> Weight: 10.07 g | HasItem: 1 | Door: Open[0m
+[0;32mI (295909) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (295909) SENSOR: Compartment [1] -> Weight: 265.52 g | HasItem: 1 | Door: Open[0m
+[0;32mI (296599) SENSOR: Compartment [0] -> Weight: 409.32 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (296609) SENSOR: Compartment [1] -> Weight: 298.20 g | HasItem: 1 | Door: Open[0m
+[0;32mI (297159) SENSOR: Compartment [0] -> Weight: 369.95 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (297159) SENSOR: Compartment [1] -> Weight: 299.59 g | HasItem: 1 | Door: Open[0m
+[0;32mI (297669) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (297669) SENSOR: Compartment [1] -> Weight: 101.45 g | HasItem: 1 | Door: Open[0m
+[0;32mI (298179) SENSOR: Compartment [0] -> Weight: 307.38 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (298179) SENSOR: Compartment [1] -> Weight: 300.40 g | HasItem: 1 | Door: Open[0m
+[0;32mI (298699) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (298699) SENSOR: Compartment [1] -> Weight: 36.09 g | HasItem: 1 | Door: Open[0m
+[0;32mI (299209) SENSOR: Compartment [0] -> Weight: 410.17 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (299209) SENSOR: Compartment [1] -> Weight: 261.63 g | HasItem: 1 | Door: Open[0m
+[0;32mI (299709) SENSOR: Compartment [0] -> Weight: 470.33 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (299709) SENSOR: Compartment [1] -> Weight: 269.57 g | HasItem: 1 | Door: Open[0m
+[0;32mI (300209) SENSOR: Compartment [0] -> Weight: 417.31 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (300209) SENSOR: Compartment [1] -> Weight: 287.83 g | HasItem: 1 | Door: Open[0m
+[0;32mI (300799) SENSOR: Compartment [0] -> Weight: 357.33 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (300799) SENSOR: Compartment [1] -> Weight: 281.62 g | HasItem: 1 | Door: Open[0m
+[0;32mI (301769) SENSOR: Compartment [0] -> Weight: 889.70 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (301769) SENSOR: Compartment [1] -> Weight: 305.15 g | HasItem: 1 | Door: Open[0m
+[0;32mI (302269) SENSOR: Compartment [0] -> Weight: 278.56 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (302269) SENSOR: Compartment [1] -> Weight: 347.13 g | HasItem: 1 | Door: Open[0m
+[0;32mI (302769) SENSOR: Compartment [0] -> Weight: 456.57 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (302769) SENSOR: Compartment [1] -> Weight: 291.57 g | HasItem: 1 | Door: Open[0m
+[0;32mI (303269) SENSOR: Compartment [0] -> Weight: 455.01 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (303269) SENSOR: Compartment [1] -> Weight: 291.30 g | HasItem: 1 | Door: Open[0m
+[0;32mI (303769) SENSOR: Compartment [0] -> Weight: 492.82 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (303769) SENSOR: Compartment [1] -> Weight: 290.24 g | HasItem: 1 | Door: Open[0m
+[0;32mI (304269) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (304269) SENSOR: Compartment [1] -> Weight: 302.79 g | HasItem: 1 | Door: Open[0m
+[0;32mI (304769) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (304769) SENSOR: Compartment [1] -> Weight: 105.78 g | HasItem: 1 | Door: Open[0m
+[0;32mI (305269) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (305269) SENSOR: Compartment [1] -> Weight: 104.33 g | HasItem: 1 | Door: Open[0m
+[0;32mI (306149) SENSOR: Compartment [0] -> Weight: 332.56 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (306149) SENSOR: Compartment [1] -> Weight: 401.17 g | HasItem: 1 | Door: Open[0m
+[0;32mI (306649) SENSOR: Compartment [0] -> Weight: 431.26 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (306649) SENSOR: Compartment [1] -> Weight: 307.52 g | HasItem: 1 | Door: Open[0m
+[0;32mI (307149) SENSOR: Compartment [0] -> Weight: 488.93 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (307149) SENSOR: Compartment [1] -> Weight: 287.29 g | HasItem: 1 | Door: Open[0m
+[0;32mI (307649) SENSOR: Compartment [0] -> Weight: 279.40 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (307649) SENSOR: Compartment [1] -> Weight: 307.07 g | HasItem: 1 | Door: Open[0m
+[0;32mI (308149) SENSOR: Compartment [0] -> Weight: 373.52 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (308149) SENSOR: Compartment [1] -> Weight: 314.17 g | HasItem: 1 | Door: Open[0m
+[0;32mI (308649) SENSOR: Compartment [0] -> Weight: 334.13 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (308649) SENSOR: Compartment [1] -> Weight: 321.29 g | HasItem: 1 | Door: Open[0m
+[0;32mI (309149) SENSOR: Compartment [0] -> Weight: 458.67 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (309149) SENSOR: Compartment [1] -> Weight: 315.79 g | HasItem: 1 | Door: Open[0m
+[0;32mI (309649) SENSOR: Compartment [0] -> Weight: 303.92 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (309649) SENSOR: Compartment [1] -> Weight: 298.26 g | HasItem: 1 | Door: Open[0m
+[0;32mI (310149) SENSOR: Compartment [0] -> Weight: 450.19 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (310149) SENSOR: Compartment [1] -> Weight: 292.10 g | HasItem: 1 | Door: Open[0m
+[0;32mI (310649) SENSOR: Compartment [0] -> Weight: 288.77 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (310649) SENSOR: Compartment [1] -> Weight: 319.90 g | HasItem: 1 | Door: Open[0m
+[0;32mI (311149) SENSOR: Compartment [0] -> Weight: 645.27 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (311149) SENSOR: Compartment [1] -> Weight: 378.14 g | HasItem: 1 | Door: Open[0m
+[0;32mI (311649) SENSOR: Compartment [0] -> Weight: 297.79 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (311649) SENSOR: Compartment [1] -> Weight: 325.45 g | HasItem: 1 | Door: Open[0m
+[0;32mI (312149) SENSOR: Compartment [0] -> Weight: 243.85 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (312149) SENSOR: Compartment [1] -> Weight: 314.06 g | HasItem: 1 | Door: Open[0m
+[0;32mI (312649) SENSOR: Compartment [0] -> Weight: 413.34 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (312649) SENSOR: Compartment [1] -> Weight: 311.42 g | HasItem: 1 | Door: Open[0m
+[0;32mI (313149) SENSOR: Compartment [0] -> Weight: 186.62 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (313149) SENSOR: Compartment [1] -> Weight: 305.85 g | HasItem: 1 | Door: Open[0m
+[0;32mI (313649) SENSOR: Compartment [0] -> Weight: 298.00 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (313649) SENSOR: Compartment [1] -> Weight: 337.11 g | HasItem: 1 | Door: Open[0m
+[0;32mI (314149) SENSOR: Compartment [0] -> Weight: 297.89 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (314149) SENSOR: Compartment [1] -> Weight: 316.48 g | HasItem: 1 | Door: Open[0m
+[0;32mI (314649) SENSOR: Compartment [0] -> Weight: 461.41 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (314649) SENSOR: Compartment [1] -> Weight: 311.55 g | HasItem: 1 | Door: Open[0m
+[0;32mI (315149) SENSOR: Compartment [0] -> Weight: 397.23 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (315149) SENSOR: Compartment [1] -> Weight: 280.08 g | HasItem: 1 | Door: Open[0m
+[0;32mI (315649) SENSOR: Compartment [0] -> Weight: 498.08 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (315649) SENSOR: Compartment [1] -> Weight: 263.03 g | HasItem: 1 | Door: Open[0m
+[0;32mI (316149) SENSOR: Compartment [0] -> Weight: 526.92 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (316149) SENSOR: Compartment [1] -> Weight: 289.30 g | HasItem: 1 | Door: Open[0m
+[0;32mI (316649) SENSOR: Compartment [0] -> Weight: 483.64 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (316649) SENSOR: Compartment [1] -> Weight: 282.10 g | HasItem: 1 | Door: Open[0m
+[0;32mI (317149) SENSOR: Compartment [0] -> Weight: 140.81 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (317149) SENSOR: Compartment [1] -> Weight: 230.88 g | HasItem: 1 | Door: Open[0m
+[0;32mI (318109) SENSOR: Compartment [0] -> Weight: 533.35 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (318109) SENSOR: Compartment [1] -> Weight: 379.34 g | HasItem: 1 | Door: Open[0m
+[0;32mI (318609) SENSOR: Compartment [0] -> Weight: 617.25 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (318609) SENSOR: Compartment [1] -> Weight: 306.79 g | HasItem: 1 | Door: Open[0m
+[0;32mI (319109) SENSOR: Compartment [0] -> Weight: 507.39 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (319109) SENSOR: Compartment [1] -> Weight: 298.95 g | HasItem: 1 | Door: Open[0m
+[0;32mI (319609) SENSOR: Compartment [0] -> Weight: 411.88 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (319609) SENSOR: Compartment [1] -> Weight: 304.81 g | HasItem: 1 | Door: Open[0m
+[0;32mI (320109) SENSOR: Compartment [0] -> Weight: 616.45 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (320109) SENSOR: Compartment [1] -> Weight: 294.16 g | HasItem: 1 | Door: Open[0m
+[0;32mI (320609) SENSOR: Compartment [0] -> Weight: 517.25 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (320609) SENSOR: Compartment [1] -> Weight: 283.77 g | HasItem: 1 | Door: Open[0m
+[0;32mI (321109) SENSOR: Compartment [0] -> Weight: 432.51 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (321109) SENSOR: Compartment [1] -> Weight: 309.63 g | HasItem: 1 | Door: Open[0m
+[0;32mI (321609) SENSOR: Compartment [0] -> Weight: 425.13 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (321609) SENSOR: Compartment [1] -> Weight: 276.80 g | HasItem: 1 | Door: Open[0m
+[0;32mI (322109) SENSOR: Compartment [0] -> Weight: 627.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (322109) SENSOR: Compartment [1] -> Weight: 304.45 g | HasItem: 1 | Door: Open[0m
+[0;32mI (322609) SENSOR: Compartment [0] -> Weight: 19.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (322609) SENSOR: Compartment [1] -> Weight: 183.45 g | HasItem: 1 | Door: Open[0m
+[0;32mI (323419) SENSOR: Compartment [0] -> Weight: 626.09 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (323419) SENSOR: Compartment [1] -> Weight: 378.41 g | HasItem: 1 | Door: Open[0m
+[0;32mI (323919) SENSOR: Compartment [0] -> Weight: 1518.51 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (323919) SENSOR: Compartment [1] -> Weight: 252.89 g | HasItem: 1 | Door: Open[0m
+[0;32mI (324419) SENSOR: Compartment [0] -> Weight: 1851.69 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (324419) SENSOR: Compartment [1] -> Weight: 181.99 g | HasItem: 1 | Door: Open[0m
+[0;32mI (324919) SENSOR: Compartment [0] -> Weight: 1770.99 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (324919) SENSOR: Compartment [1] -> Weight: 219.66 g | HasItem: 1 | Door: Open[0m
+[0;32mI (325419) SENSOR: Compartment [0] -> Weight: 3469.25 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (325419) SENSOR: Compartment [1] -> Weight: 187.83 g | HasItem: 1 | Door: Open[0m
+[0;32mI (326079) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (326079) SENSOR: Compartment [1] -> Weight: 90.95 g | HasItem: 1 | Door: Open[0m
+[0;32mI (326609) SENSOR: Compartment [0] -> Weight: 209.85 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (326609) SENSOR: Compartment [1] -> Weight: 257.29 g | HasItem: 1 | Door: Open[0m
+[0;32mI (327139) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (327139) SENSOR: Compartment [1] -> Weight: 278.91 g | HasItem: 1 | Door: Open[0m
+[0;32mI (327889) SENSOR: Compartment [0] -> Weight: 598.15 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (327889) SENSOR: Compartment [1] -> Weight: 286.14 g | HasItem: 1 | Door: Open[0m
+[0;32mI (328389) SENSOR: Compartment [0] -> Weight: 460.82 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (328389) SENSOR: Compartment [1] -> Weight: 282.10 g | HasItem: 1 | Door: Open[0m
+[0;32mI (328969) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (328969) SENSOR: Compartment [1] -> Weight: 90.18 g | HasItem: 1 | Door: Open[0m
+[0;32mI (329469) SENSOR: Compartment [0] -> Weight: 249.94 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (329469) SENSOR: Compartment [1] -> Weight: 105.12 g | HasItem: 1 | Door: Open[0m
+[0;32mI (330179) SENSOR: Compartment [0] -> Weight: 207.84 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (330179) SENSOR: Compartment [1] -> Weight: 231.82 g | HasItem: 1 | Door: Open[0m
+[0;32mI (330689) SENSOR: Compartment [0] -> Weight: 862.75 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (330689) SENSOR: Compartment [1] -> Weight: 129.51 g | HasItem: 1 | Door: Open[0m
+[0;32mI (331189) SENSOR: Compartment [0] -> Weight: 467.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (331189) SENSOR: Compartment [1] -> Weight: 180.75 g | HasItem: 1 | Door: Open[0m
+[0;32mI (331689) SENSOR: Compartment [0] -> Weight: 281.10 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (331689) SENSOR: Compartment [1] -> Weight: 193.68 g | HasItem: 1 | Door: Open[0m
+[0;32mI (332329) SENSOR: Compartment [0] -> Weight: 209.96 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (332329) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (332339) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (333229) SENSOR: Compartment [0] -> Weight: 190.90 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (333229) SENSOR: Compartment [1] -> Weight: 182.21 g | HasItem: 1 | Door: Open[0m
+[0;32mI (333239) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":182.2}[0m
+[0;32mI (333749) SENSOR: Compartment [0] -> Weight: 204.88 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (333749) SENSOR: Compartment [1] -> Weight: 204.87 g | HasItem: 1 | Door: Open[0m
+[0;32mI (334249) SENSOR: Compartment [0] -> Weight: 455.16 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (334249) SENSOR: Compartment [1] -> Weight: 169.19 g | HasItem: 1 | Door: Open[0m
+[0;32mI (334749) SENSOR: Compartment [0] -> Weight: 327.74 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (334749) SENSOR: Compartment [1] -> Weight: 174.48 g | HasItem: 1 | Door: Open[0m
+[0;32mI (335249) SENSOR: Compartment [0] -> Weight: 238.68 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (335249) SENSOR: Compartment [1] -> Weight: 182.37 g | HasItem: 1 | Door: Open[0m
+[0;32mI (335749) SENSOR: Compartment [0] -> Weight: 332.47 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (335749) SENSOR: Compartment [1] -> Weight: 163.39 g | HasItem: 1 | Door: Open[0m
+[0;32mI (336249) SENSOR: Compartment [0] -> Weight: 86.84 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (336249) SENSOR: Compartment [1] -> Weight: 199.68 g | HasItem: 1 | Door: Open[0m
+[0;32mI (336749) SENSOR: Compartment [0] -> Weight: 345.05 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (336749) SENSOR: Compartment [1] -> Weight: 227.84 g | HasItem: 1 | Door: Open[0m
+[0;32mI (337249) SENSOR: Compartment [0] -> Weight: 204.34 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (337249) SENSOR: Compartment [1] -> Weight: 208.09 g | HasItem: 1 | Door: Open[0m
+[0;32mI (337749) SENSOR: Compartment [0] -> Weight: 108.58 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (337749) SENSOR: Compartment [1] -> Weight: 157.71 g | HasItem: 1 | Door: Open[0m
+[0;32mI (338249) SENSOR: Compartment [0] -> Weight: 523.06 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (338249) SENSOR: Compartment [1] -> Weight: 195.20 g | HasItem: 1 | Door: Open[0m
+[0;32mI (338749) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (338749) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (338749) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (338759) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (339269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (339269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (339769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (339769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (340269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (340269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (340769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (340769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (341269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (341269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (341769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (341769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (342269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (342269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (342769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (342769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (343269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (343269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (343769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (343769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (344269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (344269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (344769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (344769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (345269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (345269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (345769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (345769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (346269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (346269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (346769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (346769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (347269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (347269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (347769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (347769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (348269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (348269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (348769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (348769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (349269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (349269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (349769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (349769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (350269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (350269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (350769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (350769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (351269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (351269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (351769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (351769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (352269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (352269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (352769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (352769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (353269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (353269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (353769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (353769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (354269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (354269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (354769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (354769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (355269) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (355269) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (355769) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (355769) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (356299) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (356299) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (356799) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (356799) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (356799) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (357309) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (357309) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (357809) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (357809) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (358309) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (358309) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (358809) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (358809) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (359309) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (359309) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (359809) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (359809) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (360309) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (360309) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (360809) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (360809) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (361309) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (361309) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (361809) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (361809) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (362309) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (362309) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (362809) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (362809) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (363309) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (363309) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (363809) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (363809) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (364309) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (364309) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (364309) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (364819) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (364819) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (365319) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (365319) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (365819) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (365819) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (366319) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (366319) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (366819) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (366819) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (367319) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (367319) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (367819) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (367819) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (368319) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (368319) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (368319) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (368829) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (368829) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (369329) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (369329) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (369829) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (369829) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (370329) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (370329) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (370829) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (370829) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (371329) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (371329) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (371829) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (371829) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (372329) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (372329) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (372329) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (372839) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (372839) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (373339) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Open[0m
+[0;32mI (373339) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (373839) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (373839) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (373839) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (374349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (374349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (374849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (374849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (375349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (375349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (375849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (375849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (376349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (376349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (376849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (376849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (377349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (377349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (377849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (377849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (378349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (378349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (378849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (378849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (379349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (379349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (379849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (379849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (380349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (380349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (380849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (380849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (381349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (381349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (381849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (381849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (382349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (382349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (382849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (382849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (383349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (383349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (383849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (383849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (384349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (384349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (384849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (384849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (385349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (385349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (385849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (385849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (386349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (386349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (386849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (386849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (387349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (387349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (387849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (387849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (388349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (388349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (388849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (388849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (389349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (389349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (389849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (389849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (390349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (390349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (390849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (390849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (391349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (391349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (391849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (391849) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (392349) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (392349) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (392849) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (392849) SENSOR: Compartment [1] -> Weight: 11.11 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (392849) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":11.1}[0m
+[0;32mI (393359) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (393359) SENSOR: Compartment [1] -> Weight: 14.66 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (393859) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (393859) SENSOR: Compartment [1] -> Weight: 15.26 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (394359) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (394359) SENSOR: Compartment [1] -> Weight: 16.64 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (394859) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (394859) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (394859) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (395369) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (395369) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (395869) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (395869) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (396369) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (396369) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (396869) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (396869) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (397369) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (397369) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (397869) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (397869) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (398369) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (398369) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (398869) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (398869) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (399369) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (399369) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (399869) SENSOR: Compartment [0] -> Weight: 6.40 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (399869) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":6.4}[0m
+[0;32mI (399869) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (400379) SENSOR: Compartment [0] -> Weight: 21.86 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (400379) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (400879) SENSOR: Compartment [0] -> Weight: 18.05 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (400879) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (401379) SENSOR: Compartment [0] -> Weight: 14.30 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (401379) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (401879) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (401879) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (401879) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (402389) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (402389) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (402889) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (402889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (403389) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (403389) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (403889) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (403889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (404389) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (404389) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (404889) SENSOR: Compartment [0] -> Weight: 33.79 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (404889) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":33.8}[0m
+[0;32mI (404889) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (405399) SENSOR: Compartment [0] -> Weight: 41.09 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (405399) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (405899) SENSOR: Compartment [0] -> Weight: 29.55 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (405899) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (406399) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (406399) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (406399) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (406909) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (406909) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (407409) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (407409) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (407909) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (407909) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (408409) SENSOR: Compartment [0] -> Weight: 8.43 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (408409) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":8.4}[0m
+[0;32mI (408409) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (408919) SENSOR: Compartment [0] -> Weight: 15.68 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (408919) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (409419) SENSOR: Compartment [0] -> Weight: 13.80 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (409419) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (409919) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (409919) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (409919) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (410429) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (410429) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (410929) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (410929) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (411429) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (411429) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (411929) SENSOR: Compartment [0] -> Weight: 116.91 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (411929) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":116.9}[0m
+[0;32mI (411929) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (412439) SENSOR: Compartment [0] -> Weight: 102.80 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (412439) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (412939) SENSOR: Compartment [0] -> Weight: 80.56 g | HasItem: 1 | Door: Closed[0m
+[0;32mI (412939) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (413439) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (413439) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (413439) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (413949) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (413949) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (414449) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (414449) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (414949) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (414949) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (415449) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (415449) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (415949) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (415949) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (416449) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (416449) SENSOR: Compartment [1] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (416949) SENSOR: Compartment [0] -> Weight: 0.00 g | HasItem: 0 | Door: Closed[0m
+[0;32mI (416949) SENSOR: Compartment [1] -> We

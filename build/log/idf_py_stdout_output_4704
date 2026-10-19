@@ -1,0 +1,662 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\TFT\build\TFT.elf D:\ESP_IDF\Code\TFT\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM3'
+�ׁJun� 201�0:22��SH�HH�t:0x1BPOWER��%UMQ),boo�'��3 i%}M�_FLAS�%==Q�
+confi֥�� �	�A%]A�0xee�,�}���:0x00)}����0x00,�E���0�0,cs�����0�0,hdE���0��,wp_���0x�j
+modY'T�	�����div:2��+����fff��0,leK��j
+loa�'��0��000����1M�4
+�+��0Q0080�bb���3920C������0x400��44
+[0;32mI (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27678h (161400) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376a0 vaddr=3ffb0000 size=04830h ( 18480) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bed8 vaddr=40080000 size=04140h ( 16704) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f140ch (988172) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131434 vaddr=40084140 size=174d0h ( 95440) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=0014890c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (573) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  db4049fcc...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (595) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (599) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93F0 len 00016C10 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1478, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (855) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (895) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (905) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (905) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (915) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (945) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 66:87:70:e9:0f:46[0m
+[0;32mI (945) wifi:security: WPA2-PSK, phy: bgn, rssi: -71[0m
+[0;32mI (955) wifi:pm start, type: 1[0m
+
+[0;32mI (955) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (995) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2005) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2005) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5865) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 66:87:70:e9:0f:46), tid:0, ssn:2, winSize:64[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6025) display_touch: Starting LVGL task[0m
+[0;32mI (6225) main_task: Returned from app_main()[0m
+[0;32mI (7105) SENSOR: Tare complete for [0]. Offset=471290[0m
+[0;32mI (7915) SENSOR: Tare complete for [1]. Offset=-244436[0m
+[0;32mI (8795) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (11515) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (41225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (41725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (42225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (42725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (43225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (43725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (44225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (44725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (45225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (45725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (46225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (46725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (47225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (47725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (48225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (48725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (49225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (49725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (50225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (50725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (51225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (51725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (52225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (52725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (53225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (53725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (54225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (54725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (55225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (55725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (56225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (56725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (57225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (57725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (58225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (58725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (59225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (59725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (60225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (60725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (61225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (61725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (62225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (62725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (63225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (63725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (64225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (64725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (65225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (65725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (66225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (66725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (67225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (67725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (68225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (68725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (69225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (69725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (70225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (70725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (71225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (71725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (72225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (72725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (73225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (73725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (74225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (74725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (75225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (75725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (76225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (76725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (77225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (77725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (78225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (78725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (79225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (79725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (80225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (80725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (81225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (81725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (82225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (82725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (83225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (83725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (84225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (84725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (85225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (85725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (86225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (86725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (87225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (87725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (88225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (88725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (89225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (89725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (90225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (90725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (91225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (91725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (92225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (92725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (93225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (93725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (94225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (94725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (95225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (95725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (96225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (96725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (97225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (97725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (98225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (98725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (99225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (99725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (100225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (100725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (101225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (101725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (102225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (102725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (103225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (103725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (104225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (104725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (105225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (105725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (106225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (106725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (107225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (107725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (108225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (108725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (109225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (109725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (110225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (110725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (111225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (111725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (112225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (112725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (113225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (113725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (114225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (114725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (115225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (115725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (116225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (116725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (117225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (117725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (118225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (118725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (119225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (119725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (120225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (120725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (121225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (121725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (122225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (122725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (123225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (123725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (124225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (124725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (125225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (125725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (126225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (126725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (127225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (127725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (128225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (128725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (129225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (129725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (130225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (130725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (131225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (131725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (132225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (132725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (133225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (133725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (134225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (134725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (135225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (135725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (136225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (136725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (137225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (137725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (138225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (138725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (139225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (139725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (140225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (140725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (141225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (141725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (142225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (142725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (143225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (143725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (144225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (144725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (145225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (145725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (146225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (146725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (147225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (147725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (148225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (148725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (149225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (149725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (150225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (150725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (151225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (151725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (152225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (152725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (153225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (153725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (154225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (154725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (155225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (155725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (156225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (156725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (157225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (157725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (158225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (158725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (159225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (159725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (160225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (160725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (161225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (161725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (162225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (162725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (163225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (163725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (164225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (164725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (165225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (165725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (166225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (166725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (167225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (167725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (168225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (168725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (169225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (169725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (170225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (170725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (171225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (171725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (172225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (172725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (173225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (173725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (174225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (174725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (175225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (175725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (176225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (176725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (177225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (177725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (178225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (178725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (179225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (179725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (180225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (180725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (181225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (181725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (182225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (182725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (183225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (183725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (184225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (184725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (185225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (185725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (186225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (186725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (187225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (187725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (188225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (188725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (189225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (189725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (190225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (190725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (191225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (191725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (192225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (192725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (193225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (193725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (194225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (194725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (195225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (195725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (196225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (196725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (197225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (197725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (198225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (198725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (199225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (199725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (200225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (200725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (201225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (201725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (202225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (202725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (203225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (203725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (204225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (204725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (205225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (205725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (206225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (206725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (207225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (207725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (208225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (208725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (209225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (209725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (210225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (210725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (211225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (211725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (212225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (212725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (213225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (213725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (214225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (214725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (215225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (215725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (216225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (216725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (217225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (217725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (218225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (218725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (219225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (219725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (220225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (220725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (221225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (221725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (222225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (222725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (223225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (223725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (224225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (224725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (225225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (225725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (226225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (226725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (227225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (227725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (228225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (228725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (229225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (229725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (230225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (230725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (231225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (231725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (232225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (232725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (233225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (233725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (234225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (234725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (235225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (235725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (236225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (236725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (237225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (237725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (238225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (238725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (239225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (239725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (240225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (240725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (241225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (241725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (242225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (242725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (243225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (243725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (244225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (244725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (245225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (245725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (246225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (246725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (247225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (247725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (248225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (248725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (249225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (249725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (250225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (250725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (251225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (251725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (252225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (252725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (253225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (253725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (254225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (254725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (255225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (255725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (256225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (256725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (257225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (257725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (258225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (258725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (259225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (259725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (260225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (260725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (261225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (261725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (262225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (262725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (263225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (263725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (264225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (264725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (265225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (265725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (266225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (266725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (267225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (267725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (268225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (268725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (269225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (269725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (270225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (270725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (271225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (271725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (272225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (272725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (273225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (273725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (274225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (274725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (275225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (275725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (276225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (276725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (277225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (277725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (278225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (278725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (279225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (279725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (280225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (280725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (281225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (281725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (282225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (282725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (283225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (283725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (284225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (284725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (285225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (285725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (286225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (286725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (287225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (287725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (288225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (288725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (289225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (289725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (290225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (290725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (291225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (291725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (292225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (292725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (293225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (293725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (294225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (294725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (295225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (295725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (296225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (296725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (297225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (297725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (298225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (298725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (299225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (299725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (300225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (300725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (301225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (301725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (302225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (302725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (303225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (303725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (304225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (304725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (305225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (305725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (306225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (306725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (307225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (307725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (308225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (308725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (309225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (309725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (310225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (310725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (311225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (311725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (312225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (312725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (313225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (313725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (314225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (314725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (315225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (315725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (316225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (316725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (317225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (317725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (318225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (318725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (319225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (319725) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (320225) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (320725) WARNING: Cảnh báo: Ng

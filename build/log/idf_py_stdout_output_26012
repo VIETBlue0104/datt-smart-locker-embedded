@@ -1,0 +1,1065 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\TFT\build\TFT.elf D:\ESP_IDF\Code\TFT\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM3'
+etsRչ� ��016 ��22:5�C�Hrst'�� (P�U��9}ISET),���0xL&B�A%}AST_F*M!}	==T)
+c�˥����� 0, S�R���
+clkߖ��0x0b�}����0x00,dE���0x�bcs0_�.����0	�}����0x00,wpE���0x0j
+mode:T����k div:�H�����0x3fff��0,le�'�j
+�+��0x����blen:1M�4
+loX����00�400,lYK�ʒ�j
+entry 0Q00806SHI (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=276c8h (161480) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376f0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bf18 vaddr=40080000 size=04100h ( 16640) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f136ch (988012) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131394 vaddr=40084100 size=17510h ( 95504) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=001488ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (573) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  8aac86da5...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93C8 len 00016C38 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1450, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (865) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (905) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (935) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (935) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (935) wifi:pm start, type: 1[0m
+
+[0;32mI (935) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (985) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1975) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (1975) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5865) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6025) display_touch: Starting LVGL task[0m
+[0;32mI (6115) SENSOR: Tare complete for [0]. Offset=-1[0m
+[0;32mI (6415) main_task: Returned from app_main()[0m
+[0;32mI (6735) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7215) SENSOR: Tare complete for [1]. Offset=-10132[0m
+[0;32mI (7215) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":230.0}[0m
+[0;32mI (7305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":20.7}[0m
+[0;32mI (7805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (8305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":7.1}[0m
+[0;32mI (9305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (17805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":7.8}[0m
+[0;32mI (18305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (75805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":6.7}[0m
+[0;32mI (76305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (128305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":18.7}[0m
+[0;32mI (128805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (144305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":8.6}[0m
+[0;32mI (145305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (166305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":8.0}[0m
+[0;32mI (166805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (171305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":27.7}[0m
+[0;32mI (172305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (201805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":6.3}[0m
+[0;32mI (202805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (224305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":9.3}[0m
+[0;32mI (225305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (275305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":166.8}[0m
+[0;32mI (279305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (279805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":13.7}[0m
+[0;32mI (280305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (281805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":17.8}[0m
+[0;32mI (283305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (283805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":7.8}[0m
+[0;32mI (284805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (300305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":5.2}[0m
+[0;32mI (300805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (301805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":7.4}[0m
+[0;32mI (302305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (302805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":5.1}[0m
+[0;32mI (303305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (303805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":14.8}[0m
+[0;32mI (304305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (307805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":39.0}[0m
+[0;32mI (308805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (309305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":8.9}[0m
+[0;32mI (309805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (310805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":10.8}[0m
+[0;32mI (311305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (315305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":5.1}[0m
+[0;32mI (315805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (316305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":7.4}[0m
+[0;32mI (316805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (332305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":8.6}[0m
+[0;32mI (336305) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (336805) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":1839.6}[0m
+[0;32mI (351805) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":459.9}[0m
+[0;32mI (353705) main: Recv str: VN2686823255027[0m
+[0;32mI (353705) main: Xử lý mã QR hợp lệ: VN2686823255027[0m
+[0;33mW (381305) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;32mI (385215) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (385215) main: MQTT Received [ptit/verified/shiper]: 1[0m
+[0;32mI (385215) main: Xác minh thành công (1) -> Vào giao diện nhập SĐT[0m
+[0;32mI (404805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (405305) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":5.9}[0m
+[0;32mI (405805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;33mW (411305) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;32mI (412805) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":104.0}[0m
+et.Rչ� 8 20L��Ғ�:57C��rs���Š	�]I=N_RE�U�I��t:0x�&B�A%�FASTe1M!}�OOT)C���˥�sip: b SPIץ��5
+clkE���0�0,q_���0x�,d_���0x�,cs0E���0�0,hdE����0,w�E���0x00
+[����R���ck dZ��j��+��0x3fff�30,�YK��
+loX����00780�,len��²�j
+loa�'��0�0400����N&j
+Y���0x400�644��I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (27) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=276c8h (161480) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376f0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bf18 vaddr=40080000 size=04100h ( 16640) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f136ch (988012) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131394 vaddr=40084100 size=17510h ( 95504) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=001488ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  8aac86da5...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93C8 len 00016C38 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1450, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (865) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (895) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (925) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (925) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (935) wifi:pm start, type: 1[0m
+
+[0;32mI (935) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (945) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2485) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2485) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5865) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6015) display_touch: Starting LVGL task[0m
+[0;32mI (6125) SENSOR: Tare complete for [0]. Offset=838859[0m
+[0;32mI (6285) main_task: Returned from app_main()[0m
+[0;32mI (6795) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6935) SENSOR: Tare complete for [1]. Offset=-247189[0m
+[0;32mI (6945) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":367.9}[0m
+[0;32mI (14785) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (14785) main: MQTT Received [ptit/verified/shiper]: 1[0m
+[0;32mI (14785) main: Xác minh thành công (1) -> Vào giao diện nhập SĐT[0m
+[0;32mI (32585) gui: Bat dau quet ma QR don hang[0m
+[0;33mW (36535) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;32mI (42545) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (42545) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":367.9}[0m
+[0;32mI (44045) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":367.9}[0m
+[0;32mI (47045) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (47045) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":367.9}[0m
+etsRչ� 8 2�L���22�MSH�HH���0x1 	�]ION_RQ���b�����0x1��SP�eMQ}FLA��%==�)
+�˙��sip'�b��IWP'�5
+clkߖ��0x00,\E���0x00�}���i0x0bcs0E����0,��E��i0x0���}��v:0��j
+[���DIO, ,덭�div:�HloX����fff0�0,�Y˲��0
+�+��0x400���b����1586�C!�+�:0x����0,l�K�ʒ�j
+en��0�008�44��I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=276c8h (161480) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376f0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bf18 vaddr=40080000 size=04100h ( 16640) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f136ch (988012) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131394 vaddr=40084100 size=17510h ( 95504) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=001488ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  8aac86da5...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93C8 len 00016C38 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1450, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (855) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (895) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (895) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (925) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (925) wifi:security: WPA2-PSK, phy: bgn, rssi: -60[0m
+[0;32mI (935) wifi:pm start, type: 1[0m
+
+[0;32mI (935) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (975) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1975) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (1975) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[1;31mE (5875) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6015) display_touch: Starting LVGL task[0m
+[0;32mI (6115) SENSOR: Tare complete for [0]. Offset=838859[0m
+[0;32mI (6405) main_task: Returned from app_main()[0m
+[0;32mI (6735) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6885) SENSOR: Tare complete for [1]. Offset=-247162[0m
+[0;32mI (6885) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":367.9}[0m
+[0;32mI (60485) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (60485) main: MQTT Received [ptit/verified/shiper]: 1[0m
+[0;32mI (60485) main: Xác minh thành công (1) -> Vào giao diện nhập SĐT[0m
+[0;32mI (63195) gui: Bat dau quet ma QR don hang[0m
+[0;32mI (74835) main: Recv str: VN2686823255027[0m
+[0;32mI (74835) main: Xử lý mã QR hợp lệ: VN2686823255027[0m
+[0;32mI (119675) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (119675) main: MQTT Received [ptit/locker/open]: 1[0m
+[0;32mI (119675) main: Nhận lệnh mở ngăn số (mặc định): 1[0m
+[0;32mI (119675) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (119675) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (122685) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (122685) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (191455) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (191465) main: MQTT Received [ptit/locker/open]: 1[0m
+[0;32mI (191465) main: Nhận lệnh mở ngăn số (mặc định): 1[0m
+[0;32mI (191465) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (191465) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (194475) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (194475) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (194475) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":1471.7}[0m
+[0;32mI (203985) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (203985) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":1471.7}[0m
+[0;32mI (312185) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (312185) main: MQTT Received [ptit/locker/open]: 1 deposit[0m
+[0;32mI (312185) main: Nhận lệnh mở ngăn số (mặc định): 1[0m
+[0;32mI (312195) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (312195) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (315205) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (315205) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (315205) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":1471.7}[0m
+[0;32mI (335715) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (335715) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":1471.7}[0m
+[0;32mI (345715) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":1471.7}[0m
+[0;33mW (375215) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;32mI (378215) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (378215) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":1471.7}[0m
+[0;32mI (405215) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":57.4}[0m
+[0;32mI (407215) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (442215) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":40.8}[0m
+[0;32mI (443715) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+etsRչ� 8 2�6 0�22���H�HH���0x1�	�]�ON_��UQ�,boo����3 (S�ReM�_FLP*�%=�T)���˥gsi�'�b�A%]A:0x�YC��k_dr����0,q_�.���A0,dE���0x00,�.����:0x��hdߖ���0,}���:0x�j
+m�V�"%�, c�k��div:�C!�+��0�&���030,���6&�j
+�+��0x400���bb���15864C!�+�:0x4�804�,leK�ʒ�j
+en���0Q008�44�I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=276c8h (161480) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376f0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bf18 vaddr=40080000 size=04100h ( 16640) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f136ch (988012) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131394 vaddr=40084100 size=17510h ( 95504) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=001488ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  8aac86da5...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93C8 len 00016C38 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1450, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (865) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (895) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (945) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (945) wifi:security: WPA2-PSK, phy: bgn, rssi: -65[0m
+[0;32mI (945) wifi:pm start, type: 1[0m
+
+[0;32mI (945) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1015) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2475) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2475) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5865) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6015) display_touch: Starting LVGL task[0m
+[0;32mI (6115) SENSOR: Tare complete for [0]. Offset=838859[0m
+[0;32mI (6235) main_task: Returned from app_main()[0m
+[0;32mI (6975) SENSOR: Tare complete for [1]. Offset=-247375[0m
+[0;32mI (9015) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (9025) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":367.9}[0m
+[0;32mI (37025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":11.2}[0m
+[0;32mI (38025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (39525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":88.2}[0m
+[0;32mI (40525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (82525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":6.9}[0m
+[0;32mI (86525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (87025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":8.8}[0m
+[0;32mI (87525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (92025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":9.7}[0m
+[0;32mI (93025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (107525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":6.1}[0m
+[0;32mI (108025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (185735) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":160.2}[0m
+[0;32mI (187235) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (187235) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":160.1}[0m
+ets J]����6 00'&&��SH��rs���� 	u]I=N_RESQU����:0x13BSPI_TMQ}1SH_BO�U�
+co˥�ͥ�i 0, ӕ]A�0�e
+cl�E���0x00,qE���0A0,d_���0x��cs0ߖ��0x��hd_�.����0,wp_�.����0
+mod�'T�	�ock �Z��j
+�+��0x&�����blen:6&�j
+loX����007800blen:�M��j
+�+��0�0080�bb���3920C������0x40644��I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (27) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=276c8h (161480) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376f0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bf18 vaddr=40080000 size=04100h ( 16640) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f136ch (988012) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131394 vaddr=40084100 size=17510h ( 95504) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=001488ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  8aac86da5...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93C8 len 00016C38 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1450, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (855) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (895) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (935) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (935) wifi:security: WPA2-PSK, phy: bgn, rssi: -56[0m
+[0;32mI (935) wifi:pm start, type: 1[0m
+
+[0;32mI (935) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (995) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2025) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2025) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5865) gpio: GPIO can only be used as input mode[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6025) display_touch: Starting LVGL task[0m
+[0;32mI (6735) main_task: Returned from app_main()[0m
+[0;32mI (6855) SENSOR: Tare complete for [0]. Offset=473822[0m
+[0;32mI (7675) SENSOR: Tare complete for [1]. Offset=-246276[0m
+[0;32mI (7775) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7775) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":207.8}[0m
+[0;32mI (8285) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (19785) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":13.6}[0m
+[0;32mI (20785) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (58285) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (87785) SENSOR: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (117785) SENSOR: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (147785) SENSOR: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (176285) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (176285) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (186285) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (215785) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (245785) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;32mI (257285) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (257285) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (271285) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":26.2}[0m
+[0;32mI (273785) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (275285) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.9}[0m
+[0;32mI (275785) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (276285) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":23.7}[0m
+[0;32mI (281785) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (283285) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":124.6}[0m
+[0;32mI (284285) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (286285) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":21.4}[0m
+[0;32mI (299785) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (325745) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (325745) main: MQTT Received [ptit/locker/open]: 1 deposit[0m
+[0;32mI (325745) main: Nhận lệnh mở ngăn số (mặc định): 1[0m
+[0;32mI (325755) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (325755) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (328765) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (328765) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (344465) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (344465) main: MQTT Received [ptit/locker/open]: 1 deposit[0m
+[0;32mI (344465) main: Nhận lệnh mở ngăn số (mặc định): 1[0m
+[0;32mI (344465) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (344475) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (347475) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (347475) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (347475) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (354485) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (354485) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (448485) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (455985) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (455985) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (574465) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (574465) main: MQTT Received [ptit/locker/open]: 0,deposit[0m
+[0;32mI (574465) main: Nhận lệnh mở ngăn số: 0, chế độ: deposit[0m
+[0;32mI (574465) Lock: Đang mở khóa cho ngăn số: 0[0m
+[1;31mE (574475) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (577485) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (577485) Lock: Đã đóng khóa ngăn số: 0[0m
+[0;32mI (577495) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (577995) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;33mW (577995) SENSOR: Ngoại lệ: Shipper không bỏ hàng vào ngăn [1]![0m
+[0;32mI (577995) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (603855) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (603855) main: MQTT Received [ptit/locker/open]: 0,deposit[0m
+[0;32mI (603855) main: Nhận lệnh mở ngăn số: 0, chế độ: deposit[0m
+[0;32mI (603855) Lock: Đang mở khóa cho ngăn số: 0[0m
+[1;31mE (603865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (606865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (606865) Lock: Đã đóng khóa ngăn số: 0[0m
+[0;32mI (606875) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (609875) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;33mW (609875) SENSOR: Ngoại lệ: Shipper không bỏ hàng vào ngăn [1]![0m
+[0;32mI (609875) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (629385) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (629555) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (629555) main: MQTT Received [ptit/locker/open]: 1,deposit[0m
+[0;32mI (629555) main: Nhận lệnh mở ngăn số: 1, chế độ: deposit[0m
+[0;32mI (629565) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (629565) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (632575) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (632575) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (634385) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;33mW (634385) SENSOR: Ngoại lệ: Shipper không bỏ hàng vào ngăn [2]![0m
+[0;32mI (634385) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (638395) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (640895) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (640895) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (686385) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (686385) main: MQTT Received [ptit/locker/open]: 1,deposit[0m
+[0;32mI (686385) main: Nhận lệnh mở ngăn số: 1, chế độ: deposit[0m
+[0;32mI (686395) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (686395) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (689405) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (689405) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (689415) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (689915) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;33mW (689915) SENSOR: Ngoại lệ: Shipper không bỏ hàng vào ngăn [2]![0m
+[0;32mI (689915) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (704215) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (704215) main: MQTT Received [ptit/locker/open]: 1,deposit[0m
+[0;32mI (704215) main: Nhận lệnh mở ngăn số: 1, chế độ: deposit[0m
+[0;32mI (704215) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (704225) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (707225) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (707225) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (720925) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (721425) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (721425) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (726935) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (726945) main: MQTT Received [ptit/locker/open]: 0,deposit[0m
+[0;32mI (726945) main: Nhận lệnh mở ngăn số: 0, chế độ: deposit[0m
+[0;32mI (726945) Lock: Đang mở khóa cho ngăn số: 0[0m
+[1;31mE (726945) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (729955) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (729955) Lock: Đã đóng khóa ngăn số: 0[0m
+[0;32mI (729965) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (730465) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;33mW (730465) SENSOR: Ngoại lệ: Shipper không bỏ hàng vào ngăn [1]![0m
+[0;32mI (730465) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (746805) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (746805) main: MQTT Received [ptit/locker/open]: 1,deposit[0m
+[0;32mI (746805) main: Nhận lệnh mở ngăn số: 1, chế độ: deposit[0m
+[0;32mI (746805) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (746815) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (749815) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (749815) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (749825) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (751825) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;33mW (751825) SENSOR: Ngoại lệ: Shipper không bỏ hàng vào ngăn [2]![0m
+[0;32mI (751825) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (819335) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":6.3}[0m
+[0;32mI (820335) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (820835) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":28.2}[0m
+[0;32mI (827915) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (827915) main: MQTT Received [ptit/locker/open]: 0,pickup[0m
+[0;32mI (827915) main: Nhận lệnh mở ngăn số: 0, chế độ: pickup[0m
+[0;32mI (827915) Lock: Đang mở khóa cho ngăn số: 0[0m
+[1;31mE (827925) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (830925) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (830925) Lock: Đã đóng khóa ngăn số: 0[0m
+[0;32mI (831835) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":39.5}[0m
+[0;32mI (832835) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;33mW (832835) SENSOR: Ngoại lệ: Khách quên lấy hàng ra khỏi ngăn [1]![0m
+[0;32mI (832835) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":41.3}[0m
+[0;32mI (837345) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (850845) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.8}[0m
+[0;32mI (852345) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (862845) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":19.7}[0m
+[0;32mI (870105) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (870105) main: MQTT Received [ptit/locker/open]: 0,pickup[0m
+[0;32mI (870105) main: Nhận lệnh mở ngăn số: 0, chế độ: pickup[0m
+[0;32mI (870105) Lock: Đang mở khóa cho ngăn số: 0[0m
+[1;31mE (870115) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (873115) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (873115) Lock: Đã đóng khóa ngăn số: 0[0m
+[0;32mI (873125) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":53.7}[0m
+[0;32mI (875125) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;33mW (875125) SENSOR: Ngoại lệ: Khách quên lấy hàng ra khỏi ngăn [1]![0m
+[0;32mI (875125) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":63.8}[0m
+[0;32mI (878635) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (902635) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":22.7}[0m
+[0;32mI (906655) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (906655) main: MQTT Received [ptit/locker/open]: 1,pickup[0m
+[0;32mI (906655) main: Nhận lệnh mở ngăn số: 1, chế độ: pickup[0m
+[0;32mI (906665) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (906665) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (909675) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (909675) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (909685) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":19.8}[0m
+[0;32mI (910185) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;33mW (910185) SENSOR: Ngoại lệ: Khách quên lấy hàng ra khỏi ngăn [2]![0m
+[0;32mI (910185) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":31.5}[0m
+[0;32mI (912695) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (1084125) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (1084125) main: MQTT Received [ptit/verified/shiper]: 1[0m
+[0;32mI (1084125) main: Xác minh thành công (1) -> Vào giao diện nhập SĐT[0m
+[0;32mI (1085515) gui: Bat dau quet ma QR don hang[0m
+[0;32mI (1122525) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (1122525) main: MQTT Received [ptit/locker/open]: 0,deposit[0m
+[0;32mI (1122525) main: Nhận lệnh mở ngăn số: 0, chế độ: deposit[0m
+[0;32mI (1122525) Lock: Đang mở khóa cho ngăn số: 0[0m
+[1;31mE (1122535) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (1125535) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (1125535) Lock: Đã đóng khóa ngăn số: 0[0m
+[0;32mI (1125545) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (1127045) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;33mW (1127045) SENSOR: Ngoại lệ: Shipper không bỏ hàng vào ngăn [1]![0m
+[0;32mI (1127045) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (1143555) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (1149555) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (1149555) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (1285055) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (1285555) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (1285555) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (1304485) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (1304495) main: MQTT Received [ptit/locker/open]: 1,deposit[0m
+[0;32mI (1304495) main: Nhận lệnh mở ngăn số: 1, chế độ: deposit[0m
+[0;32mI (1304495) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (1304495) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (1307505) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (1307505) Lock: Đã đóng khóa ngăn số: 1[0m
+e�.Rչ� 8 20L��Ғ�:57�HH���0x1 (�]I=9_RES�U����:0x1&B�A%}FAST_*M!}	�OT)��˙��sip: b SPI���5
+clkE���0A0,q_���0��,d_�.����0,cs0_���0x��hd_d.����0,wp_d.����0
+modY'T�	�����div:2C!녑�0x3fff�30,lYK��j
+loa��x40�8000����1M��j
+�+��0x����,len����j�Y����0x400��44�I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=276c8h (161480) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376f0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bf18 vaddr=40080000 size=04100h ( 16640) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f136ch (988012) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131394 vaddr=40084100 size=17510h ( 95504) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=001488ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  8aac86da5...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93C8 len 00016C38 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1450, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (865) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (895) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (945) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (945) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (945) wifi:pm start, type: 1[0m
+
+[0;32mI (945) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (955) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2395) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2395) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5865) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6025) display_touch: Starting LVGL task[0m
+[0;32mI (6295) main_task: Returned from app_main()[0m
+[0;32mI (6885) SENSOR: Tare complete for [0]. Offset=475763[0m
+[0;32mI (6915) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7715) SENSOR: Tare complete for [1]. Offset=-246665[0m
+[0;32mI (27075) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (27075) main: MQTT Received [ptit/verified/shiper]: 1[0m
+[0;32mI (27085) main: Xác minh thành công (1) -> Vào giao diện nhập SĐT[0m
+[0;32mI (29625) gui: Bat dau quet ma QR don hang[0m
+[0;32mI (45605) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (45605) main: MQTT Received [ptit/locker/open]: 1,deposit[0m
+[0;32mI (45605) main: Nhận lệnh mở ngăn số: 1, chế độ: deposit[0m
+[0;32mI (45615) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (45615) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (48625) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (48625) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (48635) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (49135) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;33mW (49135) SENSOR: Ngoại lệ: Shipper không bỏ hàng vào ngăn [2]![0m
+[0;32mI (49135) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (50145) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (56645) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (56645) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+et�Rչ� 8 20������:57�Hrs���Š	�]�ON_RQ���b����0x13 i%}ST_�*M!}	OOT)C���˥�ͥ�i 0,�*�]A�0xeeC�,k�E����0,�E���0x00�}���:0x��cs�E���0x00��}���:0x0bwp_d.����0
+moV�"%=1 clk��d��j��+��0x3ff���bb���6&�j
+�+��0x400���bb���1586�C!�+�:0x����0,l�K�ʒ�j
+en�偰�00��44��I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=276c8h (161480) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376f0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bf18 vaddr=40080000 size=04100h ( 16640) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f136ch (988012) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131394 vaddr=40084100 size=17510h ( 95504) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=001488ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  8aac86da5...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93C8 len 00016C38 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1450, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (855) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (895) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (925) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (925) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (935) wifi:pm start, type: 1[0m
+
+[0;32mI (935) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (985) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2455) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2455) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5865) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6035) display_touch: Starting LVGL task[0m
+[0;32mI (6615) main_task: Returned from app_main()[0m
+[0;32mI (6935) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7065) SENSOR: Tare complete for [0]. Offset=475757[0m
+[0;32mI (7855) SENSOR: Tare complete for [1]. Offset=-246660[0m
+[0;32mI (19565) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (19565) main: MQTT Received [ptit/verified/shiper]: 1[0m
+[0;32mI (19565) main: Xác minh thành công (1) -> Vào giao diện nhập SĐT[0m
+[0;32mI (28415) gui: Bat dau quet ma QR don hang[0m
+[0;32mI (61825) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (61825) main: MQTT Received [ptit/locker/open]: 1,deposit[0m
+[0;32mI (61825) main: Nhận lệnh mở ngăn số: 1, chế độ: deposit[0m
+[0;32mI (61825) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (61835) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (64835) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (64835) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (64845) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (66845) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":49.1}[0m
+[0;32mI (67945) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":6.4}[0m
+[0;32mI (68945) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (69445) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":7.1}[0m
+[0;32mI (69945) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (70945) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":8.7}[0m
+[0;32mI (71445) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (71445) SENSOR: Gửi hàng thành công vào ngăn [2][0m
+[0;32mI (71455) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":8.4}[0m
+[0;32mI (72455) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (74455) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed

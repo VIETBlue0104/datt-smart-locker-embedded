@@ -1,0 +1,27 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP_IDF\Code\TFT\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.5.3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP_IDF/Code/TFT/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/display_touch.c.obj
+D:/ESP_IDF/Code/TFT/main/display_touch.c: In function 'example_lvgl_touch_cb':
+D:/ESP_IDF/Code/TFT/main/display_touch.c:114:5: warning: 'esp_lcd_touch_get_coordinates' is deprecated: This API will be removed in version 2.0.0. Use esp_lcd_touch_get_data instead! [-Wdeprecated-declarations]
+  114 |     bool touchpad_pressed = esp_lcd_touch_get_coordinates(touch_pad, touchpad_x, touchpad_y, NULL, &touchpad_cnt, 1);
+      |     ^~~~
+In file included from D:/ESP_IDF/Code/TFT/managed_components/atanisoft__esp_lcd_touch_xpt2046/include/esp_lcd_touch_xpt2046.h:10,
+                 from D:/ESP_IDF/Code/TFT/main/display_touch.c:18:
+D:/ESP_IDF/Code/TFT/managed_components/espressif__esp_lcd_touch/include/esp_lcd_touch.h:317:6: note: declared here
+  317 | bool esp_lcd_touch_get_coordinates(esp_lcd_touch_handle_t tp, uint16_t *x, uint16_t *y, uint16_t *strength, uint8_t *point_num, uint8_t max_point_num);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable TFT.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP_IDF/Code/TFT/build/TFT.bin
+[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP_IDF\Code\TFT\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.5.3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP_IDF/Code/TFT/build/partition_table/partition-table.bin D:/ESP_IDF/Code/TFT/build/TFT.bin"
+TFT.bin binary size 0x12f010 bytes. Smallest app partition is 0x177000 bytes. 0x47ff0 bytes (19%) free.

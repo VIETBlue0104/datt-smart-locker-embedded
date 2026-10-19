@@ -1,0 +1,47 @@
+Command: ninja flash
+fatal: detected dubious ownership in repository at 'D:/Espressif/frameworks/esp-idf-v5.5.3'
+'D:/Espressif/frameworks/esp-idf-v5.5.3' is owned by:
+	BUILTIN/Administrators (S-1-5-32-544)
+but the current user is:
+	DESKTOP-C02OR8C/PC (S-1-5-21-1745865661-2047418525-1660411907-1001)
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory D:/Espressif/frameworks/esp-idf-v5.5.3
+CMake Warning at D:/Espressif/frameworks/esp-idf-v5.5.3/tools/cmake/build.cmake:629 (message):
+  WARNING: The following Kconfig variables were used in "if" clauses, but not
+  found in any Kconfig file:
+
+      LV_USE_FREETYPE, introduced by espressif/freetype, defined in (unknown)
+      LV_USE_LIBJPEG_TURBO, introduced by espressif/libjpeg-turbo, defined in (unknown)
+      LV_USE_LIBPNG, introduced by espressif/libpng, defined in (unknown)
+      LV_USE_LZ4, introduced by espressif/lz4, defined in (unknown)
+
+  
+
+Call Stack (most recent call first):
+  D:/Espressif/frameworks/esp-idf-v5.5.3/tools/cmake/project.cmake:741 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+
+CMake Warning at D:/Espressif/frameworks/esp-idf-v5.5.3/tools/cmake/project.cmake:754 (message):
+  Missing kconfig option.  Re-run the build process...
+Call Stack (most recent call first):
+  CMakeLists.txt:6 (project)
+
+
+fatal: detected dubious ownership in repository at 'D:/Espressif/frameworks/esp-idf-v5.5.3'
+'D:/Espressif/frameworks/esp-idf-v5.5.3' is owned by:
+	BUILTIN/Administrators (S-1-5-32-544)
+but the current user is:
+	DESKTOP-C02OR8C/PC (S-1-5-21-1745865661-2047418525-1660411907-1001)
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory D:/Espressif/frameworks/esp-idf-v5.5.3
+fatal: detected dubious ownership in repository at 'D:/Espressif/frameworks/esp-idf-v5.5.3/components/openthread/openthread'
+'D:/Espressif/frameworks/esp-idf-v5.5.3/components/openthread/openthread/.git' is owned by:
+	BUILTIN/Administrators (S-1-5-32-544)
+but the current user is:
+	DESKTOP-C02OR8C/PC (S-1-5-21-1745865661-2047418525-1660411907-1001)
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory D:/Espressif/frameworks/esp-idf-v5.5.3/components/openthread/openthread

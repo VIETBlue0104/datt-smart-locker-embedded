@@ -1,0 +1,119 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\TFT\build\TFT.elf D:\ESP_IDF\Code\TFT\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM3'
+etsRչ  ����6 �Ғ�:�SH�Hr.��Š	��ER��%UM�),���i0x�&B�A%}�AS�e1�SH%==�)���˥��ip��bZA%WP��
+,k�E��i0x�,���:0�0��E�v:��0,c����v:��0,h�E��:0�0�}�rv���0
+[K�iDI����� dZ�j
+�+�i0x&��A03�l�˲�80C!�+��0x4�7���bleK���6�C!�+��0x��40�l�˚�20C�����0x��64SH�I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=26d38h (159032) map[0m
+[0;32mI (140) esp_image: segment 1: paddr=00036d60 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003b588 vaddr=40080000 size=04a90h ( 19088) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ec9c0h (969152) map[0m
+[0;32mI (487) esp_image: segment 4: paddr=0012c9e8 vaddr=40084a90 size=16b80h ( 93056) load[0m
+[0;32mI (523) esp_image: segment 5: paddr=00143570 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (537) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (537) boot: Disabling RNG early entropy source...[0m
+[0;32mI (547) cpu_start: Multicore app[0m
+[0;32mI (556) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (556) cpu_start: Pro cpu start user code[0m
+[0;32mI (556) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (558) app_init: Application information:[0m
+[0;32mI (562) app_init: Project name:     TFT[0m
+[0;32mI (565) app_init: App version:      7e929b8[0m
+[0;32mI (569) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (574) app_init: ELF file SHA256:  9eecb5b69...[0m
+[0;32mI (578) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (583) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (587) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (591) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (595) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (601) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (606) heap_init: At 3FFC93C0 len 00016C40 (91 KiB): DRAM[0m
+[0;32mI (611) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (617) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (629) spi_flash: detected chip: generic[0m
+[0;32mI (631) spi_flash: flash io: dio[0m
+[0;33mW (634) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (647) main_task: Started on CPU0[0m
+[0;32mI (657) main_task: Calling app_main()[0m
+[0;32mI (687) wifi:wifi driver task: 3ffd13c4, prio:23, stack:6656, core=0[0m
+[0;32mI (697) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (697) wifi:wifi certification version: v7.0[0m
+[0;32mI (697) wifi:config NVS flash: enabled[0m
+[0;32mI (697) wifi:config nano formatting: disabled[0m
+[0;32mI (697) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (707) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (707) wifi:Init management short buffer num: 32[0m
+[0;32mI (717) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (717) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (727) wifi:Init static rx buffer num: 10[0m
+[0;32mI (727) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (727) wifi_init: rx ba win: 6[0m
+[0;32mI (737) wifi_init: accept mbox: 6[0m
+[0;32mI (737) wifi_init: tcpip mbox: 32[0m
+[0;32mI (737) wifi_init: udp mbox: 6[0m
+[0;32mI (747) wifi_init: tcp mbox: 6[0m
+[0;32mI (747) wifi_init: tcp tx win: 5760[0m
+[0;32mI (747) wifi_init: tcp rx win: 5760[0m
+[0;32mI (747) wifi_init: tcp mss: 1440[0m
+[0;32mI (757) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (757) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (767) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (847) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (927) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (927) wifi:enable tsf[0m
+[0;32mI (937) SERVER: wifi_init_sta finished.[0m
+[0;32mI (937) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (3347) SERVER: Disconnected, retrying...[0m
+[0;32mI (5767) SERVER: Disconnected, retrying...[0m
+[1;31mE (5937) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (5937) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (5937) mqtt_client: Error transport connect[0m
+[1;31mE (5947) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (5947) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5957) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6097) display_touch: Starting LVGL task[0m
+[0;32mI (6187) main_task: Returned from app_main()[0m
+[0;32mI (8187) SERVER: Disconnected, retrying...[0m
+[0;32mI (10607) SERVER: Disconnected, retrying...[0m
+[0;32mI (13027) SERVER: Disconnected, retrying...[0m
+[0;32mI (15447) SERVER: Disconnected, retrying...[0m
+[0;32mI (17867) SERVER: Disconnected, retrying...[0m
+[0;32mI (20287) SERVER: Disconnected, retrying...[0m
+[1;31mE (20947) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (20947) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (20947) mqtt_client: Error transport connect[0m
+[1;31mE (20947) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (20957) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (22707) SERVER: Disconnected, retrying...[0m
+[0;32mI (25127) SERVER: Disconnected, retrying...[0m
+[0;32mI (27547) SERVER: Disconnected, retrying...[0m
+[0;32mI (28907) main: Recv str: VN2686823255027[0m
+[0;33mW (28907) main: Bỏ qua mã quét do chưa bấm nút quét![0m
+[0;32mI (29957) SERVER: Disconnected, retrying...[0m
+[0;32mI (32377) SERVER: Disconnected, retrying...[0m
+[0;32mI (34797) SERVER: Disconnected, retrying...[0m
+[1;31mE (35957) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (35957) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (35957) mqtt_client: Error transport connect[0m
+[1;31mE (35957) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (35967) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (36317) main: Recv str: VN2686823255027[0m
+[0;32mI (36317) main: Xử lý mã QR hợp lệ: VN2686823255027[0m
+[0;32mI (37217) SERVER: Disconnected, retrying...[0m
+[0;32mI (39637) SERVER: Disconnected, retrying...[0m
+[0;32mI (40847) main: Recv str: VN2686823255027[0m
+[0;33mW (40847) main: Bỏ qua mã quét do chưa bấm nút quét![0m
+[0;32mI (42057) SERVER: Disco

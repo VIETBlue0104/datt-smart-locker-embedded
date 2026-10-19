@@ -1,0 +1,78 @@
+Command: ninja flash
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[2/10] Linking C static library esp-idf\main\libmain.a
+[3/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP_IDF\Code\TFT\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.5.3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP_IDF/Code/TFT/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[4/10] No install step for 'bootloader'
+[5/10] Completed 'bootloader'
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable TFT.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.12.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP_IDF/Code/TFT/build/TFT.bin
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP_IDF\Code\TFT\build\esp-idf\esptool_py && D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.5.3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP_IDF/Code/TFT/build/partition_table/partition-table.bin D:/ESP_IDF/Code/TFT/build/TFT.bin"
+TFT.bin binary size 0x1335e0 bytes. Smallest app partition is 0x177000 bytes. 0x43a20 bytes (18%) free.
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Espressif\frameworks\esp-idf-v5.5.3\components\esptool_py && D:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=D:/Espressif/frameworks/esp-idf-v5.5.3 -D SERIAL_TOOL=D:/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;D:/Espressif/frameworks/esp-idf-v5.5.3/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP_IDF/Code/TFT/build -P D:/Espressif/frameworks/esp-idf-v5.5.3/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 TFT.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.dev1
+Serial port COM3
+Connecting....
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 80:7d:3a:d2:9d:e0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00143fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26160 bytes to 16534...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000755d... (100 %)
+Wrote 26160 bytes (16534 compressed) at 0x00001000 in 0.9 seconds (effective 244.9 kbit/s)...
+Hash of data verified.
+Compressed 1258976 bytes to 782998...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001cbfc... (4 %)
+Writing at 0x000279dd... (6 %)
+Writing at 0x0002f1ca... (8 %)
+Writing at 0x0003aaff... (10 %)
+Writing at 0x00040eba... (12 %)
+Writing at 0x000467d8... (14 %)
+Writing at 0x0004caf6... (16 %)
+Writing at 0x000530bf... (18 %)
+Writing at 0x00058f26... (20 %)
+Writing at 0x0005ed66... (22 %)
+Writing at 0x00065d45... (25 %)
+Writing at 0x0006b696... (27 %)
+Writing at 0x00071461... (29 %)
+Writing at 0x000772a7... (31 %)
+Writing at 0x0007d080... (33 %)
+Writing at 0x0008319a... (35 %)
+Writing at 0x0008b884... (37 %)
+Writing at 0x0009325c... (39 %)
+Writing at 0x000997ef... (41 %)
+Writing at 0x0009f7d7... (43 %)
+Writing at 0x000a5798... (45 %)
+Writing at 0x000ab4a3... (47 %)
+Writing at 0x000b1bed... (50 %)
+Writing at 0x000b7a95... (52 %)
+Writing at 0x000bd9eb... (54 %)
+Writing at 0x000c304e... (56 %)
+Writing at 0x000c85d6... (58 %)
+Writing at 0x000cde8e... (60 %)
+Writing at 0x000d3b0c... (62 %)
+Writing at 0x000d940b... (64 %)
+Writing at 0x000dea5c... (66 %)
+Writing at 0x000e4582... (68 %)
+Writing at 0x000ea27a... (70 %)
+Writing at 0x000efce8... (72 %)

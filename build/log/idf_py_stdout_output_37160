@@ -1,0 +1,180 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\TFT\build\TFT.elf D:\ESP_IDF\Code\TFT\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM3'
+ets Jun  8 2016 00:22��SH�HH���0x1 (POWERON_RESEU�I����0x13 (SPI_FAST_F*M!}	=OT)
+configsip: 0, SPIWP'e
+clk_drv:0x00,q_dr����0,d_drv:0x00,cs0_drv:��0,hd_drv:0x00,wp_drv:0�0
+mode:DIO, clock div:2!�+�:0x3fff0030,len:6280
+loa����0078000,len:15864
+load:��0080400,len:3920
+entry ��0080644
+[0;32mI (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=26ca8h (158888) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00036cd0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003b4f8 vaddr=40080000 size=04b20h ( 19232) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ec9b4h (969140) map[0m
+[0;32mI (487) esp_image: segment 4: paddr=0012c9dc vaddr=40084b20 size=16af0h ( 92912) load[0m
+[0;32mI (523) esp_image: segment 5: paddr=001434d4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (537) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (537) boot: Disabling RNG early entropy source...[0m
+[0;32mI (548) cpu_start: Multicore app[0m
+[0;32mI (556) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (556) cpu_start: Pro cpu start user code[0m
+[0;32mI (556) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (558) app_init: Application information:[0m
+[0;32mI (562) app_init: Project name:     TFT[0m
+[0;32mI (565) app_init: App version:      7e929b8[0m
+[0;32mI (569) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (574) app_init: ELF file SHA256:  516148ba2...[0m
+[0;32mI (579) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (583) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (587) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (591) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (595) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (601) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (606) heap_init: At 3FFC93C0 len 00016C40 (91 KiB): DRAM[0m
+[0;32mI (612) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (617) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (623) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (629) spi_flash: detected chip: generic[0m
+[0;32mI (631) spi_flash: flash io: dio[0m
+[0;33mW (634) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (658) main_task: Calling app_main()[0m
+[0;32mI (688) wifi:wifi driver task: 3ffd1448, prio:23, stack:6656, core=0[0m
+[0;32mI (698) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (698) wifi:wifi certification version: v7.0[0m
+[0;32mI (698) wifi:config NVS flash: enabled[0m
+[0;32mI (698) wifi:config nano formatting: disabled[0m
+[0;32mI (698) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (708) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (708) wifi:Init management short buffer num: 32[0m
+[0;32mI (718) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (718) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (728) wifi:Init static rx buffer num: 10[0m
+[0;32mI (728) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (728) wifi_init: rx ba win: 6[0m
+[0;32mI (738) wifi_init: accept mbox: 6[0m
+[0;32mI (738) wifi_init: tcpip mbox: 32[0m
+[0;32mI (738) wifi_init: udp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp tx win: 5760[0m
+[0;32mI (748) wifi_init: tcp rx win: 5760[0m
+[0;32mI (748) wifi_init: tcp mss: 1440[0m
+[0;32mI (758) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (758) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (768) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (848) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (878) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (878) wifi:enable tsf[0m
+[0;32mI (878) SERVER: wifi_init_sta finished.[0m
+[0;32mI (878) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (888) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (898) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (898) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (908) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (958) wifi:connected with iPhone, aid = 1, channel 6, BW20, bssid = 1a:a8:ed:1d:36:a7[0m
+[0;32mI (958) wifi:security: WPA2-PSK, phy: bgn, rssi: -58[0m
+[0;32mI (958) wifi:pm start, type: 1[0m
+
+[0;32mI (958) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (978) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2028) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2028) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (5888) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (5898) wifi:<ba-add>idx:0 (ifx:0, 1a:a8:ed:1d:36:a7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (6018) display_touch: Starting LVGL task[0m
+[0;32mI (6098) main_task: Returned from app_main()[0m
+[0;32mI (6718) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (15428) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (15438) main: MQTT Received [ptit/rec/phone]: 5645525[0m
+[0;32mI (21978) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (21978) main: MQTT Received [ptit/rec/phone]: 1[0m
+1I (115818) gui: Xac nhan OTP: 48455
+[0;32mI (116198) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (116198) main: MQTT Received [ptit/rec/otp]: 48455[0m
+��S�J�����config NVS flash: enabled
+[0;32mI (698) wifi:config nano formatting: disabled[0m
+[0;32mI (698) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (708) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (708) wifi:Init management short buffer num: 32[0m
+[0;32mI (718) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (718) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (728) wifi:Init static rx buffer num: 10[0m
+[0;32mI (728) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (728) wifi_init: rx ba win: 6[0m
+[0;32mI (738) wifi_init: accept mbox: 6[0m
+[0;32mI (738) wifi_init: tcpip mbox: 32[0m
+[0;32mI (738) wifi_init: udp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp mbox: 6[0m
+[0;32mI (748) wifi_init: tcp tx win: 5760[0m
+[0;32mI (748) wifi_init: tcp rx win: 5760[0m
+[0;32mI (748) wifi_init: tcp mss: 1440[0m
+[0;32mI (758) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (758) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (768) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (848) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (918) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (918) wifi:enable tsf[0m
+[0;32mI (928) SERVER: wifi_init_sta finished.[0m
+[0;32mI (928) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (938) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (938) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (958) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (968) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (998) wifi:connected with iPhone, aid = 1, channel 6, BW20, bssid = 1a:a8:ed:1d:36:a7[0m
+[0;32mI (1008) wifi:security: WPA2-PSK, phy: bgn, rssi: -47[0m
+[0;32mI (1008) wifi:pm start, type: 1[0m
+
+[0;32mI (1008) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1058) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2278) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2278) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (5938) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (5938) wifi:<ba-add>idx:0 (ifx:0, 1a:a8:ed:1d:36:a7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (6078) display_touch: Starting LVGL task[0m
+[0;32mI (6168) main_task: Returned from app_main()[0m
+[0;32mI (12938) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (34858) main: Recv str: VN2686823255027[0m
+[0;32mI (34858) main: Xử lý mã QR hợp lệ: VN2686823255027[0m
+[0;32mI (35278) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (35278) main: MQTT Received [ptit/QR_Shipper]: VN2686823255027[0m
+���LC�
+B���J����}����� tcp tx win: 5760
+[0;32mI (748) wifi_init: tcp rx win: 5760[0m
+[0;32mI (748) wifi_init: tcp mss: 1440[0m
+[0;32mI (758) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (758) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (768) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (848) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (848) wifi:enable tsf[0m
+[0;32mI (858) SERVER: wifi_init_sta finished.[0m
+[0;32mI (858) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (868) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (878) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (888) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (898) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (938) wifi:connected with iPhone, aid = 1, channel 6, BW20, bssid = 1a:a8:ed:1d:36:a7[0m
+[0;32mI (938) wifi:security: WPA2-PSK, phy: bgn, rssi: -40[0m
+[0;32mI (948) wifi:pm start, type: 1[0m
+
+[0;32mI (948) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1098) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2218) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2218) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (5868) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (5868) wifi:<ba-add>idx:0 (ifx:0, 1a:a8:ed:1d:36:a7), tid:0, ssn:2, winSize:64[0m
+[0;32mI (5998) display_touch: Starting LVGL task[0m
+[0;32mI (6098) main_task: Returned from app_main()[0m
+[0;32mI (7148) MQTT_LIB: MQTT_EVENT_CONNECTED[0m

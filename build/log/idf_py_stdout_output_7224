@@ -1,0 +1,772 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\TFT\build\TFT.elf D:\ESP_IDF\Code\TFT\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM3'
+eׁJu���16��Ғ��57��r��� (POU��9}RES�U�I��t:0�3 (*}�T_F�P*�%�OT)C���˥�ͥ�: 0,�A%]Ai0xeYC�,k�E���0x00,\E���0x00�}����0x0�i��ߖ��0�0,h�E���0x00��}���:0x�j
+m�V�"%=, c�k��dZ��j
+loa�'��������le�'�j
+loᖂ��0078��,l�K��²4
+�+��0x40������le����j
+e��0x400�644C�I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=276c8h (161480) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376f0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bf18 vaddr=40080000 size=04100h ( 16640) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f136ch (988012) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131394 vaddr=40084100 size=17510h ( 95504) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=001488ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  8aac86da5...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93C8 len 00016C38 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1450, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (855) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (895) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (895) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (915) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (915) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (965) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (965) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (965) wifi:pm start, type: 1[0m
+
+[0;32mI (965) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1025) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2255) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2255) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[1;31mE (5875) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6015) display_touch: Starting LVGL task[0m
+[0;32mI (6865) main_task: Returned from app_main()[0m
+[0;32mI (7085) SENSOR: Tare complete for [0]. Offset=464237[0m
+[0;32mI (7695) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7875) SENSOR: Tare complete for [1]. Offset=-242830[0m
+[0;32mI (25465) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (25475) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":106.5}[0m
+[0;32mI (25975) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (26475) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (26475) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (27975) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (31975) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (31975) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (33975) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (34975) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (34975) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (45475) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (74975) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;32mI (79985) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (79985) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (88485) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":106.5}[0m
+[0;32mI (88985) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (126985) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.2}[0m
+[0;32mI (126995) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":49.0}[0m
+[0;32mI (127495) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (127495) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (128005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":203.6}[0m
+[0;32mI (128505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (130005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":109.5}[0m
+[0;32mI (130505) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (132505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":10.5}[0m
+[0;32mI (136505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (137005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":6.9}[0m
+[0;32mI (138005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (139005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":10.2}[0m
+[0;32mI (140005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (140505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":8.8}[0m
+[0;32mI (151505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (152505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":62.8}[0m
+[0;32mI (153505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (155005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.1}[0m
+[0;32mI (155505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (156505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.2}[0m
+[0;32mI (157005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (159005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":74.5}[0m
+[0;32mI (160505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (161005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":7.2}[0m
+[0;32mI (167505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (168005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.3}[0m
+[0;32mI (168505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (175005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.4}[0m
+[0;32mI (175505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (176505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":6.5}[0m
+[0;32mI (181505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (184005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":7.1}[0m
+[0;32mI (189505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (190005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.0}[0m
+[0;32mI (190505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (199005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":6.1}[0m
+[0;32mI (200005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (200505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.0}[0m
+[0;32mI (201005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (201505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.5}[0m
+[0;32mI (202005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (207505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.4}[0m
+[0;32mI (209005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (209505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":6.2}[0m
+[0;32mI (210005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (211505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.3}[0m
+[0;32mI (212005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (218005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":5.1}[0m
+[0;32mI (219005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (219505) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":5.7}[0m
+[0;32mI (220005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (223005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":20.1}[0m
+[0;32mI (224005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (224505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.1}[0m
+[0;32mI (225505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+ets Ju����6 0�22:�SH
+�.���� (POU��9}I�SET)I����0x13 �*�}�T_F�P*�%=OT)���˥�sip��, S�]A鰕�5
+,k}���:0x�b�}���:0x0bd_d���0,cs0ߖ��0�0,h�E���0x00,}���i0x0�C���:DIO	���� div'�H��+��0�fff���bb�n:62�j
+loX����00780�,le���²�j
+loa���Ѱ�040�����N&j
+Y��偰�008�44
+[0;32mI (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=276c8h (161480) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376f0 vaddr=3ffb0000 size=04820h ( 18464) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bf18 vaddr=40080000 size=04100h ( 16640) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f136ch (988012) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131394 vaddr=40084100 size=17510h ( 95504) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=001488ac vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  8aac86da5...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93C8 len 00016C38 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1450, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (705) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (865) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (895) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1035) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (1035) wifi:security: WPA2-PSK, phy: bgn, rssi: -53[0m
+[0;32mI (1035) wifi:pm start, type: 1[0m
+
+[0;32mI (1035) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1085) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2225) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2225) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5865) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6015) display_touch: Starting LVGL task[0m
+[0;32mI (6405) main_task: Returned from app_main()[0m
+[0;32mI (7035) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7085) SENSOR: Tare complete for [0]. Offset=475501[0m
+[0;32mI (7905) SENSOR: Tare complete for [1]. Offset=-242358[0m
+[0;32mI (12005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":67.2}[0m
+[0;32mI (13005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (13505) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":6.2}[0m
+[0;32mI (14005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (47505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (49505) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (49505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (54505) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (55005) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (55005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (62505) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":5.3}[0m
+[0;32mI (63005) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (96945) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (96945) main: MQTT Received [ptit/verified/customer]: 1[0m
+[0;32mI (99835) gui: Bat dau quet ma QR nhan hang[0m
+[0;32mI (120005) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":45.1}[0m
+[0;32mI (126435) MQTT_LIB: MQTT_EVENT_DATA[0m
+[0;32mI (126435) main: MQTT Received [ptit/locker/open]: 1,pickup[0m
+[0;32mI (126435) main: Nhận lệnh mở ngăn số: 1, chế độ: pickup[0m
+[0;32mI (126435) Lock: Đang mở khóa cho ngăn số: 1[0m
+[1;31mE (126445) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (129445) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (129445) Lock: Đã đóng khóa ngăn số: 1[0m
+[0;32mI (129465) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":51.7}[0m
+[0;32mI (129965) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (129965) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":41.6}[0m
+[0;32mI (130465) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":0, "weight":43.4}[0m
+[0;32mI (132465) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (133465) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (133465) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (138465) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (138965) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (138965) SENSOR: Khách đã lấy hàng thành công khỏi ngăn [2][0m
+[0;32mI (138975) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (187475) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (216975) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (246975) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;32mI (252475) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (252475) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (349475) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (350475) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (378975) SENSOR: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (379975) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (408975) SENSOR: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (409975) SENSOR: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;32mI (413475) SENSOR: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (413475) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (417475) SENSOR: Ngăn [1] vừa được sập cửa đóng lại![0m
+[0;32mI (417475) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (670975) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":254.4}[0m
+[0;32mI (670975) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":31.0}[0m
+[0;32mI (671485) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (671985) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":26.0}[0m
+[0;32mI (672485) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (672985) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":66.8}[0m
+[0;32mI (1629195) wifi:[ADDBA]RX DELBA, reason:1, delete tid:0, initiator:0(recipient)[0m
+[0;32mI (1661715) wifi:bcn_timeout,ap_probe_send_start[0m
+[1;31mE (1763745) mqtt_client: No PING_RESP, disconnected[0m
+[0;32mI (1763745) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1764985) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (1765485) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":712.1}[0m
+[1;31mE (1789795) mqtt_client: esp_mqtt_connect: mqtt_message_receive() returned 0[0m
+[1;31mE (1789795) mqtt_client: MQTT connect failed[0m
+[0;32mI (1789795) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1808245) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (1932365) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (1972505) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (1984925) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (1987425) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (1987425) wifi:state: run -> init (0xc800)[0m
+[0;32mI (1987445) wifi:pm stop, total sleep time: 1430819290 us / 1986402155 us[0m
+
+[0;32mI (1987445) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (1987445) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1987455) SERVER: Disconnected, retrying...[0m
+[1;31mE (1987455) transport_base: tcp_read error, errno=Software caused connection abort[0m
+[1;31mE (1987465) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[1;31mE (1987465) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[1;31mE (1987475) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (1987485) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (1989875) SERVER: Disconnected, retrying...[0m
+[0;32mI (1992295) SERVER: Disconnected, retrying...[0m
+[0;32mI (1994705) SERVER: Disconnected, retrying...[0m
+[0;32mI (1997125) SERVER: Disconnected, retrying...[0m
+[0;32mI (1999545) SERVER: Disconnected, retrying...[0m
+[0;32mI (2001965) SERVER: Disconnected, retrying...[0m
+[0;32mI (2004385) SERVER: Disconnected, retrying...[0m
+[0;32mI (2004395) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2004395) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2004425) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2004445) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2004625) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (2004625) wifi:security: WPA2-PSK, phy: bgn, rssi: -82[0m
+[0;32mI (2004635) wifi:pm start, type: 1[0m
+
+[0;32mI (2005105) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[1;31mE (2006485) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2006485) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2006485) mqtt_client: Error transport connect[0m
+[1;31mE (2006485) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2006495) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2009015) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2009015) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (2021525) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2024495) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2053305) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (2062355) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (2064855) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (2064855) wifi:state: run -> init (0xc800)[0m
+[0;32mI (2064865) wifi:pm stop, total sleep time: 8180175 us / 60226733 us[0m
+
+[0;32mI (2064865) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (2064865) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2064875) SERVER: Disconnected, retrying...[0m
+[1;31mE (2064875) transport_base: tcp_read error, errno=Software caused connection abort[0m
+[1;31mE (2064885) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[1;31mE (2064895) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[1;31mE (2064895) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (2064905) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2067295) SERVER: Disconnected, retrying...[0m
+[0;32mI (2069715) SERVER: Disconnected, retrying...[0m
+[0;32mI (2072135) SERVER: Disconnected, retrying...[0m
+[0;32mI (2074555) SERVER: Disconnected, retrying...[0m
+[0;32mI (2076975) SERVER: Disconnected, retrying...[0m
+[0;32mI (2079385) SERVER: Disconnected, retrying...[0m
+[1;31mE (2079905) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2079905) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2079905) mqtt_client: Error transport connect[0m
+[1;31mE (2079905) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2079915) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2081805) SERVER: Disconnected, retrying...[0m
+[0;32mI (2084225) SERVER: Disconnected, retrying...[0m
+[0;32mI (2086645) SERVER: Disconnected, retrying...[0m
+[0;32mI (2086655) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2086655) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2086685) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2086695) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2086755) wifi:connected with iPhone, aid = 2, channel 11, BW20, bssid = 4e:81:7b:fe:3c:8d[0m
+[0;32mI (2086755) wifi:security: WPA2-PSK, phy: bgn, rssi: -86[0m
+[0;32mI (2086755) wifi:pm start, type: 1[0m
+
+[0;32mI (2087135) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2090215) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2090215) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (2094945) wifi:<ba-add>idx:0 (ifx:0, 4e:81:7b:fe:3c:8d), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2098105) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2108395) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (2110895) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (2110895) wifi:state: run -> init (0xc800)[0m
+[0;32mI (2110905) wifi:pm stop, total sleep time: 3295684 us / 24142450 us[0m
+
+[0;32mI (2110905) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (2110905) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2110915) SERVER: Disconnected, retrying...[0m
+[1;31mE (2110915) transport_base: tcp_read error, errno=Software caused connection abort[0m
+[1;31mE (2110925) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[1;31mE (2110935) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[1;31mE (2110935) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;32mI (2110945) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2113335) SERVER: Disconnected, retrying...[0m
+[0;32mI (2115755) SERVER: Disconnected, retrying...[0m
+[0;32mI (2118175) SERVER: Disconnected, retrying...[0m
+[0;32mI (2120595) SERVER: Disconnected, retrying...[0m
+[0;32mI (2123015) SERVER: Disconnected, retrying...[0m
+[0;32mI (2125435) SERVER: Disconnected, retrying...[0m
+[1;31mE (2125945) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2125945) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2125945) mqtt_client: Error transport connect[0m
+[1;31mE (2125945) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2125955) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2127855) SERVER: Disconnected, retrying...[0m
+[0;32mI (2130265) SERVER: Disconnected, retrying...[0m
+[0;32mI (2132685) SERVER: Disconnected, retrying...[0m
+[0;32mI (2135105) SERVER: Disconnected, retrying...[0m
+[0;32mI (2137525) SERVER: Disconnected, retrying...[0m
+[0;32mI (2139945) SERVER: Disconnected, retrying...[0m
+[1;31mE (2140955) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2140955) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2140955) mqtt_client: Error transport connect[0m
+[1;31mE (2140955) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2140965) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2142365) SERVER: Disconnected, retrying...[0m
+[0;32mI (2142435) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2142435) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2143445) wifi:state: auth -> init (0x200)[0m
+[0;32mI (2143455) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2143455) SERVER: Disconnected, retrying...[0m
+[0;32mI (2145875) SERVER: Disconnected, retrying...[0m
+[0;32mI (2145915) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2145915) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2146925) wifi:state: auth -> init (0x200)[0m
+[0;32mI (2146935) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2146935) SERVER: Disconnected, retrying...[0m
+[0;32mI (2149355) SERVER: Disconnected, retrying...[0m
+[0;32mI (2151775) SERVER: Disconnected, retrying...[0m
+[0;32mI (2154195) SERVER: Disconnected, retrying...[0m
+[1;31mE (2155965) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2155965) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2155965) mqtt_client: Error transport connect[0m
+[1;31mE (2155965) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2155975) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2156605) SERVER: Disconnected, retrying...[0m
+[0;32mI (2159025) SERVER: Disconnected, retrying...[0m
+[0;32mI (2161445) SERVER: Disconnected, retrying...[0m
+[0;32mI (2163865) SERVER: Disconnected, retrying...[0m
+[0;32mI (2166285) SERVER: Disconnected, retrying...[0m
+[0;32mI (2168705) SERVER: Disconnected, retrying...[0m
+[1;31mE (2170975) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (2170975) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (2170975) mqtt_client: Error transport connect[0m
+[1;31mE (2170975) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2170985) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2171125) SERVER: Disconnected, retrying...[0m
+[0;32mI (2173545) SERVER: Disconnected, retrying...[0m
+[0;32mI (2175965) SERVER: Disconnected, retrying...[0m
+[0;32mI (2178385) SERVER: Disconnected, retrying...[0m
+[0;32mI (2180795) SERVER: Disconnected, retrying...[0m
+[0;32mI (2183215) SERVER: Disconnected, retrying...[0m
+[0;32mI (2185635) SERVER: Disconnected, retrying...[0m
+[0;32mI (2188055) SERVER: Disconnected, retrying...[0m
+[0;32mI (2190475) SERVER: Disconnected, retrying...[0m
+[0;32mI (2192895) SERVER: Disconnected, retrying...[0m
+[1;31mE (2192985) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2192985) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2192985) mqtt_client: Error transport connect[0m
+[1;31mE (2192985) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2192995) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2195315) SERVER: Disconnected, retrying...[0m
+[0;32mI (2197735) SERVER: Disconnected, retrying...[0m
+[0;32mI (2200155) SERVER: Disconnected, retrying...[0m
+[0;32mI (2202575) SERVER: Disconnected, retrying...[0m
+[0;32mI (2204985) SERVER: Disconnected, retrying...[0m
+[0;32mI (2207405) SERVER: Disconnected, retrying...[0m
+[0;32mI (2209825) SERVER: Disconnected, retrying...[0m
+[0;32mI (2212245) SERVER: Disconnected, retrying...[0m
+[0;32mI (2214665) SERVER: Disconnected, retrying...[0m
+[1;31mE (2214995) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2214995) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2214995) mqtt_client: Error transport connect[0m
+[1;31mE (2214995) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2215005) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2217085) SERVER: Disconnected, retrying...[0m
+[0;32mI (2219505) SERVER: Disconnected, retrying...[0m
+[0;32mI (2221925) SERVER: Disconnected, retrying...[0m
+[0;32mI (2224345) SERVER: Disconnected, retrying...[0m
+[0;32mI (2224455) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2224465) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2225475) wifi:state: auth -> init (0x200)[0m
+[0;32mI (2225485) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2225485) SERVER: Disconnected, retrying...[0m
+[0;32mI (2227905) SERVER: Disconnected, retrying...[0m
+[0;32mI (2230325) SERVER: Disconnected, retrying...[0m
+[0;32mI (2232745) SERVER: Disconnected, retrying...[0m
+[0;32mI (2235155) SERVER: Disconnected, retrying...[0m
+[1;31mE (2237005) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2237005) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2237005) mqtt_client: Error transport connect[0m
+[1;31mE (2237005) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2237015) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2237575) SERVER: Disconnected, retrying...[0m
+[0;32mI (2239995) SERVER: Disconnected, retrying...[0m
+[0;32mI (2242415) SERVER: Disconnected, retrying...[0m
+[0;32mI (2244835) SERVER: Disconnected, retrying...[0m
+[0;32mI (2247255) SERVER: Disconnected, retrying...[0m
+[0;32mI (2249675) SERVER: Disconnected, retrying...[0m
+[0;32mI (2252095) SERVER: Disconnected, retrying...[0m
+[0;32mI (2254515) SERVER: Disconnected, retrying...[0m
+[0;32mI (2256935) SERVER: Disconnected, retrying...[0m
+[1;31mE (2259015) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2259015) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2259015) mqtt_client: Error transport connect[0m
+[1;31mE (2259015) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2259025) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2259345) SERVER: Disconnected, retrying...[0m
+[0;32mI (2259385) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2259385) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2260395) wifi:state: auth -> init (0x200)[0m
+[0;32mI (2260405) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2260405) SERVER: Disconnected, retrying...[0m
+[0;32mI (2262825) SERVER: Disconnected, retrying...[0m
+[0;32mI (2265245) SERVER: Disconnected, retrying...[0m
+[0;32mI (2267655) SERVER: Disconnected, retrying...[0m
+[0;32mI (2267675) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2267675) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2267725) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2267765) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2268065) wifi:state: run -> init (0x7a0)[0m
+[0;32mI (2268075) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2268075) SERVER: Disconnected, retrying...[0m
+[0;32mI (2270495) SERVER: Disconnected, retrying...[0m
+[0;32mI (2272915) SERVER: Disconnected, retrying...[0m
+[0;32mI (2275335) SERVER: Disconnected, retrying...[0m
+[0;32mI (2277745) SERVER: Disconnected, retrying...[0m
+[0;32mI (2280165) SERVER: Disconnected, retrying...[0m
+[1;31mE (2281025) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2281025) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2281025) mqtt_client: Error transport connect[0m
+[1;31mE (2281025) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2281035) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2282585) SERVER: Disconnected, retrying...[0m
+[0;32mI (2285005) SERVER: Disconnected, retrying...[0m
+[0;32mI (2287425) SERVER: Disconnected, retrying...[0m
+[0;32mI (2289845) SERVER: Disconnected, retrying...[0m
+[0;32mI (2292265) SERVER: Disconnected, retrying...[0m
+[0;32mI (2294685) SERVER: Disconnected, retrying...[0m
+[0;32mI (2297105) SERVER: Disconnected, retrying...[0m
+[0;32mI (2299515) SERVER: Disconnected, retrying...[0m
+[0;32mI (2301935) SERVER: Disconnected, retrying...[0m
+[1;31mE (2303035) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2303035) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2303035) mqtt_client: Error transport connect[0m
+[1;31mE (2303035) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2303045) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2304355) SERVER: Disconnected, retrying...[0m
+[0;32mI (2306775) SERVER: Disconnected, retrying...[0m
+[0;32mI (2309195) SERVER: Disconnected, retrying...[0m
+[0;32mI (2311615) SERVER: Disconnected, retrying...[0m
+[0;32mI (2314035) SERVER: Disconnected, retrying...[0m
+[0;32mI (2316455) SERVER: Disconnected, retrying...[0m
+[0;32mI (2318875) SERVER: Disconnected, retrying...[0m
+[0;32mI (2321285) SERVER: Disconnected, retrying...[0m
+[0;32mI (2323705) SERVER: Disconnected, retrying...[0m
+[1;31mE (2325045) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2325045) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2325045) mqtt_client: Error transport connect[0m
+[1;31mE (2325045) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2325055) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2326125) SERVER: Disconnected, retrying...[0m
+[0;32mI (2328545) SERVER: Disconnected, retrying...[0m
+[0;32mI (2330965) SERVER: Disconnected, retrying...[0m
+[0;32mI (2333385) SERVER: Disconnected, retrying...[0m
+[0;32mI (2335805) SERVER: Disconnected, retrying...[0m
+[0;32mI (2338225) SERVER: Disconnected, retrying...[0m
+[0;32mI (2340645) SERVER: Disconnected, retrying...[0m
+[0;32mI (2343055) SERVER: Disconnected, retrying...[0m
+[0;32mI (2345475) SERVER: Disconnected, retrying...[0m
+[1;31mE (2347055) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2347055) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2347055) mqtt_client: Error transport connect[0m
+[1;31mE (2347055) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2347065) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2347895) SERVER: Disconnected, retrying...[0m
+[0;32mI (2350315) SERVER: Disconnected, retrying...[0m
+[0;32mI (2352735) SERVER: Disconnected, retrying...[0m
+[0;32mI (2355155) SERVER: Disconnected, retrying...[0m
+[0;32mI (2357575) SERVER: Disconnected, retrying...[0m
+[0;32mI (2359995) SERVER: Disconnected, retrying...[0m
+[0;32mI (2362415) SERVER: Disconnected, retrying...[0m
+[0;32mI (2364825) SERVER: Disconnected, retrying...[0m
+[0;32mI (2367245) SERVER: Disconnected, retrying...[0m
+[1;31mE (2369065) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2369065) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2369065) mqtt_client: Error transport connect[0m
+[1;31mE (2369065) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2369075) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2369665) SERVER: Disconnected, retrying...[0m
+[0;32mI (2372085) SERVER: Disconnected, retrying...[0m
+[0;32mI (2374505) SERVER: Disconnected, retrying...[0m
+[0;32mI (2376925) SERVER: Disconnected, retrying...[0m
+[0;32mI (2379345) SERVER: Disconnected, retrying...[0m
+[0;32mI (2381765) SERVER: Disconnected, retrying...[0m
+[0;32mI (2384175) SERVER: Disconnected, retrying...[0m
+[0;32mI (2386595) SERVER: Disconnected, retrying...[0m
+[0;32mI (2389015) SERVER: Disconnected, retrying...[0m
+[1;31mE (2391075) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2391075) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2391075) mqtt_client: Error transport connect[0m
+[1;31mE (2391075) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2391085) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2391435) SERVER: Disconnected, retrying...[0m
+[0;32mI (2393855) SERVER: Disconnected, retrying...[0m
+[0;32mI (2396275) SERVER: Disconnected, retrying...[0m
+[0;32mI (2398695) SERVER: Disconnected, retrying...[0m
+[0;32mI (2401115) SERVER: Disconnected, retrying...[0m
+[0;32mI (2403535) SERVER: Disconnected, retrying...[0m
+[0;32mI (2405945) SERVER: Disconnected, retrying...[0m
+[0;32mI (2408365) SERVER: Disconnected, retrying...[0m
+[0;32mI (2410785) SERVER: Disconnected, retrying...[0m
+[1;31mE (2413085) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2413085) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2413085) mqtt_client: Error transport connect[0m
+[1;31mE (2413085) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2413095) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2413205) SERVER: Disconnected, retrying...[0m
+[0;32mI (2415625) SERVER: Disconnected, retrying...[0m
+[0;32mI (2418045) SERVER: Disconnected, retrying...[0m
+[0;32mI (2420465) SERVER: Disconnected, retrying...[0m
+[0;32mI (2422885) SERVER: Disconnected, retrying...[0m
+[0;32mI (2425305) SERVER: Disconnected, retrying...[0m
+[0;32mI (2427715) SERVER: Disconnected, retrying...[0m
+[0;32mI (2430135) SERVER: Disconnected, retrying...[0m
+[0;32mI (2432555) SERVER: Disconnected, retrying...[0m
+[0;32mI (2434975) SERVER: Disconnected, retrying...[0m
+[1;31mE (2435095) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2435095) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2435095) mqtt_client: Error transport connect[0m
+[1;31mE (2435095) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2435105) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2437395) SERVER: Disconnected, retrying...[0m
+[0;32mI (2439815) SERVER: Disconnected, retrying...[0m
+[0;32mI (2442235) SERVER: Disconnected, retrying...[0m
+[0;32mI (2444655) SERVER: Disconnected, retrying...[0m
+[0;32mI (2447075) SERVER: Disconnected, retrying...[0m
+[0;32mI (2449485) SERVER: Disconnected, retrying...[0m
+[0;32mI (2451905) SERVER: Disconnected, retrying...[0m
+[0;32mI (2454325) SERVER: Disconnected, retrying...[0m
+[0;32mI (2456745) SERVER: Disconnected, retrying...[0m
+[1;31mE (2457105) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2457105) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2457105) mqtt_client: Error transport connect[0m
+[1;31mE (2457105) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2457115) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2459165) SERVER: Disconnected, retrying...[0m
+[0;32mI (2461585) SERVER: Disconnected, retrying...[0m
+[0;32mI (2464005) SERVER: Disconnected, retrying...[0m
+[0;32mI (2466425) SERVER: Disconnected, retrying...[0m
+[0;32mI (2468845) SERVER: Disconnected, retrying...[0m
+[0;32mI (2471255) SERVER: Disconnected, retrying...[0m
+[0;32mI (2473675) SERVER: Disconnected, retrying...[0m
+[0;32mI (2476095) SERVER: Disconnected, retrying...[0m
+[0;32mI (2478515) SERVER: Disconnected, retrying...[0m
+[1;31mE (2479115) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2479115) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2479115) mqtt_client: Error transport connect[0m
+[1;31mE (2479115) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2479125) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2480935) SERVER: Disconnected, retrying...[0m
+[0;32mI (2483355) SERVER: Disconnected, retrying...[0m
+[0;32mI (2485775) SERVER: Disconnected, retrying...[0m
+[0;32mI (2488195) SERVER: Disconnected, retrying...[0m
+[0;32mI (2490615) SERVER: Disconnected, retrying...[0m
+[0;32mI (2493025) SERVER: Disconnected, retrying...[0m
+[0;32mI (2495445) SERVER: Disconnected, retrying...[0m
+[0;32mI (2497865) SERVER: Disconnected, retrying...[0m
+[0;32mI (2500285) SERVER: Disconnected, retrying...[0m
+[1;31mE (2501125) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2501125) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2501125) mqtt_client: Error transport connect[0m
+[1;31mE (2501125) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2501135) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2502705) SERVER: Disconnected, retrying...[0m
+[0;32mI (2505125) SERVER: Disconnected, retrying...[0m
+[0;32mI (2507545) SERVER: Disconnected, retrying...[0m
+[0;32mI (2509965) SERVER: Disconnected, retrying...[0m
+[0;32mI (2512375) SERVER: Disconnected, retrying...[0m
+[0;32mI (2514795) SERVER: Disconnected, retrying...[0m
+[0;32mI (2517215) SERVER: Disconnected, retrying...[0m
+[0;32mI (2519635) SERVER: Disconnected, retrying...[0m
+[0;32mI (2522055) SERVER: Disconnected, retrying...[0m
+[1;31mE (2523135) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2523135) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2523135) mqtt_client: Error transport connect[0m
+[1;31mE (2523135) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2523145) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2524475) SERVER: Disconnected, retrying...[0m
+[0;32mI (2526895) SERVER: Disconnected, retrying...[0m
+[0;32mI (2529315) SERVER: Disconnected, retrying...[0m
+[0;32mI (2531735) SERVER: Disconnected, retrying...[0m
+[0;32mI (2534145) SERVER: Disconnected, retrying...[0m
+[0;32mI (2536565) SERVER: Disconnected, retrying...[0m
+[0;32mI (2538985) SERVER: Disconnected, retrying...[0m
+[0;32mI (2541405) SERVER: Disconnected, retrying...[0m
+[0;32mI (2543825) SERVER: Disconnected, retrying...[0m
+[1;31mE (2545145) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2545145) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2545145) mqtt_client: Error transport connect[0m
+[1;31mE (2545145) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2545155) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2546245) SERVER: Disconnected, retrying...[0m
+[0;32mI (2548665) SERVER: Disconnected, retrying...[0m
+[0;32mI (2551085) SERVER: Disconnected, retrying...[0m
+[0;32mI (2553505) SERVER: Disconnected, retrying...[0m
+[0;32mI (2555915) SERVER: Disconnected, retrying...[0m
+[0;32mI (2558335) SERVER: Disconnected, retrying...[0m
+[0;32mI (2560755) SERVER: Disconnected, retrying...[0m
+[0;32mI (2563175) SERVER: Disconnected, retrying...[0m
+[0;32mI (2565595) SERVER: Disconnected, retrying...[0m
+[1;31mE (2567155) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2567155) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2567155) mqtt_client: Error transport connect[0m
+[1;31mE (2567155) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2567165) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2568015) SERVER: Disconnected, retrying...[0m
+[0;32mI (2570435) SERVER: Disconnected, retrying...[0m
+[0;32mI (2572855) SERVER: Disconnected, retrying...[0m
+[0;32mI (2575265) SERVER: Disconnected, retrying...[0m
+[0;32mI (2577685) SERVER: Disconnected, retrying...[0m
+[0;32mI (2580105) SERVER: Disconnected, retrying...[0m
+[0;32mI (2582525) SERVER: Disconnected, retrying...[0m
+[0;32mI (2584945) SERVER: Disconnected, retrying...[0m
+[0;32mI (2587365) SERVER: Disconnected, retrying...[0m
+[1;31mE (2589165) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2589165) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2589165) mqtt_client: Error transport connect[0m
+[1;31mE (2589165) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (2589175) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (2589785) SERVER: D

@@ -1,0 +1,2 @@
+source D:/ESP_IDF/Code/TFT/build/bootloader/gdbinit/symbols
+source D:/ESP_IDF/Code/TFT/build/bootloader/gdbinit/connect

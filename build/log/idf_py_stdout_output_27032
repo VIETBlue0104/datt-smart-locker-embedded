@@ -1,0 +1,903 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\TFT\build\TFT.elf D:\ESP_IDF\Code\TFT\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM3'
+eׁJu� &�����Ҳ��SH��rs�'�Š	�]RO�%UM�T�I�o����3 �*�}A��e1�H���
+�*
+��˥�s�� 0���I��xYYH(�k�V�:��0,\E�v'���	}d����0,�.z��v���0�K�d��x�b��}d��x�j
+m��iD��	�o�-���:�C!�d���f��ڰɕn�S�0�!�+�:��00���0���:�M�4C!�+�:��00���0���:�������� ��00���j
+[0;32mI (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27698h (161432) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376c0 vaddr=3ffb0000 size=04830h ( 18480) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bef8 vaddr=40080000 size=04120h ( 16672) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f143ch (988220) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131464 vaddr=40084120 size=174f0h ( 95472) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=0014895c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  89c62e9e6...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (602) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93F0 len 00016C10 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (636) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1478, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (715) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (745) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (935) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (935) wifi:enable tsf[0m
+[0;32mI (945) SERVER: wifi_init_sta finished.[0m
+[0;32mI (945) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (3355) SERVER: Disconnected, retrying...[0m
+[0;32mI (5775) SERVER: Disconnected, retrying...[0m
+[1;31mE (5945) esp-tls: couldn't get hostname for :broker.emqx.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (5945) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (5945) mqtt_client: Error transport connect[0m
+[1;31mE (5955) MQTT_LIB: MQTT_EVENT_ERROR[0m
+[0;32mI (5955) MQTT_LIB: MQTT_EVENT_DISCONNECTED[0m
+[1;31mE (5965) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5965) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5965) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5975) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6105) display_touch: Starting LVGL task[0m
+[0;32mI (6275) main_task: Returned from app_main()[0m
+[0;32mI (7255) SENSOR: Tare complete for [0]. Offset=-1588424[0m
+[0;32mI (8095) SENSOR: Tare complete for [1]. Offset=-1248786[0m
+[0;32mI (8095) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":161.5}[0m
+[0;32mI (8195) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":15.2}[0m
+[0;32mI (8195) SERVER: Disconnected, retrying...[0m
+[0;32mI (10615) SERVER: Disconnected, retrying...[0m
+[0;32mI (13035) SERVER: Disconnected, retrying...[0m
+[0;32mI (15455) SERVER: Disconnected, retrying...[0m
+[0;32mI (15475) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (15475) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (15485) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (15495) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (16105) wifi:connected with iPhone, aid = 1, channel 11, BW20, bssid = d6:be:67:ae:09:a9[0m
+[0;32mI (16105) wifi:security: WPA2-PSK, phy: bgn, rssi: -56[0m
+[0;32mI (16115) wifi:pm start, type: 1[0m
+
+[0;32mI (16115) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (16205) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (17335) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (17335) SERVER: Got IP: 172.20.10.3[0m
+[0;32mI (20955) wifi:<ba-add>idx:0 (ifx:0, d6:be:67:ae:09:a9), tid:0, ssn:2, winSize:64[0m
+[0;32mI (21645) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+et.Rչ  8�01��Ғ2:�SH�HH���0x1�	�]RON%UMQ),b��0x13�SPReMT_F�P*�%==Q%
+c�K��sip'�b�A%]�:0�YYC�,�}�rv:��0�\E��:0x�,dE���0x0�i��_dr�'��0,hdE���0x0bwpߖ��0x0�C�����R�	���� d闒j
+loᖂ��fff���bb���6280C!�+��0����00�����158SH��+��0x4����,lYK�ʒ0�Y�� 0x����4�I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27698h (161432) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376c0 vaddr=3ffb0000 size=04830h ( 18480) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bef8 vaddr=40080000 size=04120h ( 16672) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f143ch (988220) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131464 vaddr=40084120 size=174f0h ( 95472) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=0014895c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (572) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  89c62e9e6...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93F0 len 00016C10 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1478, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (715) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (745) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (865) SERVER: wifi_init_sta finished.[0m
+[0;32mI (865) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (895) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (945) wifi:connected with iPhone, aid = 1, channel 11, BW20, bssid = d6:be:67:ae:09:a9[0m
+[0;32mI (945) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (955) wifi:pm start, type: 1[0m
+
+[0;32mI (955) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (975) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2005) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2005) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5865) gpio: GPIO can only be used as input mode[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5865) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5875) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, d6:be:67:ae:09:a9), tid:0, ssn:2, winSize:64[0m
+[0;32mI (6015) display_touch: Starting LVGL task[0m
+[0;32mI (6445) main_task: Returned from app_main()[0m
+[0;32mI (6715) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7145) SENSOR: Tare complete for [0]. Offset=-748957[0m
+[0;32mI (7985) SENSOR: Tare complete for [1]. Offset=-612362[0m
+[0;32mI (7995) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":23.2}[0m
+[0;32mI (8085) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":28.6}[0m
+ets ���201��Ғ�:57C�HH�t:0xLB�=]ERON%M�),b���0�L&B�AI_FA��e1�H_B���j���˥�sip'�b�A%]A�0xeeC�,k�E���0x00,\E���0x00��E���0x00i��_�.����0,hdE���0x00,}���i0x0j
+moV�"%=, clk��dZ��j��+��0x3ff���bb���6280!�+��0x400���bb���15864C!�+�:0x4�804�,leK�ʒ�j
+ent��0x��806SH�I (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader
+[0;32mI (26) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27698h (161432) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376c0 vaddr=3ffb0000 size=04830h ( 18480) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bef8 vaddr=40080000 size=04120h ( 16672) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f143ch (988220) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131464 vaddr=40084120 size=174f0h ( 95472) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=0014895c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (573) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  89c62e9e6...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (594) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (598) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93F0 len 00016C10 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd1478, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (715) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (745) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (875) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (875) wifi:enable tsf[0m
+[0;32mI (875) SERVER: wifi_init_sta finished.[0m
+[0;32mI (875) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (965) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (965) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (975) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (985) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1025) wifi:connected with iPhone, aid = 1, channel 11, BW20, bssid = d6:be:67:ae:09:a9[0m
+[0;32mI (1025) wifi:security: WPA2-PSK, phy: bgn, rssi: -56[0m
+[0;32mI (1035) wifi:pm start, type: 1[0m
+
+[0;32mI (1035) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1065) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2195) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2195) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5885) gpio: GPIO can only be used as input mode[0m
+[0;32mI (5885) wifi:<ba-add>idx:0 (ifx:0, d6:be:67:ae:09:a9), tid:0, ssn:2, winSize:64[0m
+[1;31mE (5885) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5885) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5895) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6025) display_touch: Starting LVGL task[0m
+[0;32mI (6185) main_task: Returned from app_main()[0m
+[0;32mI (7165) SENSOR: Tare complete for [0]. Offset=-615428[0m
+[0;32mI (7525) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (8015) SENSOR: Tare complete for [1]. Offset=-642458[0m
+[0;32mI (8015) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":152.2}[0m
+[0;32mI (8105) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":93.2}[0m
+[0;32mI (8605) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (9105) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (9105) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":92.2}[0m
+[0;32mI (9615) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":49.4}[0m
+[0;32mI (18115) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (18615) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":70.1}[0m
+eׁJun � 2016��:22:�SH�
+rs��x1 (�]I=9}IESET)I����0E3 (SPReMQ}LASH_Bꊕj
+c�˥����i 0, S�]A�0xYYC���}drv:0x�bq_drv'��0,d_���0x0bcs0_�.����0,hd_drv'��0,w�drv:0�0
+modY'T�	������Z��j
+�+��0x&�����blen:�j
+l+��0x��78000����15�S�loa����00�400,lYK�ʒ�j
+entr^�x4008��4
+[0;32mI (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 24 2026 11:48:13[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27698h (161432) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=000376c0 vaddr=3ffb0000 size=04830h ( 18480) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=0003bef8 vaddr=40080000 size=04120h ( 16672) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=f143ch (988220) map[0m
+[0;32mI (493) esp_image: segment 4: paddr=00131464 vaddr=40084120 size=174f0h ( 95472) load[0m
+[0;32mI (530) esp_image: segment 5: paddr=0014895c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (544) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (544) boot: Disabling RNG early entropy source...[0m
+[0;32mI (555) cpu_start: Multicore app[0m
+[0;32mI (563) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (563) cpu_start: Pro cpu start user code[0m
+[0;32mI (563) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (565) app_init: Application information:[0m
+[0;32mI (569) app_init: Project name:     TFT[0m
+[0;32mI (573) app_init: App version:      7e929b8[0m
+[0;32mI (576) app_init: Compile time:     Oct 12 2026 20:59:48[0m
+[0;32mI (581) app_init: ELF file SHA256:  89c62e9e6...[0m
+[0;32mI (586) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (591) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (595) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (599) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (603) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (609) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (614) heap_init: At 3FFC93F0 len 00016C10 (91 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (624) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (630) heap_init: At 4009B610 len 000049F0 (18 KiB): IRAM[0m
+[0;32mI (637) spi_flash: detected chip: generic[0m
+[0;32mI (639) spi_flash: flash io: dio[0m
+[0;33mW (642) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (655) main_task: Started on CPU0[0m
+[0;32mI (665) main_task: Calling app_main()[0m
+[0;32mI (695) wifi:wifi driver task: 3ffd13f4, prio:23, stack:6656, core=0[0m
+[0;32mI (705) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (705) wifi:wifi certification version: v7.0[0m
+[0;32mI (705) wifi:config NVS flash: enabled[0m
+[0;32mI (705) wifi:config nano formatting: disabled[0m
+[0;32mI (715) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (715) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (715) wifi:Init management short buffer num: 32[0m
+[0;32mI (725) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (725) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (735) wifi:Init static rx buffer num: 10[0m
+[0;32mI (735) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (745) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5760[0m
+[0;32mI (755) wifi_init: tcp rx win: 5760[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (855) wifi:mode : sta (80:7d:3a:d2:9d:e0)[0m
+[0;32mI (855) wifi:enable tsf[0m
+[0;32mI (855) SERVER: wifi_init_sta finished.[0m
+[0;32mI (865) SERVER: Connecting to SSID:iPhone password:12345678[0m
+[0;32mI (875) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (875) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (885) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (885) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (935) wifi:connected with iPhone, aid = 1, channel 11, BW20, bssid = d6:be:67:ae:09:a9[0m
+[0;32mI (935) wifi:security: WPA2-PSK, phy: bgn, rssi: -54[0m
+[0;32mI (935) wifi:pm start, type: 1[0m
+
+[0;32mI (935) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (985) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2315) esp_netif_handlers: sta ip: 172.20.10.3, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (2315) SERVER: Got IP: 172.20.10.3[0m
+[1;31mE (5875) gpio: GPIO can only be used as input mode[0m
+[0;32mI (5875) wifi:<ba-add>idx:0 (ifx:0, d6:be:67:ae:09:a9), tid:0, ssn:2, winSize:64[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[1;31mE (5875) gpio: gpio_set_level(240): GPIO output gpio_num error[0m
+[0;32mI (5885) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (6025) display_touch: Starting LVGL task[0m
+[0;32mI (6415) main_task: Returned from app_main()[0m
+[0;32mI (6845) MQTT_LIB: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7105) SENSOR: Tare complete for [0]. Offset=471320[0m
+[0;32mI (7925) SENSOR: Tare complete for [1]. Offset=-249372[0m
+[0;32mI (8025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (37915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (38415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (38915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (39415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (39915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (40415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (40915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (41415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (41915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (42415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (42915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (43415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (43915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (44415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (44915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (45415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (45915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (46415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (46915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (47415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (47915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (48415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (48915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (49415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (49915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (50415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (50915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (51415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (51915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (52415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (52915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (53415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (53915) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (54415) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+I (54525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}
+[0;32mI (54615) EVENT: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (61025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (65025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (65115) EVENT: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (65525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (66525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (66615) EVENT: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (75525) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (76025) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (76115) EVENT: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (258525) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":713.1}[0m
+[0;32mI (259035) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (383535) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":51.9}[0m
+[0;32mI (384035) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (392535) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":5.2}[0m
+[0;32mI (393035) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (425035) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":1, "door_closed":1, "weight":18.9}[0m
+[0;32mI (426035) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (433535) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":1, "weight":8.8}[0m
+[0;32mI (434035) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (666035) SENSOR: Published MQTT [ptit/chung2004/compartment/1/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (679035) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;32mI (680035) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":1, "weight":0.0}[0m
+[0;32mI (680115) EVENT: Ngăn [2] vừa được sập cửa đóng lại![0m
+[0;32mI (686035) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (695925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (696425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (696925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (697425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (697925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (698425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (698925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (699425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (699925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (700425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (700925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (701425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (701925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (702425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (702925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (703425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (703925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (704425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (704925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (705425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (705925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (706425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (706925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (707425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (707925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (708425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (708925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (709425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (709925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (710425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (710925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (711425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (711925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (712425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (712925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (713425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (713925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (714425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (714925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (715425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (715925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (715925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (716425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (716425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (716925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (716925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (717425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (717425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (717925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (717925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (718425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (718425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (718925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (718925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (719425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (719425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (719925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (719925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (720425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (720425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (720925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (720925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (721425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (721425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (721925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (721925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (722425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (722425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (722925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (722925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (723425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (723425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (723925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (723925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (724425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (724425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (724925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (724925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (725425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (725425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (725925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (725925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (726425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (726425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (726925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (726925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (727425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (727425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (727925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (727925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (728425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (728425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (728925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (728925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (729425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (729425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (729925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (729925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (730425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (730425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (730925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (730925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (731425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (731425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (731535) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":23.1}[0m
+[0;33mW (731925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (731925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (732035) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (732425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (732425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (732925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (732925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (733425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (733425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (733925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (733925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (734425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (734425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (734925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (734925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (735425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (735425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (735925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (735925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (736425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (736425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (736925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (736925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (737425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (737425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (737925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (737925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (738425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (738425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (738925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (738925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (739425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (739425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (739925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (739925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (740425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (740425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (740925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (740925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (741425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (741425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (741925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (741925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (742425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (742425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (742925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (742925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (743425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (743425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (743925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (743925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (744425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (744425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (744925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (744925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (745425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (745425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (745925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (745925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (746425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (746425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (746925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (746925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (747425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (747425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (747925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (747925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (748425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (748425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (748925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (748925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (749425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (749425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (749925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (749925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (750425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (750425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (750925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (750925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (751425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (751425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (751925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (751925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (752425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (752425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (752925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (752925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (753425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (753425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (753925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (753925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (754425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (754425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (754925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (754925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (755425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (755425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (755925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (755925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (756425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (756425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (756925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (756925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (757425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (757425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (757925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (757925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (758425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (758425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (758925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (758925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (759425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (759425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (759925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (759925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (760425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (760425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (760925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (760925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (761425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (761425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (761925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (761925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (762425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (762425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (762925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (762925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (763425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (763425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (763925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (763925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (764425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (764425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (764925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (764925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (765425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (765425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (765925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (765925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (766425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (766425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (766925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (766925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (767425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (767425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (767925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (767925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (768425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (768425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (768925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (768925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (769425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (769425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (769925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (769925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (770425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (770425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (770925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (770925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (771425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (771425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (771925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (771925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (772425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (772425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (772925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (772925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (773425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (773425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (773925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (773925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (774425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (774425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (774925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (774925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (775425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (775425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (775925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (775925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (776425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (776425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (776925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (776925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (777425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (777425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (777925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (777925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (778425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (778425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (778925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (778925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (779425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (779425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (779925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (779925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (780425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (780425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (780925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (780925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (781425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (781425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (781925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (781925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (782425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (782425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (782925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (782925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (783035) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":23.1}[0m
+[0;33mW (783425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (783425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (783535) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (783925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (783925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (784425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (784425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (784925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (784925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (785425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (785425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (785925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (785925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (786425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (786425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (786925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (786925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (787425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (787425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (787925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (787925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (788425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (788425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (788925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (788925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (789425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (789425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (789925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (789925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (790425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (790425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (790925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (790925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (791425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (791425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (791535) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":8.8}[0m
+[0;33mW (791925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (791925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (792035) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (792425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (792425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (792925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (792925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (793425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (793425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (793925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (793925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (794425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (794425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (794925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (794925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (795425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (795425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (795925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (795925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (796425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (796425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (796925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (796925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (797425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (797425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (797925) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (797925) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (798425) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (798425) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (798935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (798935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (799435) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (799435) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (799535) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":23.1}[0m
+[0;33mW (799935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (799935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (800035) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (800435) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (800435) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (800935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (800935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (801435) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (801435) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (801935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (801935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (802435) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (802435) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (802935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (802935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (803435) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (803435) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (803535) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":23.1}[0m
+[0;33mW (803935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (803935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (804435) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (804435) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (804535) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":0, "door_closed":0, "weight":0.0}[0m
+[0;33mW (804935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (804935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (805435) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (805435) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (805935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (805935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (806435) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (806435) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (806935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (806935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;33mW (807435) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (807435) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đóng![0m
+[0;32mI (807535) SENSOR: Published MQTT [ptit/chung2004/compartment/2/status]: {"has_item":1, "door_closed":0, "weight":23.1}[0m
+[0;33mW (807935) WARNING: Cảnh báo: Ngăn [1] bị mở quá lâu không đóng![0m
+[0;33mW (807935) WARNING: Cảnh báo: Ngăn [2] bị mở quá lâu không đó

@@ -1,0 +1,12 @@
+Command: ninja flash
+[1/7] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP_IDF\Code\TFT\build\bootloader\esp-idf\esptool_py && D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/Espressif/frameworks/esp-idf-v5.5.3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP_IDF/Code/TFT/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[2/7] No install step for 'bootloader'
+[3/7] Completed 'bootloader'
+[4/7] Linking CXX executable TFT.elf
+FAILED: TFT.elf 
+C:\WINDOWS\system32\cmd.exe /C "cd . && D:\Espressif\tools\xtensa-esp-elf\esp-14.2.0_20251107\xtensa-esp-elf\bin\xtensa-esp32-elf-g++.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32=0 -Wl,--Map=D:/ESP_IDF/Code/TFT/build/TFT.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=warn -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T esp32.peripherals.ld -T esp32.rom.ld -T esp32.rom.api.ld -T esp32.rom.libgcc.ld -T esp32.rom.newlib-data.ld -T esp32.rom.syscalls.ld -T esp32.rom.libc-funcs.ld -T esp32.rom.newlib-reent-funcs.ld -T memory.ld -T sections.ld @CMakeFiles\TFT.elf.rsp -o TFT.elf && cd ."
+D:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20251107/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.c.obj):(.literal.app_main+0x8): undefined reference to `on_mqtt_data'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,78 @@
+Command: D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\ESP_IDF\Code\TFT\build\TFT.elf D:\ESP_IDF\Code\TFT\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py' '-p' 'COM3'
+ets Jun ��016 00:22:57C�HH���0x1 (POWE���%UMQ�,boot:0xL&B�A%}MQ}1M!}	==Q)
+configsip: 0, S�]A:0xee
+clk_dr����0,q_drv:0x00,�E���0x00,cs0_d.����0,hd_drv:0�0,wp_drv:0x00
+moV�"%=� clock div'�H��+��0x3f��30,len:628j
+load:0x4007���,len:158SH��+��0x4��00,len:39&j
+entry 0x40�44
+[0;32mI (26) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Sep 18 2026 22:59:58[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v1.0[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=11a50h ( 72272) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00021a78 vaddr=3ffb0000 size=02cf0h ( 11504) load[0m
+[0;32mI (115) esp_image: segment 2: paddr=00024770 vaddr=40080000 size=0b8a8h ( 47272) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=5b7fch (374780) map[0m
+[0;32mI (262) esp_image: segment 4: paddr=0008b824 vaddr=4008b8a8 size=04320h ( 17184) load[0m
+[0;32mI (269) esp_image: segment 5: paddr=0008fb4c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (277) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (278) boot: Disabling RNG early entropy source...[0m
+[0;32mI (288) cpu_start: Multicore app[0m
+[0;32mI (297) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (297) cpu_start: Pro cpu start user code[0m
+[0;32mI (297) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (299) app_init: Application information:[0m
+[0;32mI (303) app_init: Project name:     TFT[0m
+[0;32mI (306) app_init: App version:      1[0m
+[0;32mI (309) app_init: Compile time:     Sep 19 2026 23:35:54[0m
+[0;32mI (315) app_init: ELF file SHA256:  042164d62...[0m
+[0;32mI (319) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (324) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (328) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (332) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (336) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (342) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (347) heap_init: At 3FFC3838 len 0001C7C8 (113 KiB): DRAM[0m
+[0;32mI (352) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (357) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (363) heap_init: At 4008FBC8 len 00010438 (65 KiB): IRAM[0m
+[0;32mI (370) spi_flash: detected chip: generic[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;33mW (375) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (388) main_task: Started on CPU0[0m
+[0;32mI (398) main_task: Calling app_main()[0m
+[0;32mI (398) locker_app: Turn off LCD backlight[0m
+[0;32mI (398) locker_app: Initialize SPI bus[0m
+[0;32mI (398) locker_app: Install panel IO[0m
+[0;32mI (398) locker_app: Install ILI9341 panel driver[0m
+[0;32mI (408) ili9341: LCD panel create success, version: 2.1.0[0m
+[0;32mI (528) locker_app: Turn on LCD backlight[0m
+[0;32mI (528) locker_app: Initialize LVGL library[0m
+[0;32mI (538) locker_app: Install LVGL tick timer[0m
+[0;32mI (538) locker_app: Register io panel event callback for LVGL flush ready notification[0m
+[0;32mI (538) locker_app: Initialize touch controller XPT2046[0m
+[0;32mI (538) locker_app: Create LVGL task[0m
+[0;32mI (548) locker_app: Starting LVGL task[0m
+[0;32mI (618) locker_app: Display Main Screen[0m
+[0;32mI (728) main_task: Returned from app_main()[0m
+[0;32mI (4298) locker_app: Chuyen qua man hinh Gui Hang[0m
+[0;32mI (29688) locker_app: Xac nhan Gui Hang - SDT: 0353896159[0m
+[0;32mI (41768) locker_app: Xac nhan Gui Hang - SDT: 0353896159[0m
+[0;32mI (53408) locker_app: Chuyen qua man hinh Nhan Hang[0m
+[0;32mI (64408) locker_app: Xac nhan Nhan Hang - SDT: 565875588[0m
+[0;32mI (304648) locker_app: Chuyen qua man hinh Gui Hang[0m
+[0;32mI (318198) locker_app: Chuyen qua man hinh Nhan Hang[0m
+[0;32mI (337358) locker_app: Xac nhan Nhan Hang - SDT: 88548555457[0m
+[0;32mI (387638) locker_app: Chuyen qua man hinh Gui Hang[0m
+[0;32mI (393298) locker_app: Chuyen qua man hinh Gui Hang[0m
+[0;32mI (395698) locker_app: Chuyen qua man hinh Nhan Hang[0m
