@@ -209,9 +209,7 @@ void warning_task(void *arg) {
     }
 }
 
-// Thêm mảng cờ toàn cục ở đầu file main.c nếu cần
-static bool is_showing_exception[2] = {false, false};
-
+// Task xử lý sự kiện và ngoại lệ khi cửa đóng (Shipper không bỏ hàng, khách quên lấy hàng)
 void event_handler_task(void *arg) {
     while (1) {
         for (int i = 0; i < 2; i++) {
@@ -230,19 +228,13 @@ void event_handler_task(void *arg) {
                         snprintf(event_payload, sizeof(event_payload), 
                                  "{\"status\":\"deposit_cancelled\", \"reason\":\"no_item_detected\", \"compartment\":%d}", i + 1);
                         my_mqtt_publish(event_topic, event_payload, 1);
-                        
-                        // CHỈ GỌI 1 LẦN NẾU CHƯA HIỂN THỊ LỖI
-                        if (!is_showing_exception[i]) {
-                            gui_show_exception("Failed! Chua bo hang vao trong");
-                            is_showing_exception[i] = true;
-                        }
+                        gui_show_exception("Failed! Chua bo hang vao trong") ;
                     } else {
                         ESP_LOGI(TAG_EVENT, "Gửi hàng thành công vào ngăn [%d]", i + 1);
                         snprintf(event_payload, sizeof(event_payload), 
                                  "{\"status\":\"deposit_success\", \"weight\":%.1f, \"compartment\":%d}", compartment_weight[i], i + 1);
                         my_mqtt_publish(event_topic, event_payload, 1);
-                        gui_show_home_screen(); 
-                        is_showing_exception[i] = false;
+                        gui_show_home_screen(); // Tích hợp sẵn lock bên trong gui.c
                     }
                     waiting_for_deposit[i] = false;
                 }
@@ -254,34 +246,23 @@ void event_handler_task(void *arg) {
                         snprintf(event_payload, sizeof(event_payload), 
                                  "{\"status\":\"item_uncollected\", \"weight\":%.1f, \"compartment\":%d}", compartment_weight[i], i + 1);
                         my_mqtt_publish(event_topic, event_payload, 1);
-                        
-                        // CHỈ GỌI 1 LẦN NẾU CHƯA HIỂN THỊ LỖI
-                        if (!is_showing_exception[i]) {
-                            gui_show_exception("Failed! Chua lay hang ra");
-                            is_showing_exception[i] = true;
-                        }
+                        gui_show_exception("Failed! Chua lay hang ra") ;
                     } else {
                         ESP_LOGI(TAG_EVENT, "Khách đã lấy hàng thành công khỏi ngăn [%d]", i + 1);
                         snprintf(event_payload, sizeof(event_payload), 
                                  "{\"status\":\"pickup_success\", \"compartment\":%d}", i + 1);
                         my_mqtt_publish(event_topic, event_payload, 1);
-                        gui_show_home_screen(); 
-                        is_showing_exception[i] = false;
+                        gui_show_home_screen(); // Tích hợp sẵn lock bên trong gui.c
                     }
                     waiting_for_pickup[i] = false;
                 }
             }
-
-            // Nếu cửa mở ra lại thì reset cờ lỗi để sẵn sàng bắt sự kiện lần sau
-            if (door_closed_status[i] == false) {
-                is_showing_exception[i] = false;
-            }
-
             prev_door_closed_status[i] = door_closed_status[i];
         }
         vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
+
 // Task sensor: CHỈ ĐỌC PHẦN CỨNG THUẦN TÚY (HX711 + MC38) và cập nhật MQTT trạng thái
 void sensor_task(void *arg)
 {
