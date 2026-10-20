@@ -120,6 +120,12 @@ static void back_home_cb (lv_event_t *e) {
         gui_show_home_screen() ;
     }
 }
+static void back_home_from_failed_cb (lv_event_t *e) {
+    if(lv_event_get_code(e) == LV_EVENT_CLICKED) {
+        lv_screen_load(main_scr);
+    }
+
+}
 
 // Callback khi nhấn Xác nhận trên màn hình thông báo có đơn -> chuyển sang màn hình chọn phương thức
 static void confirm_has_order_cb(lv_event_t *e) {
@@ -303,7 +309,7 @@ static void create_loading_screen_with_actions(const char *text, lv_event_cb_t b
         lv_obj_set_size(btn_back, 110, 35);
         lv_obj_align(btn_back, LV_ALIGN_BOTTOM_MID, 0, -15);
         lv_obj_set_style_bg_color(btn_back, lv_color_hex(0xE55353), LV_PART_MAIN);
-        lv_obj_add_event_cb(btn_back, back_cb, LV_EVENT_CLICKED, NULL);
+        lv_obj_add_event_cb(btn_back, back_cb, LV_EVENT_CLICKED, NULL);//add event
 
         lv_obj_t *lbl_back = lv_label_create(btn_back);
         lv_label_set_text(lbl_back, "Quay lai");
@@ -565,5 +571,10 @@ void gui_show_warning_screen(char *str) {
     _lock_acquire(&lvgl_api_lock) ;
     create_loading_screen(str,NULL) ;
     lv_screen_load(loading_scr);
+    _lock_release(&lvgl_api_lock) ;
+}
+void gui_show_exception(char *str) {
+    _lock_acquire(&lvgl_api_lock) ;
+    create_loading_screen(str, back_home_from_failed_cb) ;
     _lock_release(&lvgl_api_lock) ;
 }
