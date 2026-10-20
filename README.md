@@ -27,7 +27,19 @@ Hệ thống điều khiển tủ giao hàng thông minh (Smart Locker 2 ngăn) 
   * **Mô tả:** ESP32 gửi mã QR/mã OTP nhận hàng của khách lên Server để kiểm tra đơn hàng.
   * **Payload:** `String` (Ví dụ: `CUST_665544`)
 
----
+#### ✉️ Số điện thoại xác minh và OTP nhận
+- **Gửi sđt khách hàng:**
+  * **Topic:** `ptit/rec/phone`
+  * **QoS:** 1
+  * **Mô tả:** Nhập sđt của mình vào màn hình và gửi qua sever chờ xác minh.
+  * **Payload:** `String` (Ví dụ: `0353896159`)
+
+#### ✉️ OTP nhận
+- **Gửi sđt khách hàng:**
+  * **Topic:** `ptit/rec/otp`
+  * **QoS:** 1
+  * **Mô tả:** Nhập mã OTP nếu chọn phương thức OTP, mã OTP đẩy lên sever để xác minh
+  * **Payload:** `String` (Ví dụ: `03589`)
 
 #### 📊 Cập nhật Trạng thái Ngăn tủ & Cảm biến
 - **Topic:** 
@@ -42,7 +54,7 @@ Hệ thống điều khiển tủ giao hàng thông minh (Smart Locker 2 ngăn) 
     "door_closed": 1,
     "weight": 125.5
   }
---
+
 #### 🚨 Báo cáo Sự kiện & Ngoại lệ Giao dịch
 - **Topic:** 
   * Ngăn 1: ptit/chung2004/compartment/1/event
@@ -72,6 +84,7 @@ Hệ thống điều khiển tủ giao hàng thông minh (Smart Locker 2 ngăn) 
     {"status":"pickup_success", "compartment":2}
   }
   
+
 
 ### 2. Topics Lắng Nghe Kết Quả từ Server (Subscribe by ESP32)
 
