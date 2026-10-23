@@ -101,4 +101,4 @@ Hệ thống điều khiển tủ giao hàng thông minh (Smart Locker 2 ngăn) 
 ****Lệnh mở khóa ngăn tủ chỉ định:**
   * **Topic:** ptit/locker/open
   * **Mô tả:** Nhận lệnh điều khiển từ Server để mở chốt khóa 12V cho ngăn tủ tương ứng.
-  * **Payload:** <compartment_index>,<mode> (compartment_index: ngăn số mấy, mode: Shiper hay khách đang giao dịch)
+  * **Payload:** "compartment_index,mode" (compartment_index: ngăn số mấy, mode: Shiper hay khách đang giao dịch)
