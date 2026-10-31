@@ -19,7 +19,7 @@ void uart_init(void) {
     ESP_ERROR_CHECK(uart_param_config(UART_PORT_NUM, &uart_config));
     
     // Chỉ định nghĩa chân RX (GPIO 16), chân TX để trống (UART_PIN_NO_CHANGE)
-    ESP_ERROR_CHECK(uart_set_pin(UART_PORT_NUM, UART_PIN_NO_CHANGE, 5, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+    ESP_ERROR_CHECK(uart_set_pin(UART_PORT_NUM, UART_PIN_NO_CHANGE, 16, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
     
     
 }

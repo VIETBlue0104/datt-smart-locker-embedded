@@ -7,6 +7,7 @@
 #include "gm65.h"
 #include "driver/uart.h"
 #include "lock.h"
+#include "locker_led.h"
 #include <inttypes.h>
 
 static const char *TAG = "main";
@@ -44,6 +45,7 @@ static bool compartment_has_item[2] = {false, false};
 
 static int door_open_counter[2] = {0, 0};
 static bool compartment_warning_active[2] = {false, false};
+static volatile bool hx711_fault[2] = {true, true};
 
 // Cờ theo dõi phiên giao dịch
 static bool waiting_for_deposit[2] = {false, false}; // Đang chờ shipper bỏ hàng
@@ -171,12 +173,22 @@ void business_logic_task(void *arg) {
 // Task cảnh báo riêng biệt (giám sát thời gian mở cửa, bật còi & hiển thị UI cảnh báo)
 void warning_task(void *arg) {
     bool prev_any_warning = false; // Biến ghi nhớ trạng thái cảnh báo cũ
+    bool warning_led_on = true;
+    unsigned int blink_half_seconds = 0;
+    bool led_error_reported = false;
 
     while (1) {
         bool any_warning = false;
 
         for (int i = 0; i < 2; i++) {
-            if (!door_closed_status[i]) {
+            bool action_completed = true;
+            if (waiting_for_deposit[i]) {
+                action_completed = compartment_has_item[i];
+            } else if (waiting_for_pickup[i]) {
+                action_completed = !compartment_has_item[i];
+            }
+
+            if (!door_closed_status[i] && action_completed) {
                 door_open_counter[i]++;
                 if (door_open_counter[i] >= 60) { // Mở quá 30 giây
                     compartment_warning_active[i] = true;
@@ -202,6 +214,40 @@ void warning_task(void *arg) {
             if (prev_any_warning == true) {
                 gui_show_home_screen(); 
             }
+        }
+
+        if (++blink_half_seconds >= 2) {
+            warning_led_on = !warning_led_on;
+            blink_half_seconds = 0;
+        }
+
+        bool network_fault = !wifi_is_connected() || !my_mqtt_is_connected();
+        uint8_t led_mask = 0;
+        for (int i = 0; i < 2; i++) {
+            uint8_t red_bit = (i == 0) ? LOCKER_LED1_RED : LOCKER_LED2_RED;
+            uint8_t green_bit = (i == 0) ? LOCKER_LED1_GREEN : LOCKER_LED2_GREEN;
+
+            if (network_fault) {
+                led_mask |= red_bit | green_bit;
+            } else if (hx711_fault[i]) {
+                led_mask |= red_bit | green_bit;
+            } else if (compartment_warning_active[i]) {
+                if (warning_led_on) {
+                    led_mask |= red_bit;
+                }
+            } else if (compartment_has_item[i]) {
+                led_mask |= red_bit;
+            } else {
+                led_mask |= green_bit;
+            }
+        }
+
+        esp_err_t led_err = locker_led_write(led_mask);
+        if (led_err != ESP_OK && !led_error_reported) {
+            ESP_LOGE(TAG_WARN, "Failed to update status LEDs: %s", esp_err_to_name(led_err));
+            led_error_reported = true;
+        } else if (led_err == ESP_OK) {
+            led_error_reported = false;
         }
 
         prev_any_warning = any_warning; // Cập nhật trạng thái cho chu kỳ sau
@@ -267,17 +313,22 @@ void event_handler_task(void *arg) {
 void sensor_task(void *arg)
 {
     int32_t offset[2] = {0};
+    bool tare_succeeded[2] = {false, false};
 
     for (int i = 0; i < 2; i++) {
         if (hx711_tare(&hx[i], &offset[i]) != ESP_OK) {
+            hx711_fault[i] = true;
             ESP_LOGE(TAG_SENSOR, "HX711 [%d] tare failed!", i);
         } else {
+            tare_succeeded[i] = true;
+            hx711_fault[i] = false;
             ESP_LOGI(TAG_SENSOR, "Tare complete for [%d]. Offset=%" PRId32, i, offset[i]);
         }
     }
 
     bool prev_has_item[2] = {false, false};
     bool prev_door_closed[2] = {true, true};
+    unsigned int heartbeat_cycles = 0;
 
     while (1) {
         // Đọc trạng thái cửa từ phần cứng (MC-38: 0 = Đóng, 1 = Mở)
@@ -288,6 +339,7 @@ void sensor_task(void *arg)
             int32_t raw;
             esp_err_t err = hx711_read_raw(&hx[i], &raw);
             if (err == ESP_OK) {
+                hx711_fault[i] = !tare_succeeded[i];
                 int32_t net_raw = raw - offset[i];
                 float weight_grams = (float)net_raw / HX711_CALIBRATION_FACTOR;
                 
@@ -319,8 +371,24 @@ void sensor_task(void *arg)
                 }
 
             } else {
+                hx711_fault[i] = true;
                 ESP_LOGW(TAG_SENSOR, "HX711 [%d] read failed: %s", i, esp_err_to_name(err));
             }
+        }
+
+        // Báo nhịp tim định kỳ để máy chủ phân biệt tủ đang hoạt động với tủ mất kết nối.
+        // Vòng lặp chạy mỗi 500 ms nên chu kỳ 30 tương đương khoảng 15 giây.
+        if (++heartbeat_cycles >= 30) {
+            my_mqtt_publish("ptit/locker/heartbeat", "ONLINE", 1);
+            for (int i = 0; i < 2; i++) {
+                char topic[64];
+                char payload[96];
+                snprintf(topic, sizeof(topic), "ptit/chung2004/compartment/%d/status", i + 1);
+                snprintf(payload, sizeof(payload), "{\"has_item\":%d, \"door_closed\":%d, \"weight\":%.1f}",
+                         compartment_has_item[i], door_closed_status[i], compartment_weight[i]);
+                my_mqtt_publish(topic, payload, 1);
+            }
+            heartbeat_cycles = 0;
         }
         
         vTaskDelay(pdMS_TO_TICKS(500));
@@ -331,9 +399,9 @@ void app_main(void)
 {
     // 1. Config Network
     flash_init();
-    wifi_init_sta("iPhone", "12345678");
+    wifi_init_sta("P303", "12344321");
     vTaskDelay(pdMS_TO_TICKS(5000));
-    my_mqtt_init("mqtt://broker.emqx.io", on_mqtt_data);
+    my_mqtt_init("mqtts://broker.emqx.io:8883", on_mqtt_data);
     qr_queue = xQueueCreate(10, 64);
 
     // 2. Config Device
@@ -365,6 +433,7 @@ void app_main(void)
     _lock_acquire(&lvgl_api_lock);
     gui_init();
     _lock_release(&lvgl_api_lock);
+    ESP_ERROR_CHECK(locker_led_init());
 
     // 3. Config Task
     xTaskCreate(example_lvgl_port_task, "LVGL", 7 * 1024, NULL, 2, NULL);

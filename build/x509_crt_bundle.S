@@ -1,4 +1,4 @@
-/* * Data converted from D:/ESP_IDF/Code/TFT/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from D:/DoAnTotNghiep/DATT_Smart_Locker(Embebded)/datt-smart-locker-embedded/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

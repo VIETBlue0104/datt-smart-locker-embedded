@@ -1,6 +1,7 @@
 #ifndef __MQTT_H
 #define __MQTT_H
 
+#include <stdbool.h>
 #include "mqtt_client.h"
 
 // Callback để xử lý dữ liệu nhận được từ server
@@ -14,5 +15,6 @@ int my_mqtt_publish(const char *topic, const char *data, int qos);
 
 // Hàm Subscribe topic
 int my_mqtt_subscribe(const char *topic, int qos);
+bool my_mqtt_is_connected(void);
 
 #endif

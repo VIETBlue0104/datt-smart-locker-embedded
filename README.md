@@ -4,6 +4,25 @@ Hệ thống điều khiển tủ giao hàng thông minh (Smart Locker 2 ngăn) 
 
 ---
 
+## 🔒 Bảo mật kết nối MQTT
+
+ESP32 kết nối tới `broker.emqx.io` qua MQTT over TLS bằng URI `mqtts://` và cổng TLS `8883`. Firmware xác minh chứng chỉ máy chủ bằng certificate bundle của ESP-IDF; cấu hình certificate bundle cần được bật trong `sdkconfig`.
+
+---
+
+## 💡 Đèn LED trạng thái ngăn
+
+Hai LED RGB âm chung được điều khiển qua 74HC595 trên cùng bus SPI với màn hình: DATA/GPIO23, CLOCK/GPIO18, LATCH/GPIO5 và OE/GPIO15. GM65 dùng RX/GPIO16.
+
+- Xanh lá: ngăn trống.
+- Đỏ: ngăn có hàng.
+- Vàng (đỏ + xanh lá): lỗi HX711 hoặc mất kết nối Wi-Fi/MQTT.
+- Cảnh báo cửa mở quá lâu: LED ngăn tương ứng nháy đỏ (1 giây sáng, 1 giây tắt), ưu tiên hơn màu trạng thái khác.
+
+Đầu ra QA–QC điều khiển RGB LED 1; QD–QF điều khiển RGB LED 2. Cần điện trở hạn dòng riêng cho từng kênh LED.
+
+---
+
 ## 📡 Danh sách MQTT Topics & Định dạng Payload
 
 ### 1. Topics Gửi Dữ Liệu từ ESP32 (Publish by ESP32)

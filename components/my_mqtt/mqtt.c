@@ -1,10 +1,16 @@
 #include "mqtt.h"
 #include "esp_log.h"
+#include "esp_crt_bundle.h"
 #include <string.h>
 
 static const char *TAG = "MQTT_LIB";
 static esp_mqtt_client_handle_t client = NULL;
 static mqtt_data_callback_t user_data_callback = NULL;
+static volatile bool mqtt_connected;
+
+bool my_mqtt_is_connected(void) {
+    return mqtt_connected;
+}
 
 // Handler xử lý các sự kiện MQTT
 static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data) {
@@ -13,12 +19,14 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 
     switch ((esp_mqtt_event_id_t)event_id) {
         case MQTT_EVENT_CONNECTED:
+            mqtt_connected = true;
             ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
             my_mqtt_subscribe("ptit/verified/shiper", 1);
             my_mqtt_subscribe("ptit/verified/customer", 1);
             my_mqtt_subscribe("ptit/locker/open",1);
             break;
         case MQTT_EVENT_DISCONNECTED:
+            mqtt_connected = false;
             ESP_LOGI(TAG, "MQTT_EVENT_DISCONNECTED");
             break;
         case MQTT_EVENT_DATA:
@@ -33,6 +41,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
             }
             break;
         case MQTT_EVENT_ERROR:
+            mqtt_connected = false;
             ESP_LOGE(TAG, "MQTT_EVENT_ERROR");
             break;
         default:
@@ -45,6 +54,7 @@ void my_mqtt_init(const char *uri, mqtt_data_callback_t data_cb) {
 
     esp_mqtt_client_config_t mqtt_cfg = {
         .broker.address.uri = uri,
+        .broker.verification.crt_bundle_attach = esp_crt_bundle_attach,
     };
 
     client = esp_mqtt_client_init(&mqtt_cfg);// khởi tạo client MQTT với cấu hình đã cho
