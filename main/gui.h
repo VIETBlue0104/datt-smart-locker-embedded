@@ -18,6 +18,8 @@ void nhap_show_has_order(char *str) ;
 void gui_show_home_screen(void) ;
 void show_lock_open(char *str) ;
 void gui_show_warning_screen(char *str);
+void gui_show_exception(char *str) ;
+void gui_show_wrong_otp(void);
 #ifdef __cplusplus
 }
 #endif

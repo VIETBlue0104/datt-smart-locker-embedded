@@ -10,7 +10,8 @@ typedef void (*mqtt_data_callback_t)(const char *topic, const char *data, int da
 void my_mqtt_init(const char *uri, mqtt_data_callback_t data_cb);
 
 // Hàm Publish dữ liệu
-int my_mqtt_publish(const char *topic, const char *data, int qos);
+int my_mqtt_publish_kv(const char *topic, const char *key, const char *value, int qos);
+int my_mqtt_publish_json(const char *topic, const char *json_str, int qos);
 
 // Hàm Subscribe topic
 int my_mqtt_subscribe(const char *topic, int qos);
