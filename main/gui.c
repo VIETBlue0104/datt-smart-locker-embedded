@@ -2,6 +2,8 @@
 #include "display_touch.h"
 #include "esp_log.h"
 #include "mqtt.h"
+#include <stdio.h>
+#include <stdint.h>
 
 // Đặt ở đầu file gui.c
 extern void set_scan_enabled(bool enable);
@@ -16,9 +18,14 @@ static lv_obj_t *loading_scr = NULL;         // Màn hình chờ
 static lv_obj_t *receive_scr = NULL;         // Màn hình nhận hàng (nhập SĐT)
 static lv_obj_t *receive_method_scr = NULL;  // Màn hình chọn phương thức nhận (OTP hoặc Quét QR)
 static lv_obj_t *otp_scr = NULL;             // Màn hình nhập OTP
+static lv_obj_t *maintenance_scr = NULL;
+static lv_obj_t *compartment_selection_scr = NULL;
+static bool locker_maintenance_active = false;
+static bool selectable_compartments[2] = {false, false};
 
 // Con trỏ đối tượng UI
 static lv_obj_t *lbl_loading_status = NULL;
+static lv_obj_t *lbl_compartment_selection_status = NULL;
 static lv_obj_t *ta_recv_phone = NULL;
 static lv_obj_t *ta_otp = NULL;
 static lv_obj_t *kb_numpad = NULL;
@@ -31,6 +38,8 @@ static void create_method_screen(void);
 static void create_receive_screen(void);
 static void create_receive_method_screen(void);
 static void create_otp_screen(void);
+static void create_maintenance_screen(void);
+static void back_home_cb(lv_event_t *e);
 
 // Ngăn việc quét mã QR ngay khi nhấn các nút quay lại của màn hình quét
 static void cancel_scan() {
@@ -48,8 +57,31 @@ static void cancel_scan() {
 static void back_to_main_cb_from_send_screen_cb(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_CLICKED) {
         lv_screen_load(main_scr);
-        my_mqtt_publish("/ptit/cancel", "Huy bo", 1);
+        my_mqtt_publish_kv("session/cancel", "action", "cancel_send", 1);
         cancel_scan() ;
+    }
+}
+
+static void select_compartment_cb(lv_event_t *e) {
+    if (lv_event_get_code(e) != LV_EVENT_CLICKED) return;
+
+    int index = (int)(intptr_t)lv_event_get_user_data(e);
+    if (index < 0 || index >= 2 || !selectable_compartments[index]) return;
+
+    int result = locker_select_and_open_compartment(index);
+    if (result < 0) {
+        ESP_LOGW(TAG_GUI, "Compartment %d is no longer available or order QR is missing", index);
+        lv_label_set_text(lbl_compartment_selection_status,
+                          "Ngan khong con kha dung. Vui long chon lai.");
+        return;
+    }
+
+    char message[64];
+    snprintf(message, sizeof(message), "Da mo ngan %d. Hay dat hang vao ngan.", index + 1);
+    create_loading_screen(message, back_home_cb);
+    lv_screen_load(loading_scr);
+    if (result == 0) {
+        ESP_LOGE(TAG_GUI, "Compartment %d opened, but selection/QR could not be published", index);
     }
 }
 
@@ -57,14 +89,14 @@ static void back_to_main_cb_from_send_screen_cb(lv_event_t *e) {
 static void back_to_main_cb_from_rec_screen_cb(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_CLICKED) {
         lv_screen_load(main_scr);
-        my_mqtt_publish("/ptit/cancel", "Huy bo", 1);
+        my_mqtt_publish_kv("session/cancel", "action", "cancel_receive", 1);
     }
 }
 
 // Quay lại Màn hình lựa chọn phương thức (Hủy quét mã đơn)
 static void back_to_method_cb(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_CLICKED) {
-        my_mqtt_publish("/ptit/locker/cancel_scan", "Huy quet ma", 1);
+        my_mqtt_publish_kv("session/cancel", "action", "cancel_order_scan", 1);
         cancel_scan() ;
         if (method_scr != NULL) {
             lv_screen_load(method_scr);
@@ -78,7 +110,7 @@ static void back_to_method_cb(lv_event_t *e) {
 // Quay lại Màn hình nhập SĐT từ màn hình OTP hoặc khi đang kiểm tra SĐT
 static void back_to_receive_cb(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_CLICKED) {
-        my_mqtt_publish("ptit/rec/cancel_phone", "Huy kiem tra SDT", 1);
+        my_mqtt_publish_kv("session/cancel", "action", "cancel_receive_phone", 1);
         if (receive_scr != NULL) {
             lv_screen_load(receive_scr);
         } else {
@@ -91,7 +123,7 @@ static void back_to_receive_cb(lv_event_t *e) {
 // Quay lại Màn hình lựa chọn phương thức nhận hàng từ màn hình chờ xác minh QR
 static void back_to_receive_method_from_QR_method_cb(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_CLICKED) {
-        my_mqtt_publish("ptit/rec/cancel_QR", "Huy xac minh OTP", 1);
+        my_mqtt_publish_kv("session/cancel", "action", "cancel_receive_qr", 1);
         cancel_scan() ;
         if (receive_method_scr != NULL) {
             lv_screen_load(receive_method_scr);
@@ -105,7 +137,7 @@ static void back_to_receive_method_from_QR_method_cb(lv_event_t *e) {
 // Quay lại màn hình lựa chọn phương thức nhận hàng từ màn hình nhập và chờ xác minh OTP
 static void back_to_receive_method_from_otp_method_cb(lv_event_t *e) {
     if(lv_event_get_code(e) == LV_EVENT_CLICKED) {
-        my_mqtt_publish("ptit/rec/cancel_otp", "Huy xac minh OTP", 1);
+        my_mqtt_publish_kv("session/cancel", "action", "cancel_receive_otp", 1);
         if (receive_method_scr != NULL) {
             lv_screen_load(receive_method_scr);
         } else {
@@ -115,16 +147,18 @@ static void back_to_receive_method_from_otp_method_cb(lv_event_t *e) {
     }
 }
 
-static void back_home_cb (lv_event_t *e) {
-    if(lv_event_get_code(e) == LV_EVENT_CLICKED) {
-        gui_show_home_screen() ;
+// Quay lại Màn hình nhập OTP để nhập lại khi nhập sai
+static void back_to_otp_cb(lv_event_t *e) {
+    if (lv_event_get_code(e) == LV_EVENT_CLICKED) {
+        create_otp_screen();      // Tạo lại để xóa sạch mã OTP cũ
+        lv_screen_load(otp_scr);
     }
 }
-static void back_home_from_failed_cb (lv_event_t *e) {
-    if(lv_event_get_code(e) == LV_EVENT_CLICKED) {
-        lv_screen_load(main_scr);
-    }
 
+static void back_home_cb (lv_event_t *e) {
+    if(lv_event_get_code(e) == LV_EVENT_CLICKED) {
+        lv_screen_load(main_scr); // Chỉ load lại màn hình chính đã có sẵn
+    }
 }
 
 // Callback khi nhấn Xác nhận trên màn hình thông báo có đơn -> chuyển sang màn hình chọn phương thức
@@ -144,7 +178,7 @@ static void send_btn_event_cb(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_CLICKED) {
         create_loading_screen("Dua QR vao may", back_to_main_cb_from_send_screen_cb);
         lv_screen_load(loading_scr);
-        rec_topic("ptit/QR_Shipper") ;
+        rec_topic("qr/shipper") ;
         set_scan_enabled(true) ;
     }
 }
@@ -163,8 +197,8 @@ static void scan_qr_btn_cb(lv_event_t *e) {
         ESP_LOGI(TAG_GUI, "Bat dau quet ma QR don hang");
         create_loading_screen("Dua ma van don vao may quet", back_to_method_cb);
         lv_screen_load(loading_scr);
-        my_mqtt_publish("/ptit/locker/scan_order_qr_req", "Quet QR Don", 1);
-        rec_topic("ptit/QR_send") ;
+        my_mqtt_publish_kv("locker/scan_order_qr/request", "action", "scan_order_qr", 1);
+        rec_topic("qr/order") ;
         set_scan_enabled(true) ;
     }
 }
@@ -183,8 +217,8 @@ static void choose_qr_method_cb(lv_event_t *e) {
         ESP_LOGI(TAG_GUI, "Bat dau quet ma QR nhan hang");
         create_loading_screen("Dua ma QR nhan hang vao may", back_to_receive_method_from_QR_method_cb);
         lv_screen_load(loading_scr);
-        my_mqtt_publish("/ptit/rec/scan_qr_req", "Quet QR Nhan", 1);
-        rec_topic("ptit/QR_rec") ;
+        my_mqtt_publish_kv("receive/scan_qr/request", "action", "scan_receive_qr", 1);
+        rec_topic("qr/receive") ;
         set_scan_enabled(true) ;
     }
 }
@@ -205,7 +239,7 @@ static void confirm_receive_cb(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_CLICKED) {
         const char *phone = lv_textarea_get_text(ta_recv_phone);
         create_loading_screen("Dang kiem tra SDT...", back_to_receive_cb);
-        my_mqtt_publish("ptit/rec/phone", phone, 1);
+        my_mqtt_publish_kv("receive/phone", "phone", phone, 1);
         lv_screen_load(loading_scr);
     }
 }
@@ -214,14 +248,13 @@ static void confirm_receive_cb(lv_event_t *e) {
 static void confirm_otp_cb(lv_event_t *e) {
     if (lv_event_get_code(e) == LV_EVENT_CLICKED) {
         const char *otp_code = lv_textarea_get_text(ta_otp);
-        my_mqtt_publish("ptit/rec/otp", otp_code, 1);
+        my_mqtt_publish_kv("receive/otp", "otp", otp_code, 1);
         ESP_LOGI(TAG_GUI, "Xac nhan OTP: %s", otp_code);
 
         create_loading_screen("Dang xac minh OTP...", back_to_receive_method_from_otp_method_cb);
         lv_screen_load(loading_scr);
     }
 }
-
 /* =========================================================================
  * KHỞI TẠO CÁC MÀN HÌNH
  * ========================================================================= */
@@ -319,6 +352,55 @@ static void create_loading_screen_with_actions(const char *text, lv_event_cb_t b
 
 static void create_loading_screen(const char *text, lv_event_cb_t back_cb) {
     create_loading_screen_with_actions(text, back_cb, NULL);
+}
+
+static void create_compartment_selection_screen(void) {
+    if (compartment_selection_scr != NULL) {
+        lv_obj_clean(compartment_selection_scr);
+    } else {
+        compartment_selection_scr = lv_obj_create(NULL);
+    }
+
+    lv_obj_set_style_bg_color(compartment_selection_scr, lv_color_hex(0x1E1E2E), LV_PART_MAIN);
+    lv_obj_t *title = lv_label_create(compartment_selection_scr);
+    lv_label_set_text(title, "CHON NGAN TRONG");
+    lv_obj_set_style_text_color(title, lv_color_hex(0xFFFFFF), LV_PART_MAIN);
+    lv_obj_align(title, LV_ALIGN_TOP_MID, 0, 15);
+
+    lbl_compartment_selection_status = lv_label_create(compartment_selection_scr);
+    lv_label_set_text(lbl_compartment_selection_status, "Chon ngan de tiep tuc");
+    lv_obj_set_style_text_color(lbl_compartment_selection_status, lv_color_hex(0xFFD700), LV_PART_MAIN);
+    lv_obj_align(lbl_compartment_selection_status, LV_ALIGN_CENTER, 0, -55);
+
+    bool any_available = false;
+    for (int i = 0; i < 2; i++) {
+        if (!selectable_compartments[i]) continue;
+        any_available = true;
+
+        lv_obj_t *button = lv_button_create(compartment_selection_scr);
+        lv_obj_set_size(button, 125, 90);
+        lv_obj_align(button, LV_ALIGN_CENTER, i == 0 ? -70 : 70, 5);
+        lv_obj_set_style_bg_color(button, lv_color_hex(0x10B981), LV_PART_MAIN);
+        lv_obj_add_event_cb(button, select_compartment_cb, LV_EVENT_CLICKED, (void *)(intptr_t)i);
+
+        lv_obj_t *label = lv_label_create(button);
+        lv_label_set_text_fmt(label, "NGAN %d", i + 1);
+        lv_obj_center(label);
+    }
+
+    if (!any_available) {
+        lv_label_set_text(lbl_compartment_selection_status, "Khong con ngan trong kha dung");
+    }
+
+    lv_obj_t *back_button = lv_button_create(compartment_selection_scr);
+    lv_obj_set_size(back_button, 110, 35);
+    lv_obj_align(back_button, LV_ALIGN_BOTTOM_MID, 0, -10);
+    lv_obj_set_style_bg_color(back_button, lv_color_hex(0xE55353), LV_PART_MAIN);
+    lv_obj_add_event_cb(back_button, back_to_main_cb_from_send_screen_cb, LV_EVENT_CLICKED, NULL);
+
+    lv_obj_t *back_label = lv_label_create(back_button);
+    lv_label_set_text(back_label, "Quay lai");
+    lv_obj_center(back_label);
 }
 
 // 3. Màn hình Lựa chọn Phương thức Gửi
@@ -508,73 +590,159 @@ static void create_otp_screen(void) {
     lv_keyboard_set_textarea(kb_numpad, ta_otp);
 }
 
+static void create_maintenance_screen(void) {
+    if (maintenance_scr != NULL) {
+        lv_obj_clean(maintenance_scr);
+    } else {
+        maintenance_scr = lv_obj_create(NULL);
+    }
+
+    lv_obj_set_style_bg_color(maintenance_scr, lv_color_hex(0x1E1E2E), LV_PART_MAIN);
+    lv_obj_t *label = lv_label_create(maintenance_scr);
+    lv_label_set_text(label, "TU DANG BAO TRI");
+    lv_obj_set_style_text_color(label, lv_color_hex(0x4DA6FF), LV_PART_MAIN);
+    lv_obj_center(label);
+}
+
+static bool redirect_to_maintenance_if_active(void) {
+    if (!locker_maintenance_active) {
+        return false;
+    }
+
+    create_maintenance_screen();
+    lv_screen_load(maintenance_scr);
+    return true;
+}
+
 /* =========================================================================
  * CÁC HÀM GỌI TỪ NGOÀI (CÓ KHÓA LOCK)
  * ========================================================================= */
 
+void gui_set_locker_maintenance(bool enabled) {
+    _lock_acquire(&lvgl_api_lock);
+    locker_maintenance_active = enabled;
+    if (main_scr != NULL) {
+        if (enabled) {
+            create_maintenance_screen();
+            lv_screen_load(maintenance_scr);
+        } else {
+            lv_screen_load(main_scr);
+        }
+    }
+    _lock_release(&lvgl_api_lock);
+}
+
+void gui_show_compartment_selection(const bool available[2]) {
+    _lock_acquire(&lvgl_api_lock);
+    if (!redirect_to_maintenance_if_active()) {
+        for (int i = 0; i < 2; i++) {
+            selectable_compartments[i] = available[i];
+        }
+        create_compartment_selection_screen();
+        lv_screen_load(compartment_selection_scr);
+    }
+    _lock_release(&lvgl_api_lock);
+}
+
 void gui_open_send_screen(void) {
     _lock_acquire(&lvgl_api_lock);
-    create_method_screen();
-    lv_screen_load(method_scr);
+    if (!redirect_to_maintenance_if_active()) {
+        create_method_screen();
+        lv_screen_load(method_scr);
+    }
     _lock_release(&lvgl_api_lock);
 }
 
 void nhap_OTP_nhan(void) {
     _lock_acquire(&lvgl_api_lock);
-    create_otp_screen();
-    lv_screen_load(otp_scr);
+    if (!redirect_to_maintenance_if_active()) {
+        create_otp_screen();
+        lv_screen_load(otp_scr);
+    }
     _lock_release(&lvgl_api_lock);
 }
 
 void gui_show_verify_failed(void) {
     _lock_acquire(&lvgl_api_lock);
-    create_loading_screen("Ma shipper ko hop le", back_to_main_cb_from_send_screen_cb);
+    if (!redirect_to_maintenance_if_active()) {
+        create_loading_screen("Ma shipper ko hop le", back_to_main_cb_from_send_screen_cb);
+    }
     _lock_release(&lvgl_api_lock);
 }
 
 void nhan_show_verify_failed(void) {
     _lock_acquire(&lvgl_api_lock);
-    create_loading_screen("Sdt ko ton tai", back_to_receive_cb);
+    if (!redirect_to_maintenance_if_active()) {
+        create_loading_screen("Sdt ko ton tai", back_to_receive_cb);
+    }
     _lock_release(&lvgl_api_lock);
 }
 
 // Màn hình thông báo có đơn (Hiển thị số lượng đơn kèm 2 nút Quay lại & Xác nhận)
 void nhap_show_has_order(char *str) {
     _lock_acquire(&lvgl_api_lock);
-    create_loading_screen_with_actions(str, back_to_receive_cb, confirm_has_order_cb);
+    if (!redirect_to_maintenance_if_active()) {
+        create_loading_screen_with_actions(str, back_to_receive_cb, confirm_has_order_cb);
+    }
     _lock_release(&lvgl_api_lock);
 }
 
 void nhap_show_no_order(void) {
     _lock_acquire(&lvgl_api_lock);
-    create_loading_screen("Ban ko co don nao", back_to_receive_cb);
+    if (!redirect_to_maintenance_if_active()) {
+        create_loading_screen("Ban ko co don nao", back_to_receive_cb);
+    }
     _lock_release(&lvgl_api_lock);
+}
+
+void gui_show_wrong_otp(void) {
+    _lock_acquire(&lvgl_api_lock) ;
+    if (!redirect_to_maintenance_if_active()) {
+        create_loading_screen("Sai ma OTP", back_to_otp_cb) ;
+        lv_screen_load(loading_scr) ;
+    }
+    _lock_release(&lvgl_api_lock) ;
 }
 
 void gui_init(void) {
     create_main_screen();
-    lv_screen_load(main_scr);
+    if (locker_maintenance_active) {
+        create_maintenance_screen();
+        lv_screen_load(maintenance_scr);
+    } else {
+        lv_screen_load(main_scr);
+    }
 }
 void gui_show_home_screen(void) {
     _lock_acquire(&lvgl_api_lock);
-    lv_screen_load(main_scr); // Chỉ load lại màn hình chính đã có sẵn
+    if (!redirect_to_maintenance_if_active()) {
+        lv_screen_load(main_scr); // Chỉ load lại màn hình chính đã có sẵn
+    }
     _lock_release(&lvgl_api_lock);
 }
 
 void show_lock_open(char *str) {
     _lock_acquire(&lvgl_api_lock);
-    create_loading_screen(str,back_home_cb) ;
+    if (!redirect_to_maintenance_if_active()) {
+        create_loading_screen(str,back_home_cb) ;
+        lv_screen_load(loading_scr) ;
+    }
     _lock_release(&lvgl_api_lock);
 }
 
 void gui_show_warning_screen(char *str) {
     _lock_acquire(&lvgl_api_lock) ;
-    create_loading_screen(str,NULL) ;
-    lv_screen_load(loading_scr);
+    if (!redirect_to_maintenance_if_active()) {
+        create_loading_screen(str,NULL) ;
+        lv_screen_load(loading_scr);
+    }
     _lock_release(&lvgl_api_lock) ;
 }
 void gui_show_exception(char *str) {
     _lock_acquire(&lvgl_api_lock) ;
-    create_loading_screen(str, back_home_from_failed_cb) ;
-    _lock_release(&lvgl_api_lock) ;
+    if (!redirect_to_maintenance_if_active()) {
+        create_loading_screen(str, back_home_cb) ;
+        lv_screen_load(loading_scr) ;
+    }
+    _lock_release(&lvgl_api_lock);
 }

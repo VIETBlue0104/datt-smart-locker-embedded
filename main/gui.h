@@ -1,6 +1,7 @@
 #ifndef GUI_H
 #define GUI_H
 
+#include <stdbool.h>
 #include "lvgl.h"
 
 #ifdef __cplusplus
@@ -8,6 +9,9 @@ extern "C" {
 #endif
 
 void gui_init(void);
+void gui_set_locker_maintenance(bool enabled);
+void gui_show_compartment_selection(const bool available[2]);
+int locker_select_and_open_compartment(int index);
 void gui_open_send_screen(void);    // Gọi khi Server gửi 1
 void gui_show_verify_failed(void);  // Gọi khi Server gửi 0
 void nhap_OTP_nhan(void) ;
@@ -19,6 +23,7 @@ void gui_show_home_screen(void) ;
 void show_lock_open(char *str) ;
 void gui_show_warning_screen(char *str);
 void gui_show_exception(char *str) ;
+void gui_show_wrong_otp(void);
 #ifdef __cplusplus
 }
 #endif

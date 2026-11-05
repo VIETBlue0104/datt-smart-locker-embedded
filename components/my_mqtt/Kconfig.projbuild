@@ -1,0 +1,21 @@
+menu "Smart Locker Config"
+
+    config LOCKER_ID
+        string "Locker ID"
+        default "LOCKER_01"
+        help
+            Phai trung khop voi locker_id trong bang lockers cua database.
+
+    config MQTT_USERNAME
+        string "MQTT Username"
+        default ""
+        help
+            Username xac thuc voi MQTT broker. De trong neu broker khong yeu cau.
+
+    config MQTT_PASSWORD
+        string "MQTT Password"
+        default ""
+        help
+            Password xac thuc voi MQTT broker. De trong neu broker khong yeu cau.
+
+endmenu

@@ -34,7 +34,7 @@ void open_lock(int compartment_index) {
 
     ESP_LOGI(TAG, "Dang mo khoa cho ngan so: %d (GPIO %d)", compartment_index + 1, target_pin);
     gpio_set_level(target_pin, 1);       // Bật Rơ-le kích mở khóa
-    vTaskDelay(pdMS_TO_TICKS(3000));     // Giữ mở 3 giây
+    vTaskDelay(pdMS_TO_TICKS(1000));     // Giữ mở 3 giây
     gpio_set_level(target_pin, 0);       // Tắt Rơ-le
     ESP_LOGI(TAG, "Da dong khoa ngan so: %d", compartment_index + 1);
 }

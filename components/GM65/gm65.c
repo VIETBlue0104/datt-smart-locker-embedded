@@ -15,11 +15,8 @@ void uart_init(void) {
     int intr_alloc_flags = 0 ;
 
     ESP_ERROR_CHECK(uart_driver_install(UART_PORT_NUM, BUF_SIZE * 2, 0, 0, NULL, intr_alloc_flags));
-    // Cài đặt thông số UART
     ESP_ERROR_CHECK(uart_param_config(UART_PORT_NUM, &uart_config));
-    
-    // Chỉ định nghĩa chân RX (GPIO 16), chân TX để trống (UART_PIN_NO_CHANGE)
-    ESP_ERROR_CHECK(uart_set_pin(UART_PORT_NUM, UART_PIN_NO_CHANGE, 16, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+    ESP_ERROR_CHECK(uart_set_pin(UART_PORT_NUM, 16, 17, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
     
     
 }

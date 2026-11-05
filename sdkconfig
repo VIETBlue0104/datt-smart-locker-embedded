@@ -432,6 +432,14 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
+# Smart Locker Config
+#
+CONFIG_LOCKER_ID="khuon_vien"
+CONFIG_MQTT_USERNAME=""
+CONFIG_MQTT_PASSWORD=""
+# end of Smart Locker Config
+
+#
 # XPT2046
 #
 CONFIG_XPT2046_Z_THRESHOLD=400

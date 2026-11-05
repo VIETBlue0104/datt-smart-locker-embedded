@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Smart Locker khuon_vien",
+    "clientId": "mqttx_khuon_vien_monitor",
+    "host": "broker.emqx.io",
+    "port": 8883,
+    "protocol": "mqtts",
+    "ssl": true,
+    "certType": "server",
+    "ca": "",
+    "cert": "",
+    "key": "",
+    "clean": true,
+    "keepalive": 60,
+    "connectTimeout": 30,
+    "reconnect": true,
+    "reconnectPeriod": 4000,
+    "username": "",
+    "password": "",
+    "path": "",
+    "mqttVersion": "5.0",
+    "unreadMessageCount": 0,
+    "createAt": "2026-11-05T00:00:00.000Z",
+    "updateAt": "2026-11-05T00:00:00.000Z",
+    "messages": [],
+    "subscriptions": [
+      {
+        "topic": "ptit/khuon_vien/status",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/qr/shipper",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/qr/order",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/qr/receive",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/receive/phone",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/receive/otp",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/session/cancel",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/locker/scan_order_qr/request",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/receive/scan_qr/request",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/locker/select_compartment",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/compartment/1/status",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/compartment/1/event",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/compartment/2/status",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/compartment/2/event",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/maintenance/locker",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/maintenance/compartment",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/verified/shipper",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/verified/order",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/verified/customer",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/verified/qr_otp/failed",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      },
+      {
+        "topic": "ptit/khuon_vien/locker/open",
+        "qos": 1,
+        "disabled": false,
+        "createAt": "2026-11-05T00:00:00.000Z"
+      }
+    ]
+  }
+]
