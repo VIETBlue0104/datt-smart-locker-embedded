@@ -53,7 +53,7 @@ Ví dụ với ID `khuon_vien`: `ptit/khuon_vien/status`.
 | `ptit/{id}/session/cancel` | `{"locker_id":"khuon_vien","action":"cancel_send"}` | Tín hiệu hủy thao tác. `action` phân biệt: `cancel_send`, `cancel_receive`, `cancel_order_scan`, `cancel_receive_phone`, `cancel_receive_qr`, `cancel_receive_otp`. |
 | `ptit/{id}/locker/scan_order_qr/request` | `{"locker_id":"khuon_vien","action":"scan_order_qr"}` | Báo backend bắt đầu luồng quét QR đơn hàng; đây không phải nội dung QR. QR thực tế gửi trên `qr/order`. |
 | `ptit/{id}/receive/scan_qr/request` | `{"locker_id":"khuon_vien","action":"scan_receive_qr"}` | Báo backend bắt đầu luồng quét QR nhận hàng; QR thực tế gửi trên `qr/receive`. |
-| `ptit/{id}/locker/select_compartment` | `{"compartment":0,"qr":"<mã QR đơn hàng>","locker_id":"khuon_vien"}` | Shipper chọn ngăn trong nhánh không có đặt trước. Tủ mở ngăn ngay tại thao tác chọn và gửi thông tin ngăn/đơn cho backend lưu. `compartment` bắt đầu từ 0. |
+| `ptit/{id}/locker/select_compartment` | `{"compartment":0,"qr":"<mã QR đơn hàng>","recipient_phone":"090...","locker_id":"khuon_vien"}` | Shipper chọn ngăn trong nhánh không có đặt trước. Trước khi chọn ngăn, shipper nhập SĐT người nhận (10-11 chữ số); firmware gửi số này cùng QR đơn và ngăn để backend gán đơn cho người nhận. `recipient_phone` chỉ có ở nhánh không đặt trước; `compartment` bắt đầu từ 0. |
 
 QR shipper, QR đơn và QR nhận hàng có topic riêng để backend không nhầm mục đích của mã.
 
@@ -99,8 +99,8 @@ Firmware subscribe các topic dưới đây theo QoS 1. Payload gửi xuống l�
 
 ### Lưu ý lệnh mở ngăn
 
-- Ngăn đã đặt trước: sau `verified/order = 1`, backend xác định ngăn đã đặt và gửi `locker/open` với mode `deposit`.
-- Không có đặt trước: sau `verified/order = 0`, shipper chọn ngăn trên TFT. Firmware **tự mở ngăn ngay** rồi publish `locker/select_compartment` cùng QR đơn cho backend lưu. Backend không cần gửi thêm `locker/open` cho lựa chọn này.
+- Ngăn đã đặt trước: sau `verified/order = 1`, backend xác định ngăn đã đặt và gửi `locker/open` với mode `deposit`; luồng này không yêu cầu shipper nhập lại SĐT người nhận.
+- Không có đặt trước: sau `verified/order = 0`, TFT yêu cầu shipper nhập SĐT người nhận rồi chọn ngăn. Firmware **tự mở ngăn ngay** khi chọn và publish `locker/select_compartment` gồm QR đơn, SĐT người nhận và ngăn để backend lưu/gán đơn. Backend không cần gửi thêm `locker/open` cho lựa chọn này.
 - Nhận hàng: sau khi backend xác minh đúng, backend gửi `locker/open` với mode `pickup`.
 - Không gửi `locker/open` retained; đây là lệnh tức thời, không nên được phát lại khi client reconnect.
 

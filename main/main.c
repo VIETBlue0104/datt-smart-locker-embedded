@@ -74,6 +74,8 @@ QueueHandle_t qr_queue = NULL;
 static volatile bool scan_enabled = false;
 static char topic_rec_qr[64] = "qr/receive";
 static char current_order_qr[64] = {0};
+static char current_recipient_phone[16] = {0};
+static bool current_order_reserved = false;
 static portMUX_TYPE current_order_qr_mux = portMUX_INITIALIZER_UNLOCKED;
 
 hx711_pin hx[2] = {
@@ -125,9 +127,37 @@ void rec_topic(char *topic) {
         if (strcmp(topic, "qr/order") == 0) {
             portENTER_CRITICAL(&current_order_qr_mux);
             current_order_qr[0] = '\0';
+            current_recipient_phone[0] = '\0';
+            current_order_reserved = false;
             portEXIT_CRITICAL(&current_order_qr_mux);
         }
     }
+}
+
+bool set_order_recipient_phone(const char *phone)
+{
+    if (phone == NULL) {
+        return false;
+    }
+
+    size_t phone_length = strlen(phone);
+    if (phone_length < 10 || phone_length > 11) {
+        return false;
+    }
+    for (size_t i = 0; i < phone_length; i++) {
+        if (phone[i] < '0' || phone[i] > '9') {
+            return false;
+        }
+    }
+
+    bool accepted = false;
+    portENTER_CRITICAL(&current_order_qr_mux);
+    if (current_order_qr[0] != '\0' && !current_order_reserved) {
+        snprintf(current_recipient_phone, sizeof(current_recipient_phone), "%s", phone);
+        accepted = true;
+    }
+    portEXIT_CRITICAL(&current_order_qr_mux);
+    return accepted;
 }
 
 void set_scan_enabled(bool enable) {
@@ -157,10 +187,14 @@ int locker_select_and_open_compartment(int index)
     }
 
     char order_qr[sizeof(current_order_qr)];
+    char recipient_phone[sizeof(current_recipient_phone)];
+    bool order_reserved;
     portENTER_CRITICAL(&current_order_qr_mux);
     snprintf(order_qr, sizeof(order_qr), "%s", current_order_qr);
+    snprintf(recipient_phone, sizeof(recipient_phone), "%s", current_recipient_phone);
+    order_reserved = current_order_reserved;
     portEXIT_CRITICAL(&current_order_qr_mux);
-    if (order_qr[0] == '\0') {
+    if (order_qr[0] == '\0' || (!order_reserved && recipient_phone[0] == '\0')) {
         return -1;
     }
 
@@ -171,6 +205,9 @@ int locker_select_and_open_compartment(int index)
     }
     cJSON_AddNumberToObject(payload, "compartment", index);
     cJSON_AddStringToObject(payload, "qr", order_qr);
+    if (!order_reserved) {
+        cJSON_AddStringToObject(payload, "recipient_phone", recipient_phone);
+    }
     char *json = cJSON_PrintUnformatted(payload);
     cJSON_Delete(payload);
     if (json == NULL) {
@@ -258,8 +295,16 @@ void on_mqtt_data(const char *topic, const char *data, int data_len)
 
     if (strcmp(topic, "ptit/verified/order") == 0) {
         if (strcmp(data, "1") == 0) {
+            portENTER_CRITICAL(&current_order_qr_mux);
+            current_order_reserved = true;
+            current_recipient_phone[0] = '\0';
+            portEXIT_CRITICAL(&current_order_qr_mux);
             ESP_LOGI(TAG, "Order QR matches a reservation; waiting for backend locker/open command");
         } else if (strcmp(data, "0") == 0) {
+            portENTER_CRITICAL(&current_order_qr_mux);
+            current_order_reserved = false;
+            current_recipient_phone[0] = '\0';
+            portEXIT_CRITICAL(&current_order_qr_mux);
             bool available[2];
             for (int i = 0; i < 2; i++) {
                 available[i] = !locker_maintenance &&
@@ -268,8 +313,8 @@ void on_mqtt_data(const char *topic, const char *data, int data_len)
                                !compartment_has_item[i] &&
                                door_closed_status[i];
             }
-            ESP_LOGI(TAG, "Order QR has no reservation; showing available compartments");
-            gui_show_compartment_selection(available);
+            ESP_LOGI(TAG, "Order QR has no reservation; requesting recipient phone");
+            gui_show_recipient_phone(available);
         } else {
             ESP_LOGW(TAG, "Invalid order QR result: %s", data);
         }

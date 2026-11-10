@@ -62,7 +62,7 @@ Username và password được nhúng vào firmware từ `sdkconfig`; không com
 | `ptit/{id}/session/cancel` | `{"locker_id":"...","action":"..."}`; các action: `cancel_send`, `cancel_receive`, `cancel_order_scan`, `cancel_receive_phone`, `cancel_receive_qr`, `cancel_receive_otp` |
 | `ptit/{id}/locker/scan_order_qr/request` | `{"locker_id":"...","action":"scan_order_qr"}`; thông báo bắt đầu quét, khác với bản tin QR thực tế |
 | `ptit/{id}/receive/scan_qr/request` | `{"locker_id":"...","action":"scan_receive_qr"}`; thông báo bắt đầu quét, khác với bản tin QR thực tế |
-| `ptit/{id}/locker/select_compartment` | `{"compartment":0,"qr":"<mã đơn>","locker_id":"..."}`; index bắt đầu từ 0, tủ mở ngăn ngay khi chọn |
+| `ptit/{id}/locker/select_compartment` | `{"compartment":0,"qr":"<mã đơn>","recipient_phone":"090...","locker_id":"..."}` ở nhánh không đặt trước (SĐT 10-11 chữ số); index bắt đầu từ 0, tủ mở ngăn ngay khi chọn |
 
 Mỗi thao tác QR có topic riêng theo mục đích; không dùng chung topic để tránh backend nhầm QR shipper, QR đơn và QR nhận hàng.
 
@@ -110,8 +110,8 @@ Backend gửi lệnh retained (QoS 1) tới các topic:
 **Shipper gửi hàng**
 
 1. Bấm GỬI HÀNG, quét mã shipper -> `ptit/{id}/qr/shipper` -> backend trả `ptit/{id}/verified/shipper`.
-2. Quét mã đơn -> firmware gửi yêu cầu `ptit/{id}/locker/scan_order_qr/request`, sau đó gửi QR lên `ptit/{id}/qr/order`. Backend trả `ptit/{id}/verified/order`: nếu `1`, backend gửi `ptit/{id}/locker/open` (`<idx>,deposit`) cho ngăn đã đặt; nếu `0`, TFT hiển thị ngăn trống khả dụng.
-3. Với nhánh `0`, shipper chọn ngăn -> firmware mở ngăn ngay và gửi `ptit/{id}/locker/select_compartment` gồm `compartment`, `qr`, `locker_id` để backend lưu thông tin đơn.
+2. Quét mã đơn -> firmware gửi yêu cầu `ptit/{id}/locker/scan_order_qr/request`, sau đó gửi QR lên `ptit/{id}/qr/order`. Backend trả `ptit/{id}/verified/order`: nếu `1`, backend gửi `ptit/{id}/locker/open` (`<idx>,deposit`) cho ngăn đã đặt; nếu `0`, TFT yêu cầu nhập SĐT người nhận.
+3. Với nhánh `0`, shipper nhập SĐT người nhận rồi chọn ngăn -> firmware mở ngăn ngay và gửi `ptit/{id}/locker/select_compartment` gồm `compartment`, `qr`, `recipient_phone`, `locker_id` để backend lưu và gán đơn cho người nhận.
 
 **Khách nhận hàng**
 
