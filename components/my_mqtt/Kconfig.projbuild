@@ -2,7 +2,7 @@ menu "Smart Locker Config"
 
     config LOCKER_ID
         string "Locker ID"
-        default "LOCKER_01"
+        default "Tu_1"
         help
             Phai trung khop voi locker_id trong bang lockers cua database.
 

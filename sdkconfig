@@ -434,7 +434,7 @@ CONFIG_PARTITION_TABLE_MD5=y
 #
 # Smart Locker Config
 #
-CONFIG_LOCKER_ID="khuon_vien"
+CONFIG_LOCKER_ID="Tu_1"
 CONFIG_MQTT_USERNAME=""
 CONFIG_MQTT_PASSWORD=""
 # end of Smart Locker Config

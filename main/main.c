@@ -15,7 +15,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "locker_led.h"
 
 static const char *TAG = "main";
 static const char *TAG_SENSOR = "SENSOR";
@@ -31,11 +30,20 @@ static const char *TAG_EVENT = "EVENT";
 #define TOPIC_STATUS_FMT "compartment/%d/status"
 
 #define HX711_ZERO_THRESHOLD_G 5.0f
-#define HX711_CALIBRATION_FACTOR 2280.0f
+//#define HX711_CALIBRATION_FACTOR 434.0f
+#define HX711_CALIBRATION_FACTOR 2280.f
 
 #define MC38_PIN_1 GPIO_NUM_34  // Cảm biến từ cửa ngăn 1
 #define MC38_PIN_2 GPIO_NUM_35  // Cảm biến từ cửa ngăn 2
+#define IR_SENSOR_PIN_1 GPIO_NUM_5  // Cảm biến IR ngăn 1
+#define IR_SENSOR_PIN_2 GPIO_NUM_15 // Cảm biến IR ngăn 2
+#define IR_SENSOR_DETECTED_LEVEL 0  // Module IR xuất LOW khi phát hiện vật cản
 #define BUZZER_PIN GPIO_NUM_27
+
+static const gpio_num_t ir_sensor_pins[2] = {
+    IR_SENSOR_PIN_1,
+    IR_SENSOR_PIN_2,
+};
 
 static esp_err_t sync_time_for_tls(void)
 {
@@ -74,8 +82,6 @@ QueueHandle_t qr_queue = NULL;
 static volatile bool scan_enabled = false;
 static char topic_rec_qr[64] = "qr/receive";
 static char current_order_qr[64] = {0};
-static char current_recipient_phone[16] = {0};
-static bool current_order_reserved = false;
 static portMUX_TYPE current_order_qr_mux = portMUX_INITIALIZER_UNLOCKED;
 
 hx711_pin hx[2] = {
@@ -127,37 +133,9 @@ void rec_topic(char *topic) {
         if (strcmp(topic, "qr/order") == 0) {
             portENTER_CRITICAL(&current_order_qr_mux);
             current_order_qr[0] = '\0';
-            current_recipient_phone[0] = '\0';
-            current_order_reserved = false;
             portEXIT_CRITICAL(&current_order_qr_mux);
         }
     }
-}
-
-bool set_order_recipient_phone(const char *phone)
-{
-    if (phone == NULL) {
-        return false;
-    }
-
-    size_t phone_length = strlen(phone);
-    if (phone_length < 10 || phone_length > 11) {
-        return false;
-    }
-    for (size_t i = 0; i < phone_length; i++) {
-        if (phone[i] < '0' || phone[i] > '9') {
-            return false;
-        }
-    }
-
-    bool accepted = false;
-    portENTER_CRITICAL(&current_order_qr_mux);
-    if (current_order_qr[0] != '\0' && !current_order_reserved) {
-        snprintf(current_recipient_phone, sizeof(current_recipient_phone), "%s", phone);
-        accepted = true;
-    }
-    portEXIT_CRITICAL(&current_order_qr_mux);
-    return accepted;
 }
 
 void set_scan_enabled(bool enable) {
@@ -187,14 +165,10 @@ int locker_select_and_open_compartment(int index)
     }
 
     char order_qr[sizeof(current_order_qr)];
-    char recipient_phone[sizeof(current_recipient_phone)];
-    bool order_reserved;
     portENTER_CRITICAL(&current_order_qr_mux);
     snprintf(order_qr, sizeof(order_qr), "%s", current_order_qr);
-    snprintf(recipient_phone, sizeof(recipient_phone), "%s", current_recipient_phone);
-    order_reserved = current_order_reserved;
     portEXIT_CRITICAL(&current_order_qr_mux);
-    if (order_qr[0] == '\0' || (!order_reserved && recipient_phone[0] == '\0')) {
+    if (order_qr[0] == '\0') {
         return -1;
     }
 
@@ -205,9 +179,6 @@ int locker_select_and_open_compartment(int index)
     }
     cJSON_AddNumberToObject(payload, "compartment", index);
     cJSON_AddStringToObject(payload, "qr", order_qr);
-    if (!order_reserved) {
-        cJSON_AddStringToObject(payload, "recipient_phone", recipient_phone);
-    }
     char *json = cJSON_PrintUnformatted(payload);
     cJSON_Delete(payload);
     if (json == NULL) {
@@ -229,11 +200,15 @@ int locker_select_and_open_compartment(int index)
     return 1;
 }
 
-/* =========================================================================
+/* ===========================================================================
  * NHẬN DỮ LIỆU MQTT TỪ BACKEND
  * Lưu ý: mqtt.c đã cắt prefix "ptit/<LOCKER_ID>/" nên topic ở đây vẫn có
  * callback topic có dạng "ptit/locker/open", "ptit/verified/customer", ...
- * ========================================================================= */
+ * =========================================================================
+
+ */
+
+
 void on_mqtt_data(const char *topic, const char *data, int data_len)
 {
     ESP_LOGI(TAG, "MQTT Received [%s]: %s", topic, data);
@@ -295,16 +270,8 @@ void on_mqtt_data(const char *topic, const char *data, int data_len)
 
     if (strcmp(topic, "ptit/verified/order") == 0) {
         if (strcmp(data, "1") == 0) {
-            portENTER_CRITICAL(&current_order_qr_mux);
-            current_order_reserved = true;
-            current_recipient_phone[0] = '\0';
-            portEXIT_CRITICAL(&current_order_qr_mux);
             ESP_LOGI(TAG, "Order QR matches a reservation; waiting for backend locker/open command");
         } else if (strcmp(data, "0") == 0) {
-            portENTER_CRITICAL(&current_order_qr_mux);
-            current_order_reserved = false;
-            current_recipient_phone[0] = '\0';
-            portEXIT_CRITICAL(&current_order_qr_mux);
             bool available[2];
             for (int i = 0; i < 2; i++) {
                 available[i] = !locker_maintenance &&
@@ -313,8 +280,8 @@ void on_mqtt_data(const char *topic, const char *data, int data_len)
                                !compartment_has_item[i] &&
                                door_closed_status[i];
             }
-            ESP_LOGI(TAG, "Order QR has no reservation; requesting recipient phone");
-            gui_show_recipient_phone(available);
+            ESP_LOGI(TAG, "Order QR has no reservation; showing available compartments");
+            gui_show_compartment_selection(available);
         } else {
             ESP_LOGW(TAG, "Invalid order QR result: %s", data);
         }
@@ -449,8 +416,8 @@ void business_logic_task(void *arg) {
         }
     }
 }
-
-/* =========================================================================
+/*
+* =========================================================================
  * PHÂN CÔNG:
  *  - warning_task      : đếm thời gian cửa mở, điều khiển CÒI, hiện màn hình
  *                        cảnh báo MỘT LẦN khi vừa vào trạng thái cảnh báo.
@@ -460,10 +427,7 @@ void business_logic_task(void *arg) {
  * ========================================================================= */
 
 void warning_task(void *arg) {
-    bool prev_any_warning = false; // Biến ghi nhớ trạng thái cảnh báo cũ
-    bool warning_led_on = true;
-    unsigned int blink_half_seconds = 0;
-    bool led_error_reported = false;
+    bool prev_compartment_warning[2] = {false, false};
     
     while (1) {
         bool any_warning = false;
@@ -498,52 +462,25 @@ void warning_task(void *arg) {
         // Còi theo trạng thái cảnh báo
         gpio_set_level(BUZZER_PIN, any_warning ? 1 : 0);
 
-        // Chỉ hiện màn hình cảnh báo MỘT LẦN khi vừa chuyển sang cảnh báo.
-        // Việc thoát màn hình cảnh báo do event_handler_task lo khi cửa đóng.
-        if (any_warning && !prev_any_warning) {
-            gui_show_warning_screen("Chua dong ngan tu");
-        }
+        bool warning_state_changed =
+            compartment_warning_active[0] != prev_compartment_warning[0] ||
+            compartment_warning_active[1] != prev_compartment_warning[1];
 
-        if (++blink_half_seconds >= 2) {
-            warning_led_on = !warning_led_on;
-            blink_half_seconds = 0;
-        }
-
-        bool network_fault = !wifi_is_connected() || !my_mqtt_is_connected();
-        uint8_t led_mask = 0;
-        if (locker_maintenance) {
-            led_mask = LOCKER_LED1_BLUE | LOCKER_LED2_BLUE;
-        } else {
-            for (int i = 0; i < 2; i++) {
-                uint8_t red_bit = (i == 0) ? LOCKER_LED1_RED : LOCKER_LED2_RED;
-                uint8_t green_bit = (i == 0) ? LOCKER_LED1_GREEN : LOCKER_LED2_GREEN;
-                uint8_t blue_bit = (i == 0) ? LOCKER_LED1_BLUE : LOCKER_LED2_BLUE;
-
-                if (compartment_maintenance[i]) {
-                    led_mask |= blue_bit;
-                } else if (network_fault || hx711_fault[i]) {
-                    led_mask |= red_bit | green_bit;
-                } else if (compartment_warning_active[i]) {
-                    if (warning_led_on) {
-                        led_mask |= red_bit;
-                    }
-                } else if (compartment_has_item[i]) {
-                    led_mask |= red_bit;
-                } else {
-                    led_mask |= green_bit;
-                }
+        // Cập nhật màn hình khi danh sách ngăn đang cảnh báo thay đổi.
+        if (any_warning && warning_state_changed) {
+            char warning_message[32];
+            if (compartment_warning_active[0] && compartment_warning_active[1]) {
+                snprintf(warning_message, sizeof(warning_message), "Chua dong ngan 1 va 2");
+            } else if (compartment_warning_active[0]) {
+                snprintf(warning_message, sizeof(warning_message), "Chua dong ngan 1");
+            } else {
+                snprintf(warning_message, sizeof(warning_message), "Chua dong ngan 2");
             }
+            gui_show_warning_screen(warning_message);
         }
 
-        esp_err_t led_err = locker_led_write(led_mask);
-        if (led_err != ESP_OK && !led_error_reported) {
-            ESP_LOGE(TAG_WARN, "Failed to update status LEDs: %s", esp_err_to_name(led_err));
-            led_error_reported = true;
-        } else if (led_err == ESP_OK) {
-            led_error_reported = false;
-        }
-
-        prev_any_warning = any_warning;
+        prev_compartment_warning[0] = compartment_warning_active[0];
+        prev_compartment_warning[1] = compartment_warning_active[1];
         vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
@@ -655,7 +592,7 @@ void event_handler_task(void *arg) {
     }
 }
 
-// Task sensor: CHỈ ĐỌC PHẦN CỨNG THUẦN TÚY (HX711 + MC38) và cập nhật MQTT trạng thái
+// Task sensor: đọc HX711, MC38, IR và cập nhật MQTT trạng thái
 void sensor_task(void *arg)
 {
     int32_t offset[2] = {0};
@@ -671,8 +608,10 @@ void sensor_task(void *arg)
     }
 
     bool prev_has_item[2] = {false, false};
+    bool prev_ir_detected[2] = {false, false};
     bool prev_door_closed[2] = {true, true};
     bool mqtt_status_error_logged[2] = {false, false};
+    bool weight_has_item[2] = {false, false};
 
     while (1) {
         // Đọc trạng thái cửa từ phần cứng (MC-38: 0 = Đóng, 1 = Mở)
@@ -680,6 +619,8 @@ void sensor_task(void *arg)
         door_closed_status[1] = (gpio_get_level(MC38_PIN_2) == 0);
 
         for (int i = 0; i < 2; i++) {
+            bool ir_detected =
+                gpio_get_level(ir_sensor_pins[i]) == IR_SENSOR_DETECTED_LEVEL;
             int32_t raw;
             esp_err_t err = hx711_read_raw(&hx[i], &raw);
             hx711_fault[i] = (err != ESP_OK);
@@ -696,37 +637,42 @@ void sensor_task(void *arg)
 
                 // Lưu vào biến toàn cục để các task khác dùng chung
                 compartment_weight[i] = weight_grams;
-                compartment_has_item[i] = (weight_grams >= HX711_ZERO_THRESHOLD_G);
-
-                // Gửi trạng thái khi không bảo trì; giữ trạng thái cũ để phát bản cập nhật sau bảo trì.
-                if ((force_compartment_status_publish[i] ||
-                     compartment_has_item[i] != prev_has_item[i] ||
-                     door_closed_status[i] != prev_door_closed[i]) &&
-                    !locker_maintenance && !compartment_maintenance[i] &&
-                    my_mqtt_is_connected()) {
-
-                    char topic[64];
-                    char payload[96];
-
-                    snprintf(topic, sizeof(topic), TOPIC_STATUS_FMT, i + 1);
-                    snprintf(payload, sizeof(payload), "{\"has_item\":%d, \"door_closed\":%d, \"weight\":%.1f}",
-                             compartment_has_item[i], door_closed_status[i], compartment_weight[i]);
-
-                    int publish_result = my_mqtt_publish_json(topic, payload, 1);
-                    if (publish_result >= 0) {
-                        prev_has_item[i] = compartment_has_item[i];
-                        prev_door_closed[i] = door_closed_status[i];
-                        force_compartment_status_publish[i] = false;
-                        mqtt_status_error_logged[i] = false;
-                        ESP_LOGI(TAG_SENSOR, "Published MQTT [%s]: %s", topic, payload);
-                    } else if (!mqtt_status_error_logged[i]) {
-                        ESP_LOGW(TAG_SENSOR, "Failed to publish MQTT status [%s]", topic);
-                        mqtt_status_error_logged[i] = true;
-                    }
-                }
-
+                weight_has_item[i] = (weight_grams >= HX711_ZERO_THRESHOLD_G);
             } else {
                 ESP_LOGW(TAG_SENSOR, "HX711 [%d] read failed: %s", i, esp_err_to_name(err));
+            }
+
+            compartment_has_item[i] = ir_detected || weight_has_item[i];
+
+            // Publish IR-only changes too, including when the load cell is unavailable.
+            if ((force_compartment_status_publish[i] ||
+                 compartment_has_item[i] != prev_has_item[i] ||
+                 ir_detected != prev_ir_detected[i] ||
+                 door_closed_status[i] != prev_door_closed[i]) &&
+                !locker_maintenance && !compartment_maintenance[i] &&
+                my_mqtt_is_connected()) {
+
+                char topic[64];
+                char payload[128];
+
+                snprintf(topic, sizeof(topic), TOPIC_STATUS_FMT, i + 1);
+                snprintf(payload, sizeof(payload),
+                         "{\"has_item\":%d, \"ir_detected\":%d, \"door_closed\":%d, \"weight\":%.1f}",
+                         compartment_has_item[i], ir_detected, door_closed_status[i],
+                         compartment_weight[i]);
+
+                int publish_result = my_mqtt_publish_json(topic, payload, 1);
+                if (publish_result >= 0) {
+                    prev_has_item[i] = compartment_has_item[i];
+                    prev_ir_detected[i] = ir_detected;
+                    prev_door_closed[i] = door_closed_status[i];
+                    force_compartment_status_publish[i] = false;
+                    mqtt_status_error_logged[i] = false;
+                    ESP_LOGI(TAG_SENSOR, "Published MQTT [%s]: %s", topic, payload);
+                } else if (!mqtt_status_error_logged[i]) {
+                    ESP_LOGW(TAG_SENSOR, "Failed to publish MQTT status [%s]", topic);
+                    mqtt_status_error_logged[i] = true;
+                }
             }
         }
 
@@ -758,6 +704,15 @@ void app_main(void)
     };
     gpio_config(&mc38_conf);
 
+    gpio_config_t ir_sensor_conf = {
+        .pin_bit_mask = (1ULL << IR_SENSOR_PIN_1) | (1ULL << IR_SENSOR_PIN_2),
+        .mode = GPIO_MODE_INPUT,
+        .pull_up_en = GPIO_PULLUP_ENABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE,
+    };
+    ESP_ERROR_CHECK(gpio_config(&ir_sensor_conf));
+
     gpio_config_t buzzer = {
         .pin_bit_mask = (1ULL << BUZZER_PIN),
         .mode = GPIO_MODE_OUTPUT,
@@ -777,7 +732,6 @@ void app_main(void)
     _lock_acquire(&lvgl_api_lock);
     gui_init();
     _lock_release(&lvgl_api_lock);
-    ESP_ERROR_CHECK(locker_led_init());
 
     if (mqtt_time_ready) {
         my_mqtt_init("mqtts://broker.emqx.io", on_mqtt_data);
@@ -790,4 +744,79 @@ void app_main(void)
     xTaskCreate(warning_task, "warning_task", 3072, NULL, 2, NULL);                 // Còi + màn hình cảnh báo
     xTaskCreate(event_handler_task, "event_handler_task", 3 * 1024, NULL, 2, NULL); // Giao dịch + quyết định về home/lỗi
     xTaskCreate(business_logic_task, "State Machine", 4 * 1024, NULL, 2, NULL);
-}   
+}
+
+
+/*
+#include <inttypes.h>
+#include <stdbool.h>
+#include <stddef.h>
+
+#include "esp_err.h"
+#include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "hx711.h"
+
+#define HX711_SAMPLE_COUNT 10
+#define HX711_CALIBRATION_FACTOR 434.0f
+
+static const char *TAG = "HX711_TEST";
+static hx711_pin scales[] = {
+    {.DT = 36, .SCK = 32},
+    {.DT = 39, .SCK = 33},
+};
+static int32_t offsets[sizeof(scales) / sizeof(scales[0])];
+
+static esp_err_t read_average(hx711_pin *scale, int32_t *average)
+{
+    int64_t total = 0;
+    for (int sample = 0; sample < HX711_SAMPLE_COUNT; sample++) {
+        int32_t reading;
+        esp_err_t err = hx711_read_raw(scale, &reading);
+        if (err != ESP_OK) {
+            return err;
+        }
+        total += reading;
+    }
+
+    *average = (int32_t)(total / HX711_SAMPLE_COUNT);
+    return ESP_OK;
+}
+
+void app_main(void)
+{
+    const size_t scale_count = sizeof(scales) / sizeof(scales[0]);
+
+    for (size_t i = 0; i < scale_count; i++) {
+        ESP_ERROR_CHECK(hx711_init(&scales[i]));
+        ESP_ERROR_CHECK(hx711_tare(&scales[i], &offsets[i]));
+        ESP_LOGI(TAG, "Can %u da tru bi, offset=%" PRId32,
+                 (unsigned)(i + 1), offsets[i]);
+    }
+    ESP_LOGI(TAG, "Dat qua can len cac can de kiem tra gia tri RAW.");
+
+    while (true) {
+        for (size_t i = 0; i < scale_count; i++) {
+            int32_t raw_average;
+            esp_err_t err = read_average(&scales[i], &raw_average);
+            if (err != ESP_OK) {
+                ESP_LOGE(TAG, "Can %u doc that bai: %s",
+                         (unsigned)(i + 1), esp_err_to_name(err));
+                continue;
+            }
+
+            int64_t net_raw = (int64_t)raw_average - offsets[i];
+            float weight_grams = (float)net_raw / HX711_CALIBRATION_FACTOR;
+            if (weight_grams < 0.0f) {
+                weight_grams = -weight_grams;
+            }
+            ESP_LOGI(TAG, "Can %u: RAW=%" PRId32 " | sau tru bi=%" PRId64
+                     " | khoi luong uoc tinh=%.1f g",
+                     (unsigned)(i + 1), raw_average, net_raw, weight_grams);
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
+}
+*/

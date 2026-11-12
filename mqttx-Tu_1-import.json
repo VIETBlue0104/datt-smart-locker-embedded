@@ -1,7 +1,7 @@
 [
     {
-        "name":  "Smart Locker khuon_vien",
-        "clientId":  "mqttx_khuon_vien_monitor",
+        "name":  "Smart Locker Tu_1",
+        "clientId":  "mqttx_Tu_1_monitor",
         "host":  "broker.emqx.io",
         "port":  8883,
         "protocol":  "mqtts",
@@ -27,7 +27,7 @@
                      ],
         "subscriptions":  [
                               {
-                                  "topic":  "ptit/khuon_vien/status",
+                                  "topic":  "ptit/Tu_1/status",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -42,7 +42,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/qr/shipper",
+                                  "topic":  "ptit/Tu_1/qr/shipper",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -57,7 +57,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/qr/order",
+                                  "topic":  "ptit/Tu_1/qr/order",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -72,7 +72,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/qr/receive",
+                                  "topic":  "ptit/Tu_1/qr/receive",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -87,7 +87,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/receive/phone",
+                                  "topic":  "ptit/Tu_1/receive/phone",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -102,7 +102,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/receive/otp",
+                                  "topic":  "ptit/Tu_1/receive/otp",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -117,7 +117,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/session/cancel",
+                                  "topic":  "ptit/Tu_1/session/cancel",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -132,7 +132,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/locker/scan_order_qr/request",
+                                  "topic":  "ptit/Tu_1/locker/scan_order_qr/request",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -147,7 +147,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/receive/scan_qr/request",
+                                  "topic":  "ptit/Tu_1/receive/scan_qr/request",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -162,7 +162,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/locker/select_compartment",
+                                  "topic":  "ptit/Tu_1/locker/select_compartment",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -177,7 +177,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/compartment/1/status",
+                                  "topic":  "ptit/Tu_1/compartment/1/status",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -192,7 +192,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/compartment/1/event",
+                                  "topic":  "ptit/Tu_1/compartment/1/event",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -207,7 +207,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/compartment/2/status",
+                                  "topic":  "ptit/Tu_1/compartment/2/status",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -222,7 +222,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/compartment/2/event",
+                                  "topic":  "ptit/Tu_1/compartment/2/event",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -237,7 +237,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/maintenance/locker",
+                                  "topic":  "ptit/Tu_1/maintenance/locker",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -252,7 +252,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/maintenance/compartment",
+                                  "topic":  "ptit/Tu_1/maintenance/compartment",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -267,7 +267,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/verified/shipper",
+                                  "topic":  "ptit/Tu_1/verified/shipper",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -282,7 +282,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/verified/order",
+                                  "topic":  "ptit/Tu_1/verified/order",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -297,7 +297,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/verified/customer",
+                                  "topic":  "ptit/Tu_1/verified/customer",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -312,7 +312,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/verified/qr_otp/failed",
+                                  "topic":  "ptit/Tu_1/verified/qr_otp/failed",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",
@@ -327,7 +327,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/khuon_vien/locker/open",
+                                  "topic":  "ptit/Tu_1/locker/open",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",

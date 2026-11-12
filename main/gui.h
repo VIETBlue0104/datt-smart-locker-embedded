@@ -11,8 +11,6 @@ extern "C" {
 void gui_init(void);
 void gui_set_locker_maintenance(bool enabled);
 void gui_show_compartment_selection(const bool available[2]);
-void gui_show_recipient_phone(const bool available[2]);
-bool set_order_recipient_phone(const char *phone);
 int locker_select_and_open_compartment(int index);
 void gui_open_send_screen(void);    // Gọi khi Server gửi 1
 void gui_show_verify_failed(void);  // Gọi khi Server gửi 0

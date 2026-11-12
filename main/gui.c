@@ -20,7 +20,6 @@ static lv_obj_t *receive_method_scr = NULL;  // Màn hình chọn phương thứ
 static lv_obj_t *otp_scr = NULL;             // Màn hình nhập OTP
 static lv_obj_t *maintenance_scr = NULL;
 static lv_obj_t *compartment_selection_scr = NULL;
-static lv_obj_t *recipient_phone_scr = NULL;
 static bool locker_maintenance_active = false;
 static bool selectable_compartments[2] = {false, false};
 
@@ -28,10 +27,8 @@ static bool selectable_compartments[2] = {false, false};
 static lv_obj_t *lbl_loading_status = NULL;
 static lv_obj_t *lbl_compartment_selection_status = NULL;
 static lv_obj_t *ta_recv_phone = NULL;
-static lv_obj_t *ta_recipient_phone = NULL;
 static lv_obj_t *ta_otp = NULL;
 static lv_obj_t *kb_numpad = NULL;
-static lv_obj_t *lbl_recipient_phone_status = NULL;
 
 // Prototypes
 static void create_loading_screen(const char *text, lv_event_cb_t back_cb);
@@ -39,11 +36,11 @@ static void create_loading_screen_with_actions(const char *text, lv_event_cb_t b
 static void create_main_screen(void);
 static void create_method_screen(void);
 static void create_receive_screen(void);
-static void create_recipient_phone_screen(void);
 static void create_receive_method_screen(void);
 static void create_otp_screen(void);
 static void create_maintenance_screen(void);
 static void back_home_cb(lv_event_t *e);
+static void create_compartment_selection_screen(void);
 
 // Ngăn việc quét mã QR ngay khi nhấn các nút quay lại của màn hình quét
 static void cancel_scan() {
@@ -246,20 +243,6 @@ static void confirm_receive_cb(lv_event_t *e) {
         my_mqtt_publish_kv("receive/phone", "phone", phone, 1);
         lv_screen_load(loading_scr);
     }
-}
-
-static void confirm_recipient_phone_cb(lv_event_t *e) {
-    if (lv_event_get_code(e) != LV_EVENT_CLICKED) return;
-
-    const char *phone = lv_textarea_get_text(ta_recipient_phone);
-    if (!set_order_recipient_phone(phone)) {
-        lv_label_set_text(lbl_recipient_phone_status,
-                          "Nhap SDT hop le (10-11 chu so)");
-        return;
-    }
-
-    create_compartment_selection_screen();
-    lv_screen_load(compartment_selection_scr);
 }
 
 // Xác nhận OTP Nhận hàng
@@ -508,60 +491,6 @@ static void create_receive_screen(void) {
     lv_keyboard_set_textarea(kb_numpad, ta_recv_phone);
 }
 
-static void create_recipient_phone_screen(void) {
-    if (recipient_phone_scr != NULL) {
-        lv_obj_clean(recipient_phone_scr);
-    } else {
-        recipient_phone_scr = lv_obj_create(NULL);
-    }
-
-    lv_obj_set_style_bg_color(recipient_phone_scr, lv_color_hex(0x1E1E2E), LV_PART_MAIN);
-
-    lv_obj_t *title = lv_label_create(recipient_phone_scr);
-    lv_label_set_text(title, "NHAP SDT NGUOI NHAN");
-    lv_obj_set_style_text_color(title, lv_color_hex(0xFFFFFF), LV_PART_MAIN);
-    lv_obj_align(title, LV_ALIGN_TOP_LEFT, 10, 10);
-
-    ta_recipient_phone = lv_textarea_create(recipient_phone_scr);
-    lv_textarea_set_one_line(ta_recipient_phone, true);
-    lv_textarea_set_max_length(ta_recipient_phone, 11);
-    lv_textarea_set_placeholder_text(ta_recipient_phone, "So dien thoai");
-    lv_obj_set_size(ta_recipient_phone, 150, 40);
-    lv_obj_align(ta_recipient_phone, LV_ALIGN_TOP_LEFT, 10, 45);
-    lv_obj_add_event_cb(ta_recipient_phone, ta_event_cb, LV_EVENT_ALL, NULL);
-
-    lbl_recipient_phone_status = lv_label_create(recipient_phone_scr);
-    lv_label_set_text(lbl_recipient_phone_status, "SDT dung de nguoi nhan mo ngan");
-    lv_obj_set_style_text_color(lbl_recipient_phone_status, lv_color_hex(0xFFD700), LV_PART_MAIN);
-    lv_obj_align(lbl_recipient_phone_status, LV_ALIGN_TOP_LEFT, 10, 90);
-
-    lv_obj_t *btn_confirm = lv_button_create(recipient_phone_scr);
-    lv_obj_set_size(btn_confirm, 150, 40);
-    lv_obj_align(btn_confirm, LV_ALIGN_TOP_LEFT, 10, 125);
-    lv_obj_set_style_bg_color(btn_confirm, lv_color_hex(0x2EB85C), LV_PART_MAIN);
-    lv_obj_add_event_cb(btn_confirm, confirm_recipient_phone_cb, LV_EVENT_CLICKED, NULL);
-
-    lv_obj_t *lbl_confirm = lv_label_create(btn_confirm);
-    lv_label_set_text(lbl_confirm, "TIEP TUC");
-    lv_obj_center(lbl_confirm);
-
-    lv_obj_t *btn_back = lv_button_create(recipient_phone_scr);
-    lv_obj_set_size(btn_back, 150, 40);
-    lv_obj_align(btn_back, LV_ALIGN_TOP_LEFT, 10, 175);
-    lv_obj_set_style_bg_color(btn_back, lv_color_hex(0xE55353), LV_PART_MAIN);
-    lv_obj_add_event_cb(btn_back, back_to_main_cb_from_send_screen_cb, LV_EVENT_CLICKED, NULL);
-
-    lv_obj_t *lbl_back = lv_label_create(btn_back);
-    lv_label_set_text(lbl_back, "Huy gui hang");
-    lv_obj_center(lbl_back);
-
-    kb_numpad = lv_keyboard_create(recipient_phone_scr);
-    lv_keyboard_set_mode(kb_numpad, LV_KEYBOARD_MODE_NUMBER);
-    lv_obj_set_size(kb_numpad, 150, 220);
-    lv_obj_align(kb_numpad, LV_ALIGN_RIGHT_MID, -5, 0);
-    lv_keyboard_set_textarea(kb_numpad, ta_recipient_phone);
-}
-
 // 5. Màn hình lựa chọn phương thức nhận hàng (OTP hoặc Quét QR)
 static void create_receive_method_screen(void) {
     if (receive_method_scr) {
@@ -712,26 +641,6 @@ void gui_show_compartment_selection(const bool available[2]) {
         }
         create_compartment_selection_screen();
         lv_screen_load(compartment_selection_scr);
-    }
-    _lock_release(&lvgl_api_lock);
-}
-
-void gui_show_recipient_phone(const bool available[2]) {
-    _lock_acquire(&lvgl_api_lock);
-    if (!redirect_to_maintenance_if_active()) {
-        bool any_available = false;
-        for (int i = 0; i < 2; i++) {
-            selectable_compartments[i] = available[i];
-            any_available = any_available || available[i];
-        }
-
-        if (any_available) {
-            create_recipient_phone_screen();
-            lv_screen_load(recipient_phone_scr);
-        } else {
-            create_compartment_selection_screen();
-            lv_screen_load(compartment_selection_scr);
-        }
     }
     _lock_release(&lvgl_api_lock);
 }
