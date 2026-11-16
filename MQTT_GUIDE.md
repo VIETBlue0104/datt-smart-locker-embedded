@@ -49,10 +49,10 @@ Ví dụ với ID `Tu_1`: `ptit/Tu_1/status`.
 | `ptit/{id}/qr/order` | `{"locker_id":"Tu_1","qr":"<mã QR đơn hàng>"}` | Mã đơn hàng. Backend kiểm tra đơn có lịch đặt trước hay không, rồi publish `1` hoặc `0` lên `verified/order`. |
 | `ptit/{id}/qr/receive` | `{"locker_id":"Tu_1","qr":"<mã QR nhận hàng>"}` | Mã QR khách dùng để nhận hàng. Backend xác minh; nếu hợp lệ gửi lệnh mở theo luồng nhận hàng. |
 | `ptit/{id}/receive/phone` | `{"locker_id":"Tu_1","phone":"090..."}` | Số điện thoại khách nhập. Backend phản hồi số đơn qua `verified/customer`. |
+| `ptit/{id}/receive/method` | `{"locker_id":"Tu_1","method":"qr"}` hoặc `{"locker_id":"Tu_1","method":"otp"}` | Phương thức nhận hàng khách chọn; firmware gửi ngay khi khách chọn OTP hoặc QR. |
 | `ptit/{id}/receive/otp` | `{"locker_id":"Tu_1","otp":"123456"}` | OTP khách nhập. Backend xác minh OTP. |
 | `ptit/{id}/session/cancel` | `{"locker_id":"Tu_1","action":"cancel_send"}` | Tín hiệu hủy thao tác. `action` phân biệt: `cancel_send`, `cancel_receive`, `cancel_order_scan`, `cancel_receive_phone`, `cancel_receive_qr`, `cancel_receive_otp`. |
 | `ptit/{id}/locker/scan_order_qr/request` | `{"locker_id":"Tu_1","action":"scan_order_qr"}` | Báo backend bắt đầu luồng quét QR đơn hàng; đây không phải nội dung QR. QR thực tế gửi trên `qr/order`. |
-| `ptit/{id}/receive/scan_qr/request` | `{"locker_id":"Tu_1","action":"scan_receive_qr"}` | Báo backend bắt đầu luồng quét QR nhận hàng; QR thực tế gửi trên `qr/receive`. |
 | `ptit/{id}/locker/select_compartment` | `{"compartment":0,"qr":"<mã QR đơn hàng>","locker_id":"Tu_1"}` | Shipper chọn ngăn trong nhánh không có đặt trước; firmware mở ngăn và gửi QR đơn cùng ngăn để backend lưu đơn. `compartment` bắt đầu từ 0. |
 
 QR shipper, QR đơn và QR nhận hàng có topic riêng để backend không nhầm mục đích của mã.
@@ -90,11 +90,11 @@ Firmware subscribe các topic dưới đây theo QoS 1. Payload gửi xuống l�
 
 | Topic | Payload | Ý nghĩa và phản ứng của tủ |
 |---|---|---|
-| `ptit/{id}/verified/shipper` | `1` / `0` | Kết quả xác minh shipper: `1` mở màn hình chọn phương thức gửi; `0` báo QR shipper không hợp lệ. |
+| `ptit/{id}/verified/shipper` | `1` / `0` | Kết quả xác minh shipper: với luồng gửi, `1` mở màn hình chọn phương thức gửi; với luồng thu hồi, `1` đưa TFT về trạng thái chờ web gửi `locker/open`; `0` báo QR shipper không hợp lệ. |
 | `ptit/{id}/verified/order` | `1` / `0` | Kết quả tra lịch đặt trước cho QR đơn: `1` backend tiếp tục gửi lệnh mở ngăn đã đặt; `0` TFT hiển thị các ngăn khả dụng để shipper chọn. |
 | `ptit/{id}/verified/customer` | số nguyên `-1`, `0` hoặc `n` | Kết quả tra số điện thoại: `-1` không tồn tại; `0` không có đơn; số dương `n` là số đơn tìm được. |
 | `ptit/{id}/verified/qr_otp/failed` | `-1` | QR/OTP nhận hàng không hợp lệ; TFT hiện thông báo sai mã. Giao diện hiện tại điều hướng về màn hình nhập OTP. |
-| `ptit/{id}/locker/open` | `<index>,<mode>` ví dụ `0,deposit` hoặc `1,pickup` | Mở ngăn. `index` bắt đầu từ 0; `mode` là `deposit` khi gửi hàng hoặc `pickup` khi nhận hàng. Tủ bắt đầu theo dõi giao dịch để gửi event cảm biến. |
+| `ptit/{id}/locker/open` | `<index>,<mode>` ví dụ `0,deposit`, `1,pickup` hoặc `0,reclaim` | Mở ngăn. `index` bắt đầu từ 0; `deposit` là gửi hàng, `pickup` là khách nhận hàng, `reclaim` là shipper thu hồi hàng. Tủ bắt đầu theo dõi giao dịch để gửi event cảm biến. |
 | `ptit/{id}/maintenance/locker` | `1` / `0` | Bật/tắt bảo trì toàn tủ. Khi bật, tủ khóa luồng thao tác thường và hiện màn hình bảo trì. Nên publish retained để khôi phục trạng thái sau reconnect. |
 | `ptit/{id}/maintenance/compartment` | `<index>,<state>` ví dụ `0,1` hoặc `1,0` | Bật/tắt bảo trì một ngăn. Index bắt đầu từ 0; state `1` là bảo trì, `0` là hoạt động. Nên publish retained. |
 
@@ -144,11 +144,18 @@ Với trạng thái bảo trì, bật **Retain** để firmware nhận lại tr�
 6. Nếu kết quả là `0`, TFT hiển thị các ngăn trống khả dụng. Shipper chọn ngăn; firmware mở ngăn ngay và publish `locker/select_compartment` gồm mã đơn và ngăn được chọn.
 7. Shipper đặt hàng, đóng cửa. Firmware kiểm tra cửa/loadcell và publish `deposit_success` hoặc `deposit_cancelled`.
 
+### Shipper thu hồi hàng
+
+1. Shipper bấm **THU HOI HANG** trên TFT và quét mã shipper. Firmware publish mã lên `qr/shipper` với trường `action` là `reclaim`.
+2. Backend xác minh rồi publish `1` hoặc `0` lên `verified/shipper`.
+3. Sau khi xác minh thành công, TFT chờ backend gửi `locker/open` với mode `reclaim`, ví dụ `0,reclaim`.
+4. Shipper lấy hàng ra và đóng cửa. Firmware publish `reclaim_success` nếu ngăn trống, hoặc `reclaim_failed` nếu hàng vẫn còn trong ngăn.
+
 ### Khách nhận hàng
 
 1. Khách nhập số điện thoại; firmware publish lên `receive/phone`.
 2. Backend trả số đơn trên `verified/customer`.
-3. Khách nhập OTP (`receive/otp`) hoặc quét QR (request `receive/scan_qr/request`, mã trên `qr/receive`).
+3. Khi khách chọn phương thức, firmware gửi `receive/method` với `method` là `otp` hoặc `qr`. Sau đó OTP được gửi lên `receive/otp`, hoặc mã QR lên `qr/receive`.
 4. Nếu xác minh đúng, backend gửi `locker/open` với mode `pickup`; nếu sai, backend gửi `verified/qr_otp/failed` với payload `-1`.
 5. Firmware theo dõi thao tác lấy hàng và publish `pickup_success` hoặc `item_uncollected`.
 

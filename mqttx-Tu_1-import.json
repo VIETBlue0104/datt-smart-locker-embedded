@@ -147,7 +147,7 @@
                                   "connectionId":  "2cbf9af6-d85e-486c-a026-189bf7d37af5"
                               },
                               {
-                                  "topic":  "ptit/Tu_1/receive/scan_qr/request",
+                                  "topic":  "ptit/Tu_1/receive/method",
                                   "qos":  1,
                                   "disabled":  false,
                                   "createAt":  "2026-11-05T00:00:00.000Z",

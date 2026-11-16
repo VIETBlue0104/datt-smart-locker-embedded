@@ -58,10 +58,10 @@ Username và password được nhúng vào firmware từ `sdkconfig`; không com
 | `ptit/{id}/qr/order` | `{"locker_id":"...","qr":"<mã đơn hàng>"}` |
 | `ptit/{id}/qr/receive` | `{"locker_id":"...","qr":"<mã nhận hàng>"}` |
 | `ptit/{id}/receive/phone` | `{"locker_id":"...","phone":"090..."}` |
+| `ptit/{id}/receive/method` | `{"locker_id":"...","method":"qr"}` hoặc `{"locker_id":"...","method":"otp"}`; gửi ngay khi khách chọn phương thức nhận |
 | `ptit/{id}/receive/otp` | `{"locker_id":"...","otp":"123456"}` |
 | `ptit/{id}/session/cancel` | `{"locker_id":"...","action":"..."}`; các action: `cancel_send`, `cancel_receive`, `cancel_order_scan`, `cancel_receive_phone`, `cancel_receive_qr`, `cancel_receive_otp` |
 | `ptit/{id}/locker/scan_order_qr/request` | `{"locker_id":"...","action":"scan_order_qr"}`; thông báo bắt đầu quét, khác với bản tin QR thực tế |
-| `ptit/{id}/receive/scan_qr/request` | `{"locker_id":"...","action":"scan_receive_qr"}`; thông báo bắt đầu quét, khác với bản tin QR thực tế |
 | `ptit/{id}/locker/select_compartment` | `{"compartment":0,"qr":"<mã đơn>","locker_id":"..."}` ở nhánh không đặt trước; index bắt đầu từ 0, tủ mở ngăn ngay khi chọn |
 
 Mỗi thao tác QR có topic riêng theo mục đích; không dùng chung topic để tránh backend nhầm QR shipper, QR đơn và QR nhận hàng.
@@ -118,7 +118,7 @@ Backend gửi lệnh retained (QoS 1) tới các topic:
 **Khách nhận hàng**
 
 1. Nhập SĐT -> `ptit/{id}/receive/phone` -> backend trả `ptit/{id}/verified/customer` (số đơn).
-2. Chọn nhập OTP (`ptit/{id}/receive/otp`) hoặc quét QR (yêu cầu `ptit/{id}/receive/scan_qr/request`, mã gửi lên `ptit/{id}/qr/receive`).
+2. Chọn phương thức -> firmware gửi `ptit/{id}/receive/method` với `method` là `otp` hoặc `qr`. Sau đó OTP gửi lên `ptit/{id}/receive/otp`, hoặc mã QR gửi lên `ptit/{id}/qr/receive`.
 3. Đúng: backend gửi `ptit/{id}/locker/open` (`<idx>,pickup`). Sai: gửi `ptit/{id}/verified/qr_otp/failed`; TFT báo sai và cho nhập lại.
 4. Lấy hàng, đóng cửa -> event `pickup_success` hoặc `item_uncollected`.
 

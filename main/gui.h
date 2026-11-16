@@ -13,6 +13,9 @@ void gui_set_locker_maintenance(bool enabled);
 void gui_show_compartment_selection(const bool available[2]);
 int locker_select_and_open_compartment(int index);
 void gui_open_send_screen(void);    // Gọi khi Server gửi 1
+void locker_begin_shipper_verification(bool reclaim);
+void locker_cancel_shipper_session(void);
+void gui_show_reclaim_waiting(void);
 void gui_show_verify_failed(void);  // Gọi khi Server gửi 0
 void nhap_OTP_nhan(void) ;
 void nhan_show_verify_failed(void) ;

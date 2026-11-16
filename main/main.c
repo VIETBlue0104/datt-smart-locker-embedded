@@ -112,6 +112,9 @@ static volatile bool force_compartment_status_publish[2] = {false, false};
 // Cờ theo dõi phiên giao dịch
 static volatile bool waiting_for_deposit[2] = {false, false}; // Đang chờ shipper bỏ hàng
 static volatile bool waiting_for_pickup[2]  = {false, false}; // Đang chờ khách lấy hàng
+static volatile bool waiting_for_reclaim[2] = {false, false}; // Đang chờ thu hồi hàng
+static volatile bool shipper_verification_for_reclaim = false;
+static volatile bool reclaim_shipper_verified = false;
 
 // event_handler_task SỞ HỮU: các biến dưới đây
 static bool pickup_seen_item[2]  = {false, false}; // Đã thấy hàng trong ngăn khi chờ lấy
@@ -122,9 +125,22 @@ static void reset_compartment_transaction(int index)
 {
     waiting_for_deposit[index] = false;
     waiting_for_pickup[index] = false;
+    waiting_for_reclaim[index] = false;
     pickup_seen_item[index] = false;
     empty_stable_cnt[index] = 0;
     close_settle_cnt[index] = 0;
+}
+
+void locker_begin_shipper_verification(bool reclaim)
+{
+    reclaim_shipper_verified = false;
+    shipper_verification_for_reclaim = reclaim;
+}
+
+void locker_cancel_shipper_session(void)
+{
+    reclaim_shipper_verified = false;
+    shipper_verification_for_reclaim = false;
 }
 
 void rec_topic(char *topic) {
@@ -144,6 +160,7 @@ void set_scan_enabled(bool enable) {
 
 void set_compartment_expecting(int index, bool is_deposit) {
     if (index >= 0 && index < 2) {
+        waiting_for_reclaim[index] = false;
         pickup_seen_item[index] = false;
         empty_stable_cnt[index] = 0;
         if (is_deposit) {
@@ -296,10 +313,17 @@ void on_mqtt_data(const char *topic, const char *data, int data_len)
     // 1. Xử lý xác minh shipper
     if (strcmp(topic, "ptit/verified/shipper") == 0) {
         if (strcmp(data, "1") == 0) {
-            ESP_LOGI(TAG, "Xác minh thành công (1) -> Vào giao diện gửi hàng");
-            gui_open_send_screen();
+            if (shipper_verification_for_reclaim) {
+                reclaim_shipper_verified = true;
+                ESP_LOGI(TAG, "Xác minh shipper thu hồi thành công -> chờ lệnh mở từ web");
+                gui_show_reclaim_waiting();
+            } else {
+                ESP_LOGI(TAG, "Xác minh thành công (1) -> Vào giao diện gửi hàng");
+                gui_open_send_screen();
+            }
         }
         else if (strcmp(data, "0") == 0) {
+            reclaim_shipper_verified = false;
             ESP_LOGW(TAG, "Xác minh thất bại (0)");
             gui_show_verify_failed();
         }
@@ -347,6 +371,20 @@ void on_mqtt_data(const char *topic, const char *data, int data_len)
                 }
                 else if (strcmp(mode_str, "pickup") == 0) {
                     set_compartment_expecting(compartment_idx, false);
+                }
+                else if (strcmp(mode_str, "reclaim") == 0) {
+                    if (!shipper_verification_for_reclaim || !reclaim_shipper_verified) {
+                        ESP_LOGW(TAG, "Ignoring reclaim command without verified shipper session");
+                        return;
+                    }
+                    reset_compartment_transaction(compartment_idx);
+                    waiting_for_reclaim[compartment_idx] = true;
+                    waiting_for_deposit[compartment_idx] = false;
+                    waiting_for_pickup[compartment_idx] = false;
+                }
+                else {
+                    ESP_LOGW(TAG, "Unknown locker open mode: %s", mode_str);
+                    return;
                 }
 
                 open_lock(compartment_idx);
@@ -406,7 +444,20 @@ void business_logic_task(void *arg) {
                 snprintf(current_order_qr, sizeof(current_order_qr), "%s", qr_buffer);
                 portEXIT_CRITICAL(&current_order_qr_mux);
             }
-            int publish_result = my_mqtt_publish_kv(topic_rec_qr, "qr", qr_buffer, 1);
+            int publish_result;
+            if (strcmp(topic_rec_qr, "qr/shipper") == 0 && shipper_verification_for_reclaim) {
+                cJSON *root = cJSON_CreateObject();
+                if (root != NULL) {
+                    cJSON_AddStringToObject(root, "qr", qr_buffer);
+                    cJSON_AddStringToObject(root, "action", "reclaim");
+                }
+                char *payload = root != NULL ? cJSON_PrintUnformatted(root) : NULL;
+                publish_result = payload != NULL ? my_mqtt_publish_json(topic_rec_qr, payload, 1) : -1;
+                cJSON_free(payload);
+                cJSON_Delete(root);
+            } else {
+                publish_result = my_mqtt_publish_kv(topic_rec_qr, "qr", qr_buffer, 1);
+            }
             if (publish_result < 0 && is_order_qr) {
                 portENTER_CRITICAL(&current_order_qr_mux);
                 current_order_qr[0] = '\0';
@@ -477,6 +528,8 @@ void warning_task(void *arg) {
                 snprintf(warning_message, sizeof(warning_message), "Chua dong ngan 2");
             }
             gui_show_warning_screen(warning_message);
+        } else if (!any_warning && warning_state_changed) {
+            gui_show_warning_screen(NULL);
         }
 
         prev_compartment_warning[0] = compartment_warning_active[0];
@@ -499,19 +552,23 @@ void event_handler_task(void *arg) {
             }
 
             // ===== A. KHÁCH LẤY HÀNG KHI CỬA CÒN MỞ -> xác nhận thành công ngay =====
-            if (waiting_for_pickup[i] && !door_closed_status[i]) {
+            if ((waiting_for_pickup[i] || waiting_for_reclaim[i]) && !door_closed_status[i]) {
                 if (compartment_has_item[i]) {
                     pickup_seen_item[i] = true;   // đã thấy hàng trong ngăn
                     empty_stable_cnt[i] = 0;
                 } else if (pickup_seen_item[i]) {
                     // Hàng đã rời đi, chờ ngăn trống ổn định ~1s để tránh nhiễu
                     if (++empty_stable_cnt[i] >= EMPTY_STABLE_TICKS) {
-                        ESP_LOGI(TAG_EVENT, "Ngăn [%d]: khách đã lấy hàng (cửa vẫn mở)", i + 1);
+                        const char *success_status = waiting_for_reclaim[i]
+                            ? "reclaim_success" : "pickup_success";
+                        ESP_LOGI(TAG_EVENT, "Ngăn [%d]: hàng đã được lấy ra (cửa vẫn mở)", i + 1);
                         snprintf(event_payload, sizeof(event_payload),
-                                 "{\"status\":\"pickup_success\", \"door_closed\":0, \"compartment\":%d}", i + 1);
+                                 "{\"status\":\"%s\", \"door_closed\":0, \"compartment\":%d}",
+                                 success_status, i + 1);
                         my_mqtt_publish_json(event_topic, event_payload, 1);
 
                         waiting_for_pickup[i] = false;  // không gửi lặp khi đóng cửa
+                        waiting_for_reclaim[i] = false;
                         pickup_seen_item[i]   = false;
                         empty_stable_cnt[i]   = 0;
                         // Không đổi màn hình ở đây: warning_task sẽ cảnh báo nếu quá 30s,
@@ -573,6 +630,24 @@ void event_handler_task(void *arg) {
                         my_mqtt_publish_json(event_topic, event_payload, 1);
                     }
                     waiting_for_pickup[i] = false;
+                }
+
+                // Trường hợp thu hồi hàng: shipper phải lấy hàng ra khỏi ngăn.
+                if (waiting_for_reclaim[i]) {
+                    if (compartment_has_item[i]) {
+                        ESP_LOGW(TAG_EVENT, "Thu hồi thất bại: ngăn [%d] vẫn còn hàng", i + 1);
+                        snprintf(event_payload, sizeof(event_payload),
+                                 "{\"status\":\"reclaim_failed\", \"compartment\":%d}", i + 1);
+                        my_mqtt_publish_json(event_topic, event_payload, 1);
+                        gui_show_exception("Thu hoi that bai! Chua lay hang ra");
+                        show_exception = true;
+                    } else {
+                        ESP_LOGI(TAG_EVENT, "Thu hồi hàng thành công ở ngăn [%d]", i + 1);
+                        snprintf(event_payload, sizeof(event_payload),
+                                 "{\"status\":\"reclaim_success\", \"compartment\":%d}", i + 1);
+                        my_mqtt_publish_json(event_topic, event_payload, 1);
+                    }
+                    waiting_for_reclaim[i] = false;
                 }
 
                 // Không có lỗi -> về home (cũng thoát màn hình cảnh báo vốn không có nút).
